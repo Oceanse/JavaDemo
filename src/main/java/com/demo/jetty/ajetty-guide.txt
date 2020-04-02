@@ -1,0 +1,139 @@
+服务端
+==========================================================================================================
+方式1
+org.eclipse.jetty.server.Server+Servlet 提供restful服务
+url:localhost:8080/base/hello
+ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+context.setContextPath("/base");
+context.addServlet(new ServletHolder(new HelloServlet()), "/hello");
+Server server=new Server(8080);//监听8080端口
+server.setHandler(context);
+server.start();
+
+class HelloServlet extends HttpServlet {
+ @Override
+    protected void doGet(HttpServletRequest request,HttpServletResponse response) {
+    .....
+    .....
+    }
+}
+
+==========================================================================================================
+方式2
+org.eclipse.jetty.server.Server+AbstractHandler  提供restful服务
+url以及参数可以任意设置  http://localhost:8888/任意设置   比如http://localhost:8888/hello/world?q1=1&q2=2
+
+Server server = new Server(8888);
+server.setHandler(new HelloHandler());
+server.start();
+server.join();
+
+class HelloHandler extends AbstractHandler {
+
+    @Override
+    public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response){
+    ...
+    ...
+    }
+  }
+
+
+==========================================================================================================
+方式3
+org.eclipse.jetty.server.Server+resteasy  提供restful服务
+HttpServletDispatcher根据请求的url调用不同的controller
+
+
+Server server=new Server(port);
+ServletHolder servletHolder = new ServletHolder(HttpServletDispatcher.class);
+servletHolder.setInitParameter("resteasy.resources","com.demo.jetty.JettyController");//关联controller
+servletHolder.setInitParameter("resteasy.servlet.mapping.prefix", "/rest/v1/");//resteasy前缀   http://localhost:8080/base/rest/v1/xxx
+
+ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
+handler.setContextPath("/base");//设置上下问路径 http://localhost:8080/base
+handler.addServlet(servletHolder, "/rest/*");//这里可以设置成/rest/*或者/rest/v1/*
+
+
+@Path("/jtcontroller")
+public class JettyController {
+
+    @GET
+    @Path("/subpath")
+    @Consumes(MediaType.TEXT_PLAIN)
+    public String getInfo() {
+        return "hello jetty";
+    }
+}
+
+
+
+
+
+
+
+
+客户端
+==========================================================================================================
+ org.eclipse.jetty.client.HttpClient去call服务端restful api
+ HttpClient httpClient = new HttpClient();
+ httpClient.start();
+ ContentResponse response=httpClient.newRequest("http://localhost:8080/base/hi?name=ocean&passwd=123123").method(HttpMethod.GET).send()
+ ContentResponse response = httpClient.GET("http://localhost:8080/base/hi?name=ocean&passwd=123123");
+ String contentAsString = response.getContentAsString();
+ httpClient.stop();
+
+
+
+
+
+
+
+websocket
+==========================================================================================================
+概览：
+All WebSocket’s are created via whatever WebSocketCreator you have registered with the WebSocketServletFactory.
+WebSocketServletFactory给WebSocketCreator提供注册服务，WebSocketCreator创建WebSocket
+
+
+
+
+
+WebSocketServletFactory:
+Basic WebSocketServletFactory for working with Jetty-based WebSocketServlets(比如带有@WebSocket注解的类);
+
+情形1：
+WebSocketCreator.register(Class<?> websocket)（这里的websocket可以是带有@WebSocket注解的类）
+By default, the WebSocketServletFactory is a simple WebSocketCreator capable of creating a single WebSocket object.
+Use  WebSocketCreator.register(Class<?> websocket) to tell the WebSocketServletFactory which class it
+should instantiate (make sure it has a default constructor).
+默认情况下，可以通过WebSocketCreator.register(Class<?> websocket)直接创建websocket, 这个过程中Register a websocket class com.demo.pojo with the default WebSocketCreator；可以理解为默认的WebSocketCreator已经提前注册好
+
+情形2：
+webSocketServletFactory.setCreator(WebSocketCreator var1)
+When you want a custom WebSocketCreator, use WebSocketServletFactory.setCreator(WebSocketCreator creator)
+and the WebSocketServletFactory will use your creator for all incoming Upgrade requests on this servlet.用来注册WebSocketCreator
+通过webSocketServletFactory.setCreator(WebSocketCreator var1)自定义WebSocketCreator
+
+
+
+
+
+WebSocketCreator
+所有的WebSocket对象都是通过 自定义的WebSocketCreator或者默认WebSocketCreator创建的
+
+情形1
+WebSocketCreator.register(Class<?> websocket)通过默认WebSocketCreator创建WebSocket对象（这里的websocket可以是带有@WebSocket注解的类）
+
+情形2：
+webSocketServletFactory.setCreator(new MyAdvancedEchoCreator());
+
+eg:
+public class MyAdvancedEchoCreator  implements WebSocketCreator {
+    AnnotatedEchoSocket annotatedEchoSocket;
+
+    public MyAdvancedEchoCreator() {
+        annotatedEchoSocket = new AnnotatedEchoSocket();
+    }
+    return annotatedEchoSocket;
+  }
+

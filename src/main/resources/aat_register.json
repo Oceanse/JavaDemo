@@ -1,0 +1,387 @@
+{
+  "serviceInfo": {
+    "serviceName": "RAN Test Service - javademo",
+    "serviceType": "function test",
+    "description": "MJE Tool, Lab Network, Real UE (Android), CCN (Attenuator)",
+    "FATNumber": "FAT1023773/2009",
+    "serviceAddress": "146.11.82.31:8088",
+    "serviceProtocol": "http",
+    "secret": "mySecret",
+    "serviceOwner": "zhiming.zhang@ericsson.com",
+    "version": "2.0",
+    "cancelTimeout": 10,
+    "dependencies": {
+      "hectar": "2.3"
+    },
+    "updateLog": []
+  },
+  "schemas": [
+    {
+      "id": "vmarg",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "aSchemaType": "configuration",
+        "title": "Common VM arguments for MJE test case",
+        "type": "object",
+        "required": [
+          "jcat.logging"
+        ],
+        "aUniqueFields": [],
+        "aFieldsOrder": [
+          "jcat.logging"
+        ],
+        "properties": {
+          "jcat.logging": {
+            "title": "Log Level",
+            "type": "string",
+            "default": "Info"
+          },
+          "rm.moshell.path": {
+            "title": "Moshell Path",
+            "type": "string",
+            "default": "/opt/app/moshell/moshell"
+          },
+          "rm.ltng-decoder.path": {
+            "title": "LTNG Decoder Path",
+            "type": "string",
+            "default": "/opt/app/ltng/latest/bin/ltng-decoder"
+          },
+          "rm.ltng-flow.path": {
+            "title": "LTNG Flow Path",
+            "type": "string",
+            "default": "/opt/app/ltng/latest/bin/ltng-flow"
+          },
+          "cpp.decoder": {
+            "title": "Cpp Decoder Path",
+            "type": "string"
+          },
+          "cpp.flow": {
+            "title": "Cpp Flow Path",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "listeners",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "aSchemaType": "configuration",
+        "title": "TestNG Listener for MJE test cases",
+        "type": "object",
+        "required": [
+          "listenerClass"
+        ],
+        "aUniqueFields": [],
+        "aFieldsOrder": [
+          "listenerClass"
+        ],
+        "properties": {
+          "listenerClass": {
+            "description": "Full class name with package.",
+            "title": "Listener Class[es]",
+            "type": "string",
+            "default": "com.ericsson.msran.jcat.MsranTestNgListener"
+          }
+        }
+      }
+    },
+    {
+      "id": "stp",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "aSchemaType": "sutResource",
+        "aResource": "sutConfig",
+        "title": "STP Settings",
+        "type": "object",
+        "required": [
+          "name",
+          "stpId",
+          "beanPath"
+        ],
+        "aUniqueFields": [
+          "stpId"
+        ],
+        "aFieldsOrder": [
+          "name",
+          "stpId",
+          "beanPath",
+          "stpDescription"
+        ],
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "stpId": {
+            "title": "STP ID",
+            "type": "string"
+          },
+          "beanPath": {
+            "title": "Bean Directoy Path",
+            "type": "string"
+          },
+          "stpDescription": {
+            "title": "Description",
+            "type": "string",
+            "aWidget": "textarea"
+          }
+        }
+      }
+    },
+    {
+      "id": "configurationData",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "aSchemaType": "testResource",
+        "aResource": "testConfig",
+        "title": "Configuration Data Settings",
+        "type": "object",
+        "required": [
+          "name",
+          "configFilePath"
+        ],
+        "aUniqueFields": [
+          "stpId"
+        ],
+        "aFieldsOrder": [
+          "name",
+          "configFilePath",
+          "configDescription"
+        ],
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "configFilePath": {
+            "title": "Configuration Data File Path",
+            "type": "string"
+          },
+          "configDescription": {
+            "title": "Description",
+            "type": "string",
+            "aWidget": "textarea"
+          }
+        }
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "testcase",
+      "template": {
+        "name": "Single MJE Performance test case",
+        "parameters": {
+          "packageName": {
+            "default": "com.ericsson.msran.test.performance.tests",
+            "description": "full package for test class ",
+            "isOptional": false,
+            "pattern": ".*",
+            "title": "Package",
+            "type": "string",
+            "widget": "text"
+          },
+          "className": {
+            "default": "ThroughputTest",
+            "isOptional": false,
+            "pattern": ".*",
+            "title": "Class",
+            "type": "string",
+            "widget": "text"
+          },
+          "methodName": {
+            "default": "testThroughput",
+            "isOptional": true,
+            "pattern": ".*",
+            "title": "Method",
+            "type": "string",
+            "widget": "text"
+          },
+          "stp": {
+            "type": "stp",
+            "title": "STP"
+          },
+          "configurationData": {
+            "type": "configurationData",
+            "title": "Configuration Data"
+          }
+        },
+        "fieldsOrder": [
+          "packageName",
+          "classname",
+          "methodName",
+          "stp",
+          "configurationData"
+        ],
+        "required": [
+          "packageName",
+          "className",
+          "stp",
+          "configurationData"
+        ],
+        "subParameters": [
+          {
+            "name": "Parameters",
+            "required": [
+              "testId",
+              "throughputParametersId",
+              "ueConfigurationId"
+            ],
+            "aFieldsOrder": [
+              "testId",
+              "throughputParametersId",
+              "trafficConfigurationId",
+              "ueConfigurationId",
+              "verdictConfigurationId",
+              "nodeConfigurationIds",
+              "restoreNodeConfigurationIds",
+              "pmCounterConfigurationIds",
+              "traceVerdictConfigurationId",
+              "traceLogConfigurationId",
+              "printUeNodes",
+              "flightmode",
+              "rebootue"
+            ],
+            "parameters": {
+              "testId": {
+                "type": "string",
+                "title": "testId"
+              },
+              "throughputParametersId": {
+                "type": "string",
+                "title": "throughputParametersId"
+              },
+              "trafficConfigurationId": {
+                "type": "string",
+                "title": "trafficConfigurationId"
+              },
+              "ueConfigurationId": {
+                "type": "string",
+                "title": "ueConfigurationId",
+                "default": "commonRealUEConfig"
+              },
+              "verdictConfigurationId": {
+                "type": "string",
+                "title": "verdictConfigurationId"
+              },
+              "nodeConfigurationIds": {
+                "type": "string",
+                "title": "nodeConfigurationIds"
+              },
+              "restoreNodeConfigurationIds": {
+                "type": "string",
+                "title": "restoreNodeConfigurationIds"
+              },
+              "pmCounterConfigurationIds": {
+                "type": "string",
+                "title": "pmCounterConfigurationIds"
+              },
+              "traceVerdictConfigurationId": {
+                "type": "string",
+                "title": "traceVerdictConfigurationId"
+              },
+              "traceLogConfigurationId": {
+                "type": "string",
+                "title": "traceLogConfigurationId"
+              },
+              "printUeNodes": {
+                "type": "string",
+                "title": "printUeNodes"
+              },
+              "flightmode": {
+                "type": "string",
+                "title": "flightmode"
+              },
+              "rebootue": {
+                "type": "string",
+                "title": "rebootue"
+              }
+            }
+          }
+        ],
+        "subType": "Test Case Template",
+        "description": "Template for single test case definition.",
+        "type": "testcase-template"
+      }
+    },
+    {
+      "id": "testsuite",
+      "template": {
+        "name": "JCAT test suite",
+        "parameters": {
+          "suiteid": {
+            "default": "",
+            "description": "Suite ID ( find from suite.xml file ) ",
+            "isOptional": false,
+            "pattern": ".*",
+            "title": "Suite ID",
+            "type": "string",
+            "widget": "text"
+          },
+          "stp": {
+            "type": "stp",
+            "title": "STP"
+          },
+          "configurationData": {
+            "type": "configurationData",
+            "title": "Configuration Data"
+          }
+        },
+        "fieldsOrder": [
+          "suiteid",
+          "stp",
+          "configurationData"
+        ],
+        "required": [
+          "suiteid",
+          "stp",
+          "configurationData"
+        ],
+        "subParameters": [],
+        "subType": "Test Case Template",
+        "description": "Template for single test case definition.",
+        "type": "testcase-template"
+      }
+    },
+    {
+      "id": "testsuitepath",
+      "template": {
+        "name": "JCAT test suite based path ",
+        "parameters": {
+          "suitepath": {
+            "default": "",
+            "description": "Suite Path ( find the specified path ) ",
+            "isOptional": false,
+            "pattern": ".*",
+            "title": "Suite Path",
+            "type": "string",
+            "widget": "text"
+          },
+          "stp": {
+            "type": "stp",
+            "title": "STP"
+          },
+          "configurationData": {
+            "type": "configurationData",
+            "title": "Configuration Data"
+          }
+        },
+        "fieldsOrder": [
+          "suitepath",
+          "stp",
+          "configurationData"
+        ],
+        "required": [
+          "suitepath",
+          "stp",
+          "configurationData"
+        ],
+        "subParameters": [],
+        "subType": "Test Suite Path Template",
+        "description": "Template for single test case definition.",
+        "type": "testcase-template"
+      }
+    }
+  ]
+}

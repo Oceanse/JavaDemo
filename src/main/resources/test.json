@@ -1,0 +1,46 @@
+{
+  "result": {
+    "8a41014c-cd19-48e6-ad28-9c5fb4c9dadc": {
+      "FATNumber": "FAT1023773/2009",
+      "cancelTimeout": 10,
+      "configuration": [
+        "vmarg",
+        "listeners"
+      ],
+      "dependencies": {
+        "hectar": "2.3"
+      },
+      "description": "MJE Tool, Lab Network, Real UE (Android), CCN (Attenuator)",
+      "resultSyncInterval": 2,
+      "serviceType": "function test",
+      "sutResource": [
+        "stp"
+      ],
+      "testResource": [
+        "configurationData"
+      ],
+      "updateLog": [],
+      "version": "2.0"
+    },
+    "96d4cfc6-0df8-40e2-b2a7-f80bd00bfeff": {
+      "FATNumber": "FAT1023773/2009",
+      "cancelTimeout": 10,
+      "configuration": [
+        "vmarg",
+        "listeners"
+      ],
+      "dependencies": {
+        "hectar": "2.3"
+      },
+      "hasTestcaseTemplate": true,
+      "sutResource": [
+        "stp"
+      ],
+      "testResource": [
+        "configurationData"
+      ],
+      "updateLog": [],
+      "version": "2.0"
+    }
+  }
+}
