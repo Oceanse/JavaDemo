@@ -193,6 +193,7 @@ public class Try_catch_Demo {
             System.out.println("这里不能被执行。。。");
         } catch (ArithmeticException e) {
             int data = 50 / 0; //catch中又抛出异常，相当于try-catch这个整体最终还是抛出一个异常，导致程序提前中断，catch后面的代码不能被执行
+            //throw new ArithmeticException();
         }
         System.out.println("这里不能被执行。。。");
     }

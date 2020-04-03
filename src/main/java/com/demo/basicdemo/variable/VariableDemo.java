@@ -13,7 +13,8 @@ public class VariableDemo {
     //当声明定义变量的时候，为该变量分配一块栈内存，变量类型决定内存空间大小，变量名就是这块内存空间的名字(同一个作用域内，变量名不能相同)
     //初始化赋值时时会让内存空间会存储这个值,基本类型变量存储字面值，引用类型变量存储对象的引用(地址); 另外变量指向的内存可以重新赋值，所以称之为变量
 
-    //八种基本数据类型   三种引用数据类型(Object及其子类 接口 数组)
+    //按类型：八种基本数据类型   三种引用数据类型(Object及其子类 接口 数组)
+    //按作用域：局部变量 全局变量
 
     //变量类型转换：自动类型转换和强制类型转换  向上转型/向下转型 装箱/拆箱 其他类型<==>字符串
 
@@ -188,16 +189,6 @@ public class VariableDemo {
         System.out.println(String.valueOf(new Object()));
         System.out.println(String.valueOf(new Object().toString()));
         System.out.println(1+""+2);//空串是一个已经实例化之后的对象，是有堆内存空间的，只不过内存空间中存储的值为空。
-    }
-
-
-
-
-    //java使用unicode编码，所以支持中文编码
-    @Test
-    public void 测试() {
-        System.out.println("java 使用unicode编码");
-
     }
 
 
