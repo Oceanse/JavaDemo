@@ -3,6 +3,7 @@ package com.demo.basicdemo.variable;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.Date;
 
 
 /**
@@ -10,31 +11,22 @@ import java.util.Arrays;
  */
 public class InitialValue {
 
-    byte b;
-    short s ;
-    int i;
-    long l;
-    float f;
-    double d;
-    boolean bo;
-    char c;
-    static int age;
+    byte b;//false
+    short s ;//0
+    int i;//0
+    long l;//0L
+    float f;//0.0F
+    double d;//0.0
+    boolean flag;//false
+    char c;// /u0000  这种格式是一个char字符unicode码的写法;它只是看起来时空格，但是它与空格、空字符串、NULL和"null"都不同，所以无法找到能够描述它的符号
 
-    /*总结：1. 我们知道，Character类定了最小值 MIN_VALUE = '\u0000'，
-              这也是ASCII表的最小值，这样描述：空字符（NUL），只是看起来时空格，但是不是空格
-            2. 虽然它转换为字符串输出为空格，但是它与空格、空字符串、NULL和"null"都不同，
-              所以无法找到能够描述它的符号
-            3.  \+u+xxxx  其中xxxx表示一个16进制数字 这种格式是一个char字符unicode码的写法
-   */
-    char c2='\u0000';//char变量默认值；等价于 char c;
-    char c3='\u0020';//英文半角空格
-    char c4='\u3000';//中文全角空格
-    String space=" ";
-
-    String str;
     Object o;
     Runnable r;
-    int[] arr;
+    String[] names;
+
+    static int age;
+    static Date date;
+
 
     @Test
     public void test(){
@@ -44,17 +36,16 @@ public class InitialValue {
         System.out.println(l);
         System.out.println(f);
         System.out.println(d);
-        System.out.println(bo);
-        System.out.println("age="+age);
-        System.out.println("b"+c+"d");  //初始值默认为空格
-        System.out.println("b"+c2+"d");//等价于默认值
-        System.out.println("b"+c3+"d");//英文半角
-        System.out.println("b"+c4+"d");//中文半角
-        System.out.println("b"+space+"d");//空格
-        System.out.println(str);
+        System.out.println(flag);
+        System.out.println("b"+c+"d");
+
+
         System.out.println(o);
         System.out.println(r);
-        System.out.println("arr="+Arrays.toString(arr));
+        System.out.println("arr="+Arrays.toString(names));
+
+        System.out.println("age="+age);
+        System.out.println("date="+date);
     }
 
     public void test2(){

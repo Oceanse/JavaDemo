@@ -6,30 +6,32 @@ import java.util.*;
 
 
 /**
- * 标识符：字母，0-9 ，_或 $，数字不可以开头；java中所有命名的位置所用的都是标识符
- *
- *  Java语言是强类型语言，指定类型的变量只能接受与之匹配的数值
- *
+ * 标识符：字母，0-9 ，_或 $，数字不可以开头；java中所有命名的位置所用的都是标识符: 接口名 类名 方法名 变量名
+ * <p>
+ * Java语言是强类型语言，指定类型的变量只能接受与之匹配的数值
+ * <p>
  * 变量的作用：编程的本质就是对内存数据进行访问和修改。程序运行时候所有的数据及保存在内存当中，所以会通过变量这一机制对内存中的数据进行访问和修改
- *            变量类型决定内存空间大小，变量名就是这块内存空间的名字(同一个作用域内，变量名不能相同)
- *
+ * 变量类型决定内存空间大小，变量名就是这块内存空间的名字(同一个作用域内，变量名不能相同)
+ * <p>
  * 变量定义：本质是申请一块特定类型的内存并起个名字；格式：数据类型 变量名
- *
+ * <p>
  * 变量赋值：把数据存入指定的内存空间，基本类型变量存储字面值，引用类型变量存储对象的引用(地址)；并且可以反复写入赋值，所以称之为变量
- *
+ * <p>
  * 变量三要素：数据类型 变量名 变量值
- *
+ * <p>
  * 分类：
- * 按类型：八种基本数据类型(Primitive Type：数值型，字符型，boolean型)   三种引用数据类型(Reference Type:类似于指针，包括Object及其子类 接口 数组)
+ * 按类型：八种基本数据类型(Primitive Data Type：数值型，字符型，boolean型)   三种引用数据类型(Reference Data Type:类似于指针，包括Object及其子类 接口 数组)
  * 按作用域：局部变量 全局变量
- *
- * 变量类型转换：自动类型转换和强制类型转换  向上转型/向下转型 装箱/拆箱 其他类型<==>字符串
- *
- *
+ * <p>
+ * 变量类型转换：
+ * 数据类型的转换是在所赋值的数值类型和被变量接收的数据类型不一致时发生的，它需要从一种数据类型转换成另一种数据类型；
+ * 数据类型转换的本质是对数据进行强转，包括栈内存和堆内存中数据
+ * 自动类型转换和强制类型转换  向上转型/向下转型 装箱/拆箱 其他类型<==>字符串
+ * <p>
+ * <p>
  * Note:
  * 变量方法命名：驼峰命名法(第一个单词以小写字母开始；从第二个单词开始以后的每个单词的首字母都采用大写字母)；变量名不能是关键字
  * null：null可以堪称是一种特殊的引用类型变量值，不能赋值给基本类型变量，可以赋值给任意引用类型的变量，可以理解为内存空间存储着null这种不指向任何位置的特殊数据
- *
  */
 public class VariableDemo {
 
@@ -38,33 +40,37 @@ public class VariableDemo {
      * 变量的声明和初始化
      */
     @Test
-    public void test(){
+    public void test() {
+        //You can declare a variable without assigning the value, and assign the value later
         int a;  //声明只是分配内存空间，但是内存空间没有存储值，并起名为a
-        a=1;    //给变量名为a的内存空间赋值1
+        a = 1;    //给变量名为a的内存空间赋值1
         System.out.println(a);//打印变量a存储的值
 
-
-        double b=1.0;//声明double类型变量的同时赋值为1.0
+        //Create a variable called b of type double and assign it the value 1.0:
+        double b = 1.0;//声明double类型变量的同时赋值为1.0
         System.out.println(b);//打印变量d存储的值
 
-
-
-        char c='a';//声明char类型变量的同时赋值为'a'
-        c='b';     //将变量c存储的值重新赋值为'b'
+        //Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+        char c = 'a';//声明char类型变量的同时赋值为'a'
+        c = 'b';     //将变量c存储的值重新赋值为'b'
         System.out.println(c);
 
+        // Cannot assign a value to a final variable
+        final int myNum = 15;
+        //myNum = 20;  // will generate an error:
 
+        //To declare more than one variable of the same type, use a comma-separated list:
+        int x = 5, y = 6, z = 50;
+        System.out.println(x + y + z);
 
         //方法体中的代码自上而下执行,  Java 中的变量需要先声明后使用
         //System.out.println(d);
-        int d=0;
+        int d = 0;
 
 
         //int d=1;   在同一个作用域内，变量名不能相同
 
     }
-
-
 
 
     /**
@@ -74,18 +80,19 @@ public class VariableDemo {
     public void test1() {
 
         //八种基本数据类型
-        byte b = 123;   //byte占有内存1个字节（8bit）,取值范围-2^7~2^7-1也就是-128~127(2^8=256)
+        byte b = 123;   //byte占有内存1个字节（8bit）,取值范围-2^7~2^7-1也就是-128~127(2^8=256)  Save memory when you are certain that the value will be within -128 and 127:
         short s = 256;  //2字节 取值范围-2^15~2^15-1
         int i = 456888; //4字节 取值范围-2^31~2^31-1
         long l = 234L;  //8字节 取值范围-2^63~2^63-1
         float f = 1.0F; //4字节
         double d = 2.0; //8字节
-        char c = 'n';   //2字节(2^16=65536: 0~65535)
+        char c = 'n';   //2字节(2^16=65536: 0~65535, \u0000~\uffff)
+        boolean flag = true;//1 bit
 
-       //Java中还允许使用转义字符‘\’来将其后的字符转变为特殊字符型常量。 例如：'\n'是一个字符，表示换行符; '\t'是一个字符，表示制表符
+        //Java中还允许使用转义字符‘\’来将其后的字符转变为特殊字符型常量。 例如：'\n'是一个字符，表示换行符; '\t'是一个字符，表示制表符
         char c2 = '\n';
         char c3 = '\t';
-        boolean bl = true;//1 bit
+
 
         System.out.println(Byte.MIN_VALUE);
         System.out.println(Byte.MAX_VALUE);
@@ -112,16 +119,12 @@ public class VariableDemo {
     }
 
 
-
-
-
-
     /**
-       自动类型转换
-       容量小的类型自动转换为容量大的数据类型byte、short、char-->int-->long-->float-->double
-       byte,short,char之间不会相互转换,他们三者在计算时首先转换为int类型，即使是同类型间计算也会先转换成int再计算
-       有多种类型的数据混合运算时， 系统首先自动将所有数据转换成容量最大的那种数据类型，然后再进行计算
-    */
+     * 自动类型转换
+     * 容量小的类型自动转换为容量大的数据类型byte、short、char-->int-->long-->float-->double
+     * byte,short,char之间不会相互转换,他们三者在计算时首先转换为int类型，即使是同类型间计算也会先转换成int再计算
+     * 有多种类型的数据混合运算时， 系统首先自动将所有数据转换成容量最大的那种数据类型，然后再进行计算
+     */
     @Test
     public void test2_1() {
 
@@ -130,73 +133,77 @@ public class VariableDemo {
         char c1 = 'a';
 
         //以下运算都是讲各变量首先转换成int,再进行计算，即使是同类型之间的运算
-        int bb=b+b;
-        int ss=s+s;
-        int c11=c1+c1;
-        int sum=b+s+c1;
+        int bb = b + b;
+        int ss = s + s;
+        int c11 = c1 + c1;
+        int sum = b + s + c1;
 
         System.out.println("1==========================");
         System.out.println(sum);
 
-        long l=b;//byte类型数据可以跨级自动转换成log(猜测byte--->int--->long)
+        long l = b;//byte类型数据可以跨级自动转换成log(猜测byte--->int--->long)
 
         //若参与运算的数据类型不同，则先自动转换成同一类型，然后进行运算。
         System.out.println("2==========================");
         System.out.println(12 / 5);
         System.out.println(12.0f / 5);
-        System.out.println(12.0/5L);//long自动转为double(5->5.0),然后进行运算
+        System.out.println(12.0 / 5L);//long自动转为double(5->5.0),然后进行运算
 
         //任何基本类型的值和字符串值进行连接运算时(+)，基本类型的值将自动转化为字符串类型。
         System.out.println("3==========================");
         System.out.println('a' + 1 + "Hello!");//char占2字节，int4字节，char-->int
-        System.out.println("Hello!"+'a'+1);
+        System.out.println("Hello!" + 'a' + 1);
 
         //向上转型可以看作是一种自动类型转换
-        List<String> list=new ArrayList<>();
-        Map<String,Integer> map=new HashMap<>();
-        Number[] numbers=new Integer[]{1,2,3};
+        List<String> list = new ArrayList<>();
+        Map<String, Integer> map = new HashMap<>();
+        Number[] numbers = new Integer[]{1, 2, 3};
 
     }
 
 
     /**
-     *  对于不带任何后缀(F/f, L/l)的整数
-     *  如果将一个在byte/short范围内的整数赋值给byte/short变量，那么系统会自动把这个数当成byte/short类型
-     *  其他情况下把任意一个整数赋值给int/long/float/double变量,系统会把这个变量当成int
+     * 对于不带任何后缀(F/f, L/l)的整数
+     * 如果将一个在byte/short范围内的整数赋值给byte/short变量，那么系统会自动把这个数当成byte/short类型
+     * 其他情况下把任意一个整数赋值给int/long/float/double变量,系统会把这个变量当成int
      */
     @Test
-    public void test2_2(){
+    public void test2_2() {
         // byte b=128; 超出其取值范围
 
-        byte b=127; //这里127是byte类型数据
-        long l=127;//这里127是int类型是数据，会自动转换成long
-        long l2=127L;//这里127L是long类型是数据
+        byte b = 127; //这里127是byte类型数据
+        long l = 127;//这里127是int类型是数据，会自动转换成long
+        long l2 = 127L;//这里127L是long类型是数据
 
         //long l3=9999999999;//系统会把9999999999当作是int类型，但是又超出了int的取值范围，会报 Integer Number too large
-        long l3=9999999999L;//9999999999L表示long类型数据
+        long l3 = 9999999999L;//9999999999L表示long类型数据
     }
 
 
-
-
     /**
-    * 强制类型转换:强制显示的把一个数据类型转换为另外一种数据类型,也称之为“narrow conversion”:缩小转换
-    * 语法：（targetType）value
-    * 被强转对象可以是对象或者该对象对应的引用变量；也可以是基本类型数据或者基本类型数据对应的变量
-     * 强转可能会引起溢出，造成数据丢失
-    * */
+     * 强制类型转换:强制显示的把一个数据类型转换为另外一种数据类型,也称之为“narrow conversion”:缩小转换
+     * 语法：（targetType）value
+     * 被强转对象可以是对象或者该对象对应的引用变量；也可以是基本类型数据或者基本类型数据对应的变量
+     * 强转可能会引起溢出(Overflow)，造成数据丢失
+     */
     @Test
     public void test3() {
+
+        float f = 1.0f;
+        int in = (int) f;//个人理解这里强转只是把变量f对应内存区域的数据拷贝一份，然后对副本进行强转，并不会影响变量f对应内存区域的数据
+        System.out.println("f=" + f);
+        System.out.println("in=" + in);
+
         /*
-        * 强转可能损失精度;
-        * 强转过程：
-        * int类型 2255555底层存储形式(正数原码反码补码一致)：00000000 00000000 01011000 00011011
-        * 强转成byte,补码截取掉高位三个字节，保存低位一个字节进行保存  00011011
-        * 00011011 最高位是0，表示正数，原码等于反码补码：00011011，转化成十进制就是27
-        * */
+         * 强转可能损失精度;
+         * 强转过程：
+         * int类型 2255555底层存储形式(正数原码反码补码一致)：00000000 00000000 01011000 00011011
+         * 强转成byte,补码截取掉高位三个字节，保存低位一个字节进行保存  00011011
+         * 00011011 最高位是0，表示正数，原码等于反码补码：00011011，转化成十进制就是27
+         * */
         int i = 22555;
         byte bt = (byte) i;
-        byte bt2=(byte)22555;
+        byte bt2 = (byte) 22555;
         System.out.println("bt:" + bt);
         System.out.println("bt2:" + bt2);
 
@@ -211,7 +218,7 @@ public class VariableDemo {
          * */
         int i2 = 233;
         byte bt3 = (byte) i2;
-        byte bt4=(byte)233;
+        byte bt4 = (byte) 233;
         System.out.println("bt3:" + bt3);
         System.out.println("bt4:" + bt4);
     }
@@ -222,8 +229,8 @@ public class VariableDemo {
      */
     @Test
     public void test3_2() {
-        System.out.println((int)23.5);
-        System.out.println((int)-23.5f);
+        System.out.println((int) 23.5);
+        System.out.println((int) -23.5f);
     }
 
 
@@ -233,7 +240,7 @@ public class VariableDemo {
     @Test
     public void test3_3() {
         //float f=2.1;  double类型数据不能直接赋值给float变量
-        float f=(float) 2.1;
+        float f = (float) 2.1;
     }
 
 
@@ -264,8 +271,8 @@ public class VariableDemo {
         System.out.println(String.valueOf(new Object().toString()));
 
         //空串是一个已经实例化之后的对象，是有堆内存空间的，只不过内存空间中存储的值为空。
-        System.out.println(1+2+"");
-        System.out.println(""+1+2);
+        System.out.println(1 + 2 + "");
+        System.out.println("" + 1 + 2);
     }
 
 
@@ -274,20 +281,20 @@ public class VariableDemo {
      * 二进制以0b/0B开头；java7新增了对二进制的支持
      * 八进制以0开头；
      * 十六进制以0x/0X开头，其中10~15以a~f(不区分大小写)表示
-     *
+     * <p>
      * 原码：一个数的二进制表示
      * 反码：原码按位取反（符号位不变）
      * 补码：反码加1
-     *
+     * <p>
      * 计算机底层数字以反码形式存储；
      * 对于正数来说：原码 反码 补码三者一致
      * 对于负数来说：原码 --->反码---> 补码
      */
     @Test
-    public void test5(){
-        int decimal=123;//十进制
-        int octal=0123;//八进制
-        int hex=0X123;//十六进制
+    public void test5() {
+        int decimal = 123;//十进制
+        int octal = 0123;//八进制
+        int hex = 0X123;//十六进制
 /*
         //某些时候程序需要直接使用二进制，二进制“更真实”，更能体现出整数在内存中的存在形式；柚子额程序(尤其游戏开发)，使用二进制更加便捷；
         //一个不带任何后缀的二进制默认表示一个int类型

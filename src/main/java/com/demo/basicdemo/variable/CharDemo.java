@@ -65,8 +65,9 @@ public class CharDemo {
      */
     @Test
     public void test2(){
-        char c=97;
-        System.out.println(c);
+        char letter=65, letter2=97;
+        System.out.println(letter);
+        System.out.println(letter2);
        // char c2=65536;  超过char编号范围(0~65535)
 
         int i='中';//把字符'中'的编号(unicode码)赋值给整型变量
@@ -83,7 +84,7 @@ public class CharDemo {
     // 两个反斜杠\\一起出现，那么第一个\是转义字符，会把第二个\转义成不具备转义功能的普通反斜杠字符，两个字符组成一个新意义的字符：普通反斜杠
 
     @Test
-    public void testx() {
+    public void test3() {
         System.out.println('\'');
         System.out.println('\"');
         System.out.println(".");
@@ -105,7 +106,7 @@ public class CharDemo {
      */
 
     @Test
-    public void test2x() {
+    public void test4() {
 
         System.out.println("1==========================");
         System.out.println("dd" + '\n' + "dd");
@@ -123,9 +124,15 @@ public class CharDemo {
         System.out.println((int) '\t');
     }
 
-    public void test3() {
-        //char c ='';
-        //char c2=''';
+    @Test
+    public void test5() {
+        char c='\u0000';//char变量默认值；等价于 char c;
+        char c2='\u0020';//英文半角空格
+        String space=" ";
+
+        System.out.println("b"+c+"d");//等价于默认值
+        System.out.println("b"+c2+"d");//英文半角
+        System.out.println("b"+space+"d");//空格
     }
 
 }

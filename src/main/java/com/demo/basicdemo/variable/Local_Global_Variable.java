@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 
 /**
- * 局部变量
+ * 局部变量(Local Variable)
  * 定义：方法中的变量(包括方法体 形参)和代码块中的变量
  * 存储位置：栈内存中
  * 初始化：使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作；如果局部变量在使用前没有进行初始化则会在编译器报错；
@@ -17,9 +17,9 @@ import org.testng.annotations.Test;
  * <p>
  * <p>
  * <p>
- * 全局变量： 成员变量和静态变量
- * 成员变量：
- * 定义：类内方法外，不被static修饰，也称为实例变量;属于某个对象的属性，
+ * 全局变量： 实例变量(Instance Variable)和静态变量(Static variable)     (静态变量详见statics模块)
+ * 实例变量：
+ * 定义：类内方法外，不被static修饰(It is not declared as static)，也称为实例变量;属于某个对象的属性，
  * 存储位置：堆内存
  * 初始化：不需要被强制初始化的，系统都会默认根据其数据类型进行默认赋值；
  * 生存时间：非静态全局变量加载在堆内存中，随着声明初始化而创建，随着对象消亡而消亡；当一个对象被实例化之后，每个实例变量的值就跟着确定
@@ -27,15 +27,6 @@ import org.testng.annotations.Test;
  * 一般情况下应该把实例变量设为私有，只对于类中的方法、构造方法或者语句块是可见的，使得外部能够通过这些方式获取实例变量信息；
  * <p>
  * <p>
- * <p>
- * <p>
- * 静态变量
- * 定义：static修饰的成员变量，被所有对象所共享，也称为类变量
- * 存储位置：方法区的静态区
- * 初始化：不需要被强制初始化的，系统都会默认根据其数据类型进行默认赋值；
- * 生存时间：静态全局变量随着类的字节码文件加载而加载产生，随着字节码文件的消失而消失，生存时间比类的对象还要长；
- * 属于类级别的，不需要创建对象可以通过类名直接使用；内存中只存在一份
- * 用途：比如常用一个布尔型静态成员变量做控制符；统计对象数量
  * <p>
  * <p>
  * 同一作用域，变量名不能重复(不能定义变量名相同的变量)；假设存在重名的两块栈内存区域，那么编译器无法把内存和对应的变量名进行匹配；
@@ -48,17 +39,10 @@ public class Local_Global_Variable {
     String name;
     int age;
 
-    //静态变量
-    static String country="china";
-
-    static int count;
-
     public Local_Global_Variable() {
-        count++;
     }
 
     public Local_Global_Variable(String name, int age) {
-        count++;
         this.name = name;
         this.age = age;
     }
@@ -79,36 +63,6 @@ public class Local_Global_Variable {
         this.age = age;
     }
 
-    public static String getCountry() {
-        return country;
-    }
-
-    public static void setCountry(String country) {
-        Local_Global_Variable.country = country;
-    }
-
-    public static int getCount() {
-        return count;
-    }
-
-    public static void setCount(int count) {
-        Local_Global_Variable.count = count;
-    }
-
-    /**
-     * 所有对象共享相同的static variable
-     */
-    @Test
-    public void test() {
-        Local_Global_Variable variable = new Local_Global_Variable("ocean", 30);
-        Local_Global_Variable variable2 = new Local_Global_Variable("yp", 26);
-        System.out.println(variable.country);//静态变量可以通过对象进行调用
-        variable2.setCountry("USA");
-        System.out.println(variable.country);
-        System.out.println(Local_Global_Variable.country);//静态变量可以通过类名直接进行调用
-    }
-
-
 
     /**
      * 局部变量没有初始化，但是没有被使用的话编译也是不会报错的
@@ -128,7 +82,7 @@ public class Local_Global_Variable {
         // System.out.println(age);根据就近原则这里使用的是局部变量age,但是因为没有错初始化，所以编译器会报错
 
         //String str;局部变量必须要显式的初始化
-        String str=null; //String str=null会对引用变量str(存在栈内存)赋值为null,但是不会开辟堆空间，str完成了初始化
+        String str = null; //String str=null会对引用变量str(存在栈内存)赋值为null,但是不会开辟堆空间，str完成了初始化
         System.out.println(str);
     }
 
@@ -138,8 +92,8 @@ public class Local_Global_Variable {
      */
     @Test
     public static void test4() {
-        String name="tom";//局部变量可以和全局变量重名，这里的name分配再栈内存，成员变量name分配与堆内存
-        if(name!=null){//就近原则
+        String name = "tom";//局部变量可以和全局变量重名，这里的name分配再栈内存，成员变量name分配与堆内存
+        if (name != null) {//就近原则
             System.out.println(name);
         }
     }
@@ -147,9 +101,8 @@ public class Local_Global_Variable {
 
     /**
      * 代码块中声明的变量是局部变量，仅在当前代码块内生效
-     */
-    {
-        int age=100;
+     */ {
+        int age = 100;
     }
 
 }
