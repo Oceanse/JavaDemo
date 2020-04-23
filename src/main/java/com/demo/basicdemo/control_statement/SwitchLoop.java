@@ -48,9 +48,13 @@ public class SwitchLoop {
 
     @Test
     public void test2(){
-        Scanner s=new Scanner(System.in);
+        /*Scanner s=new Scanner(System.in);
         System.out.println("input:");
-        String season=s.nextLine();
+        String season=s.nextLine();*/
+
+        //String season=null;  NPE
+
+        String season="spring";
         switch(season){
             case "spring":
                 System.out.println("spring");

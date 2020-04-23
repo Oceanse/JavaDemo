@@ -1,4 +1,4 @@
-package com.demo.javaIO.java7.file;
+package com.demo.testNG;
 
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class parameterizedTest2 {
+public class ParameterizedTest {
 
 
     /*@DataProvider(name = "mapParamMethod")
@@ -48,7 +48,7 @@ public class parameterizedTest2 {
     @Parameters({"name","age"})//从xml中获取参数
     public void verifyData3(String name,int age) {
         System.out.println();
-        System.out.println("name2:" + name+" age: "+age );
+        System.out.println("name3:" + name+" age: "+age );
     }
 }
 

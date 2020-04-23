@@ -57,8 +57,19 @@ public class ProcessDemo {
 
         //返回此流程构建器的标准输出目标,意思是将来输出信息全部放在这个目标中
         processBuilder = processBuilder.redirectOutput(new File("out.txt"));
-        processBuilder.start();//启动进程构建器
+        Process process = processBuilder.start();//启动进程构建器
 
+        System.out.println("process.isAlive(): "+process.isAlive());
+        System.out.println("process==null: "+process==null);
+        process.destroy();
+        System.out.println("process.isAlive(): "+process.isAlive());
+        System.out.println("process==null: "+process==null);
+
+
+        /*while (process.isAlive()){
+        System.out.println("process.isAlive()");
+        Thread.sleep(1000);
+        }*/
     }
 
 

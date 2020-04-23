@@ -240,4 +240,16 @@ public class list_map {
     }
 
 
+    /**
+     * list.size=0 恒为true
+     *
+     */
+    @Test
+    public void test7() {
+        ArrayList list=new ArrayList();
+        System.out.println(list.stream().allMatch(item -> "".equals(item)));
+    }
+
+
+
 }

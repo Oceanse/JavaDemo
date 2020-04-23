@@ -75,4 +75,10 @@ public class PathDemo {
         System.out.println(testPath.getName(1));
         System.out.println(testPath.getName(0));
     }
+
+    @Test
+    public void test5(){
+        //获取当前项目的绝对路径
+        System.out.println(Paths.get("").toAbsolutePath());
+    }
 }
