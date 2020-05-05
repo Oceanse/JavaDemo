@@ -8,9 +8,11 @@ import java.util.Date;
 
 /**
  * 全局变量(成员变量和静态变量)具有默认初始值
+ * 局部变量没有默认初始值，必须显式初始化
  */
 public class InitialValue {
 
+    //全局变量(成员变量和静态变量)具有默认初始值
     byte b;//false
     short s ;//0
     int i;//0

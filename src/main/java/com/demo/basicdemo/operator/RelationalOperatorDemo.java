@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 /**
  * 关系运算符(Relational Operator)用于用来比较判断两个变量或常量的大小,当运算符对应的关系成立时，运算结果是 true，否则是 false
- * = 和 != 可以应用于基本数据类型和引用类型。
+ * = 和 != 可以应用于基本数据类型和引用类型。两者本质上上比较的都是变量存储的值，只是这个值可能是字面值，可能是对象的引用
  * 当用于引用类型比较时，比较的是两个引用是否指向同一个对象;
  * 当用于基本数据类型比较，比较的是他们的值
  *
@@ -44,7 +44,7 @@ public class RelationalOperatorDemo {
     public void test3_2() {
         //注意==和=
         boolean b = false;
-        if (b = true){
+        if (b = true){//赋值表达式的值是左边变量存储的值
             System.out.println("zhen.....");
         }
         else{

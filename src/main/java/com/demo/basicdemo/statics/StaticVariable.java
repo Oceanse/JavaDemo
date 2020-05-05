@@ -21,11 +21,13 @@ public class StaticVariable {
 
 
     public StaticVariable() {
+        System.out.println("StaticVariable() is invoked");
         count++;
     }
 
     //static variable和具体对象无关，所以一般不会出现构造方法中
     public StaticVariable(String name, int age) {
+        System.out.println("StaticVariable(String name, int age) is invoked");
         this.name = name;
         this.age = age;
         count++;
@@ -68,10 +70,13 @@ public class StaticVariable {
         StaticVariable s = new StaticVariable("ocean", 100);
         StaticVariable s2 = new StaticVariable("ocean2", 120);
 
-        System.out.println(nation);//省略类名或者对象名默认访问当前类的static variable
-        System.out.println(StaticVariable.nation);//类名访问
+        //省略类名或者对象名默认访问当前类的static variable
+        System.out.println(nation);
 
-        //通过对象访问static variable
+        //类名访问
+        System.out.println(StaticVariable.nation);
+
+        //通过对象访问static variable, 多个对象共享
         if ((s.getNation() == s2.getNation())) {
             System.out.println("s.getNation()==s2.getNation()");
         } else {

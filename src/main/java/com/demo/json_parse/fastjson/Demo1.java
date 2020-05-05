@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPath;
-import com.demo.json_parse.pojo.TestCaseRequestBody;
+import com.demo.json_parse.pojo.CaseBody;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -47,18 +47,18 @@ public class Demo1 {
         System.out.println("jsonStr2: "+jsonStr2);
 
         //将java对象赋值的字段转化成相应的json字符串
-        TestCaseRequestBody t=new TestCaseRequestBody();
-        t.setPackageName("mygroup");
-        t.setClassName("MyJson");
+        CaseBody c=new CaseBody();
+        c.setPackageName("mygroup");
+        c.setClassName("MyJson");
         Map parameters=new HashMap<>();
         parameters.put("name","ocean");
-        t.setParameters(parameters);
-        String jsonString = JSON.toJSONString(t);
+        c.setParameters(parameters);
+        String jsonString = JSON.toJSONString(c);
         System.out.println(jsonString);
 
         //没有赋值任何属性的对象会转成空串
         System.out.println();
-        TestCaseRequestBody t2=new TestCaseRequestBody();
+        CaseBody t2=new CaseBody();
         String jsonString2 = JSON.toJSONString(t2);
         System.out.println(jsonString2);
 
@@ -183,7 +183,7 @@ public class Demo1 {
                 "    \"name\" : \"ThroughputTest\"\n" +
                 "  }";
 
-        TestCaseRequestBody testCaseRequestBody = JSONObject.parseObject(jsonStr, TestCaseRequestBody.class);
+        CaseBody testCaseRequestBody = JSONObject.parseObject(jsonStr, CaseBody.class);
         System.out.println(testCaseRequestBody.toString());
     }
 

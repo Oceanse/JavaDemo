@@ -1,5 +1,10 @@
 package com.demo.basicdemo.method.valuepass;
 
+/**
+ * 方法参数传递都是传递变量所保存的值
+ * 引用类型变量保存的值是堆内存地址，所以参数是引用变量时传递的是地址
+ * 基本类型变量保存的是字面值，所以参数是基本类型变量时传递的是字面值
+ */
 public class ValuePass {
     public static void main(String[] args) {
         int i=10;

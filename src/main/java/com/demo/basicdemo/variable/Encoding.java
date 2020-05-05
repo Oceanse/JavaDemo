@@ -2,79 +2,86 @@ package com.demo.basicdemo.variable;
 
 import org.testng.annotations.Test;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.util.Arrays;
+
 /**
- * 把字符转化为二进制01存储到计算机中的过程称之为编码(encode)
- * 把存储在计算机中的二进制转化成字符的过程称之为解码(decode)
- *
- * ASCII、GB2312、GBK、GB18030、Big5、Unicode都是字符集的名称
- *
- * ASCII是一套电脑编码系统，主要用于显示现代英语和其他西欧语言
- * ASCII第一次以规范标准的类型发表是在1967年，最后一次更新则是在1986年，到目前为止共定义了128个字符
- * 标准ASCII 码用一个字节的前7位二进制来编码组合来表示128种可能的字符,来表示所有的大写和小写字母，数字0 到9、标点符号，以及在美式英语中使用的特殊控制字符
- * 比如: 空格SPACE是32（二进制00100000），大写的字母A是65（二进制01000001）
- *
- *
- * 英语用128个符号编码就够了，但是用来表示其他语言，128个符号是不够的。
- * 比如，在法语中，字母上方有注音符号，它就无法用 ASCII 码表示。于是，一些欧洲国家就决定，
- * 利用字节中闲置的最高位编入新的符号。比如，法语中的é的编码为130（二进制10000010）。
- * 这样一来，这些欧洲国家使用的编码体系，可以表示最多256个符号。
- * 但是，这里又出现了新的问题。不同的国家有不同的字母，因此，哪怕它们都使用256个符号的编码方式，
- * 代表的字母却不一样。比如，130在法语编码中代表了é，在希伯来语编码中却代表了字母Gimel (ג)，
- * 在俄语编码中又会代表另一个符号。但是不管怎样，所有这些编码方式中，0--127表示的符号是一样的，
- * 不一样的只是128--255的这一段。
- *至于亚洲国家的文字，使用的符号就更多了，汉字就多达10万左右。一个字节只能表示256种符号，
- * 肯定是不够的，就必须使用多个字节表达一个符号。比如，简体中文常见的编码方式是 GB2312，
- * 使用两个字节表示一个汉字，所以理论上最多可以表示 256 x 256 = 65536 个符号
- *
- * 可以想象，如果有一种编码，将世界上所有的符号都纳入其中。每一个符号都给予一个独一无二的编码，那么乱码问题就会消失。
- * 这就是 Unicode，就像它的名字都表示的，这是一种可以表示所有符号的编码
- *
- *
- * 这里就有两个严重的问题，第一个问题是，如何才能区别 Unicode 和 ASCII ？计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢？
- * 第二个问题是，我们已经知道，英文字母只用一个字节表示就够了，如果 Unicode 统一规定，每个符号用三个或四个字节表示，
- * 那么每个英文字母前都必然有二到三个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍，这是无法接受的
- *
- * Unicode 的多种存储方式，UTF-8 就是在互联网上使用最广的一种 Unicode 的实现方式
- * UTF-8 最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。
- *
- *
- *
- *
- * GBK编码专门用来解决中文编码的，是双字节的。不论中英文都是双字节的
- *
- * UTF-8、UTF-16、UTF-32都是 Unicode编码 的一种实现
- * UTF-8使用变长字节表示,顾名思义，就是使用的字节数可变,使用的字节个数从1到4个不等
- * xxxx:其中xxxx表示一个16进制数字 这种格式是unicode码的写法表示一个char字符,比如\u3000就代表象形文字的空格
- * Java编译器（即编译成class文件时） 用的是unicode字符集
- *
- * 编码与解码方式不同时会造成乱码。为什么电子邮件常常出现乱码？就是因为发信人和收信人使用的编码方式不一样。
+ * Java虚拟机规范中明确说明了java的char类型使用的编码方案是UTF-16
+ * Java中常见的char基本位于unicode表的BMP平面，码点(编号)范围是从十进制：0~65535；十六进制：0x0000~0xFFFF； 二进制16个0~16个1
+ * 所以char字符的编码统一使用unicode码点(编号)的16位二进制(不足用0补齐)作为存储编码。
+ * 简单来说就是字符编号就是其存储编码.
+ * char强制转化为int数值就是其对应的十进制编号。
+ * <p>
+ * <p>
+ * 编译时：
+ * javac -encoding utf-8 xxx.java设置javac编译器读取xxx.java文件时使用的编码方式   .java源文件-----(编码)----->。java文件二进制编码存储----(解码)---->.java源文件
+ * <p>
+ * 运行时：
+ * System.getProperty(“file.encoding”)是java程序运行时(加载解释class文件)与操作系统打交道时使用的编码方式，可以通过java -Dfile.encoding=xxx test 进行设置！
+ * .class文件二进制存储-------(解码)------>.class文件
  */
 public class Encoding {
 
 
-    //java采用unicode编码，所以方法名可以是中文
+    /**
+     * java采用unicode编码(utf-16)，所以方法名可以是中文
+     */
     @Test
-    public void 测试(){
+    public void 测试() {
+        System.out.println(System.getProperty("file.encoding"));//这个属性是启动jvm时可以设置的，默认是操作系统的编码方式
+        System.out.println(Charset.defaultCharset());
 
     }
 
 
+    /**
+     * 信息在计算机网络中传输是以字节(8位二进制)的形式。那么如何变为字节？这就是编码的过程。
+     * 计算机接收了这个编码，如何让使用者认识呢？那必须要将字节转换为人所识别的字符串形式，这就是解码的过程。
+     * <p>
+     * 编码：将字符串转换为 byte 数组
+     * 解码：把 byte 数组转换为 字符串
+     */
     @Test
-    public void test2() {
+    public void test2() throws UnsupportedEncodingException {
+        String str = new String("Aa中国");
+
+        //编码操作 GBK编码
+        byte[] byteArray = str.getBytes("GBK");
+        System.out.println(Arrays.toString(byteArray));//[65, 97, -42, -48, -71, -6]
+
+        //解码操作 编码和解码格式不一致：ASCII解码
+        //注意编码的字符集和解码的字符集格式必须一致（是其扩展字符集也可以），否则会乱码
+        String str2 = new String(byteArray, "ASCII");
+        System.out.println(str2);//乱码
+
+        //解码操作 编码和解码格式一致：GBK解码
+        //注意编码的字符集和解码的字符集格式必须一致（是其扩展字符集也可以），否则会乱码
+        String str3 = new String(byteArray, "GBK");
+        System.out.println(str3);
+    }
 
 
-        /**
-         * \+u+xxxx  其中xxxx表示一个16进制数字 这种格式是unicode码的写法,表示一个char字符
-         * Unicode为世界上所有字符都分配了一个唯一的数字编号
-          */
+    @Test
+    public void test2x() throws UnsupportedEncodingException {
 
-        char c4='\u0022';//表示 "
+        //Encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array.
+        String str = new String("中国");
+        byte[] array = str.getBytes();
+        System.out.println(Arrays.toString(array));//[65, 97]
 
-        char c5='\u3000';//表示一个空格，空格的unicode写法
+        //Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array.
+        String str2 = new String("Aa");
+        byte[] strASCII = str2.getBytes("ASCII");
+        System.out.println(Arrays.toString(strASCII));//[65, 97]
 
+        String str3 = new String("中国");
+        byte[] strASCII2 = str3.getBytes("ASCII");
+        System.out.println(Arrays.toString(strASCII2));
 
-        System.out.println(c4);
-        System.out.println("C"+c5+"D");
+        String str4 = new String("中国");
+        byte[] strASCII3 = str4.getBytes("GBK");
+        System.out.println(Arrays.toString(strASCII3));//[65, 97]
     }
 
 

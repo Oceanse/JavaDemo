@@ -14,11 +14,11 @@ public class InstanceBlock {
     }
 
     {
-        System.out.println("block1");
+        System.out.println("I am instance block1");
     }
 
     {
-        System.out.println("block2");
+        System.out.println("I am instance block1");
     }
 
 }

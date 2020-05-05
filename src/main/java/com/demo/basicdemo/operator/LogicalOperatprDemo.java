@@ -15,18 +15,16 @@ public class LogicalOperatprDemo {
         // 所谓短路，就是当参与运算的一个操作数已经足以推断出这个表达式的值的时候，另外一个操作数（有可能是表达式）就不会 执行
 
         int i=2;
-        boolean b=true;
-        if((b=false) & (i++)>0){//i++会被执行
+        boolean b=false;
+        if((b) & (i++)>0){//i++会被执行
         }
-        System.out.println("b: "+b);
         System.out.println("i: "+i);
 
 
         int i2=2;
-        boolean b2=true;
-        if ((b2=false) && (i2++>0)) {//i2++不会被执行
+        boolean b2=false;
+        if ((b2) && (i2++>0)) {//i2++不会被执行
         }
-        System.out.println("b2: "+b2);
         System.out.println("i2: "+i2);
 
 
@@ -34,7 +32,6 @@ public class LogicalOperatprDemo {
         boolean b3=true;
         if((b3) | (i3--)>0){
         }
-        System.out.println("b3: "+b3);
         System.out.println("i3: "+i3);
 
 
@@ -42,7 +39,6 @@ public class LogicalOperatprDemo {
         boolean b4=true;
         if((b4) || (i4--)>0){
         }
-        System.out.println("b4: "+b4);
         System.out.println("i4: "+i4);
     }
 

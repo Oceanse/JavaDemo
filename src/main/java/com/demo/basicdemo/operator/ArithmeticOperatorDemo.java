@@ -8,6 +8,7 @@ public class ArithmeticOperatorDemo {
     /**
      * 算数运算符：Arithmetic Operator
      * + - * / % ++ --
+     * -除了作为减号外，还可以是求负运算符
      */
     @Test
     public void test() {
@@ -69,11 +70,13 @@ public class ArithmeticOperatorDemo {
         int i2 = 2*i++;
         System.out.println("i=" + i);
         System.out.println("i2=" + i2);
+        System.out.println();
 
         int i3 = 3;
         int i4 = 2*++i3;
         System.out.println("i3=" + i3);
         System.out.println("i4=" + i4);
+        System.out.println();
 
         int a=10;
         int b=10;
