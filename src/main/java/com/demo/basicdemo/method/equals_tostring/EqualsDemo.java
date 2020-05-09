@@ -1,6 +1,6 @@
 package com.demo.basicdemo.method.equals_tostring;
 
-import com.demo.inherit.Persons;
+import com.demo.oop.inherit.demo2_this_super.Person;
 import org.testng.annotations.Test;
 
 public class EqualsDemo {
@@ -39,8 +39,8 @@ public class EqualsDemo {
      */
     @Test
     public void test2() {
-        Persons p = new Persons();
-        Persons p2 = new Persons();
+        Person p = new Person();
+        Person p2 = new Person();
         System.out.println(p.equals(p2));//
     }
 

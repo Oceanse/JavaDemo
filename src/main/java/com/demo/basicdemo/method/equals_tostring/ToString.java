@@ -6,7 +6,7 @@ package com.demo.basicdemo.method.equals_tostring;
 * Object是所有类的父类，所以任何类都拥有toString()方法，若不重写，返回的依然是对应类的全类名@堆内存地址
 * */
 
-import com.demo.inherit.Persons;
+import com.demo.oop.inherit.demo2_this_super.Person;
 import org.testng.annotations.Test;
 
 class Worker{
@@ -33,13 +33,13 @@ public class ToString {
     public void test(){
         //print括号中打印的如果是引用类型变量，会打印该引用指向对对象的toString方法
         System.out.println(new Object());
-        System.out.println(new Persons());//没有重写toString，返回的依然是对应类的 全类名@堆内存地址
+        System.out.println(new Person());//没有重写toString，返回的依然是对应类的 全类名@堆内存地址
         System.out.println(new Worker());//重写toString,子类拥有的是重写后的toString
 
         System.out.println();
 
         System.out.println(new Object().toString());
-        System.out.println(new Persons().toString());//没有重写toString，返回的依然是对应类的 全类名@堆内存地址
+        System.out.println(new Person().toString());//没有重写toString，返回的依然是对应类的 全类名@堆内存地址
         System.out.println(new Worker().toString());//重写toString,子类拥有的是重写后的toString
     }
 

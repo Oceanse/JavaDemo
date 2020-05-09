@@ -1,4 +1,4 @@
-package com.demo.basicdemo.statics;
+package com.demo.basicdemo.keywords.statics;
 
 public class StaticExtend {
 

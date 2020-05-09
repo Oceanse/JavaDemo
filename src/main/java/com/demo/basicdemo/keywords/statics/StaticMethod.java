@@ -1,4 +1,4 @@
-package com.demo.basicdemo.statics;
+package com.demo.basicdemo.keywords.statics;
 
 
 /**
@@ -14,8 +14,9 @@ package com.demo.basicdemo.statics;
  * 2 静态方法名(参数) 调用本类的static方法时候可省略类名，编译器会从当前类中找这个方法
  * <p>
  * <p>
- * 静态方法不能调用非静态的方法和变量；（非静态方法可以任意的调用静态方法/变量）
+ * 静态方法只能访问调用静态成员和方法，不能调用非静态的方法和变量；（非静态方法可以任意的调用静态方法/变量）
  * 不能使用this和super关键字（很明显，它属于类级别滴，没有创建对象签怎么可以用this/super）
+ *
  * <p>
  */
 public class StaticMethod {
@@ -53,7 +54,7 @@ public class StaticMethod {
 
 
     /**
-     * 因为在程序开始执行时必须调用main() ，所以它被声明为static。
+     * 因为在程序开始执行时必须调用main() ，甚至在构造方法之前，所以它被声明为static。
      */
     public static void main(String[] args) {
 

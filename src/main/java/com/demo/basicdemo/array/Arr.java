@@ -1,6 +1,6 @@
 package com.demo.basicdemo.array;
 
-import com.demo.inherit.Persons;
+import com.demo.oop.inherit.demo2_this_super.Person;
 import com.demo.pojo.TestResourceinfo;
 import org.testng.annotations.Test;
 
@@ -43,11 +43,11 @@ public class Arr {
 
 
         //分配空间和赋值分开进行，所以也是动态初始化
-        Persons[] p = new Persons[3];//声明同时分配内存空间
+        Person[] p = new Person[3];//声明同时分配内存空间
         System.out.println(Arrays.toString(p));//数组元素默认全是null
 
         for (int i = 0; i < p.length; i++) {
-            p[i] = new Persons();
+            p[i] = new Person();
         }
         System.out.println(Arrays.toString(p));
 
