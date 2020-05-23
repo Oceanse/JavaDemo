@@ -29,8 +29,16 @@ public class FileWriterDemo {
         FileWriter fw=null;
         try {
             try {
-                fw=new FileWriter(f);//如果没有这个文件，会创建该文件;如果有这个文件，会清空这个文件的数据.
+                //如果没有这个文件，会创建该文件;如果有这个文件，会清空这个文件的数据.
+                fw=new FileWriter(f);
+
+                //Returns the name of the character encoding being used by this stream
+                System.out.println(fw.getEncoding());
+
+                //这里使用输出流指定的编码方式，也就是输出文件的编码方式
                 fw.write("i love china !");
+                fw.write("\n");
+                fw.write("i love mom !");
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
@@ -50,7 +58,8 @@ public class FileWriterDemo {
         try {
             try {
                 fw=new FileWriter("testResource\\test.txt",true);//如果没有这个文件，会创建该文件;如果有这个文件，在这个文件后面追加数据.
-                fw.write("i love china !");
+                fw.write("\n");
+                fw.write("God bless you!");
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {

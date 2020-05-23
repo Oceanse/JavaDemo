@@ -14,7 +14,8 @@ import org.apache.logging.log4j.Logger;
  *
  * 自定义异常类一般都是以Exception结尾，说明该类是一个异常类
  *
- * 自定义异常类，必须继承Exception或者RuntimeException。
+ * 自定义异常类：
+ * 必须继承Exception或者RuntimeException。
  * 继承Exception：自定义的异常类就是一个编译期异常，如果方法内部抛出编译期异常，就必须处理这个异常，要么throws，要么try……catch。
  * 继承RuntimeException：自定义的异常是一个运行期异常，无需处理，交给虚拟机处理
  *
@@ -37,9 +38,11 @@ import org.apache.logging.log4j.Logger;
  *
  *
  * 一个常见的做法是自定义一个BaseException作为“根异常”，然后，派生出各种业务类型的异常。BaseException需要从一个适合的Exception派生，通常建议从RuntimeException派生
- *
- *
- * 编译时异常，也就是extends Exception 的异常需要在调用时try{}catch(){}或throws
+ */
+
+
+/**
+ *  编译时异常，也就是extends Exception 的异常需要在调用时try{}catch(){}或throws
  */
 public class MyException extends Exception {
 
@@ -89,9 +92,8 @@ class MyException2 extends RuntimeException {
 }
 
 
-/**
- *
- */
+
+
 class Test {
 
     private static final Logger LOG = LogManager.getLogger(Test.class);
@@ -149,9 +151,9 @@ class Test {
     public static void main(String[] args){
 
         Test t=new Test();
-        //t.test();
+        t.test();
         //t.test2();
-        t.test5();
+        //t.test5();
         //t.test2_2();
 
 

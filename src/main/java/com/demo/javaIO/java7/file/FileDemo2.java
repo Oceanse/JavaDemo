@@ -10,11 +10,12 @@ public class FileDemo2 {
 
     @Test
     public void test1() {
-        //创建文件
+        //创建文件，前提是文件所在路径要存在
         File f = new File("testResource\\out.txt");
         if (!f.exists()) {
             try {
-                f.createNewFile();
+                boolean result =  f.createNewFile();
+                System.out.println(result);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -23,13 +24,15 @@ public class FileDemo2 {
             f.delete();
         }
     }
+
     @Test
     public void test1_1() {
         //创建文件
         File f = new File("JavaDemo\\newdir\\newfile");
         if (!f.exists()) {
             try {
-                f.createNewFile();//这里createNewFile不能递归创建文件
+                boolean result = f.createNewFile();//这里createNewFile不能递归创建文件
+                System.out.println(result);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -66,7 +69,6 @@ public class FileDemo2 {
     }
 
 
-
     @Test
     public void test4() {
         File f = new File("C:\\Users\\epanhai\\Desktop");
@@ -79,7 +81,6 @@ public class FileDemo2 {
     }
 
 
-
     @Test
     public void test5() {
         File f = new File("C:\\Users\\epanhai\\Desktop");
@@ -88,7 +89,6 @@ public class FileDemo2 {
             System.out.println(file.getName());
         }
     }
-
 
 
     @Test
@@ -100,22 +100,23 @@ public class FileDemo2 {
     }
 
     @Test
-    public void test7 () {
+    public void test7() {
         File f = new File("C:\\Users\\EPANHAI\\Documents\\git\\JavaDemo");
-        File f2=new File("C:\\Users\\epanhai\\git\\myproject\\JavaDemo\\src\\main\\java\\io\\javaIO\\file\\FileTest.java");
+        File f2 = new File("C:\\Users\\epanhai\\git\\myproject\\JavaDemo\\src\\main\\java\\io\\javaIO\\file\\FileTest.java");
         myListFile(f);
 
     }
-    public void myListFile(File file){
-        if(file.isFile()){
+
+    public void myListFile(File file) {
+        if (file.isFile()) {
             System.out.println(file.getName());
             return;
         }
         File[] files = file.listFiles();
         for (File f : files) {
-            if (f.isDirectory()){
+            if (f.isDirectory()) {
                 myListFile(f);
-            }else{
+            } else {
                 System.out.println(f.getName());
             }
         }
@@ -123,15 +124,15 @@ public class FileDemo2 {
 
 
     @Test
-    public void test8 () {
-        Scanner scanner =new Scanner(System.in);
+    public void test8() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("请您输入合法路径：");
-        while(true){
+        while (true) {
             String path = scanner.nextLine();
-            File f=new File(path);
-            if(!f.exists()){
+            File f = new File(path);
+            if (!f.exists()) {
                 System.out.println("您输入的路径不存在，请重新输入");
-            }else{
+            } else {
                 System.out.println("路径正确");
                 return;
             }

@@ -15,7 +15,7 @@ package com.demo.basicdemo.keywords.statics;
  * <p>
  * <p>
  * 静态方法只能访问调用静态成员和方法，不能调用非静态的方法和变量；（非静态方法可以任意的调用静态方法/变量）
- * 不能使用this和super关键字（很明显，它属于类级别滴，没有创建对象签怎么可以用this/super）
+ * 静态方法内部不能使用this和super关键字（静态方法属于类级别，此时可能还没有对象，故不能使用(this/super属于对象级别)
  *
  * <p>
  */

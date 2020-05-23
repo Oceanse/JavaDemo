@@ -1,8 +1,36 @@
 package com.demo.javaIO.java7.stream_reader_writer.inandout;
 
+import org.testng.annotations.Test;
+
 import java.io.*;
 
 public class Io_Reader_Writer {
+
+    @Test
+    public void test() throws IOException {
+        FileReader inputStream = null;
+        FileWriter outputStream = null;
+
+        try {
+            inputStream = new FileReader("xanadu.txt");
+            outputStream = new FileWriter("characteroutput.txt");
+
+            int c;
+            while ((c = inputStream.read()) != -1) {
+                outputStream.write(c);
+            }
+        } finally {
+            if (inputStream != null) {
+                inputStream.close();
+            }
+            if (outputStream != null) {
+                outputStream.close();
+            }
+        }
+    }
+
+
+
     public static void main(String[] args) throws IOException {
 
         File sourc = new File("testResource\\test.txt");

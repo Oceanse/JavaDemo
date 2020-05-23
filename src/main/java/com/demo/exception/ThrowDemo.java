@@ -2,8 +2,9 @@ package com.demo.exception;
 
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * throw主要用来显示的抛出自定义异常
@@ -19,19 +20,13 @@ public class ThrowDemo {
     @Test
     public void test() {
         int m = 0;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
-
         if (m == 0) {
             //手动抛出异常，一般是在代码块的内部，当程序出现某种逻辑错误时由程序员主动抛出某种特定类型的异常
             //这里抛出运行时异常，可以不显示进行处理,java运行时系统默认处理方式是打印该异常对象包含的信息
-            throw new ArrayIndexOutOfBoundsException();//这里可以手动抛出自己想要的任何异常；后面不能跟代码；抛出异常之后整个方法的调用就结束了。
+            throw new ArithmeticException();//这里可以手动抛出自己想要的任何异常；后面不能跟代码；抛出异常之后整个方法的调用就结束了。
             //System.out.println("sss");
         }
-        System.out.println("如果m=0,这里不能被执行。。。");//如果if语句块中抛出异常，那么程序会提前结束，这里不能被执行
+        System.out.println("result="+1/0);//如果if语句块中抛出异常，那么程序会提前结束，这里不能被执行
     }
 
 
@@ -51,12 +46,6 @@ public class ThrowDemo {
     @Test
     public void test2() {
         int m = 1;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
-
         if (m == 0) {//if block不会被执行
             throw new ArrayIndexOutOfBoundsException();//这里可以手动抛出自己想要的任何异常；后面不能跟代码；抛出异常之后整个方法的调用就结束了。
         }
@@ -82,23 +71,21 @@ public class ThrowDemo {
     @Test
     public void test3() {
         int m = 0;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
-
         try {
             if (m == 0) {
                 throw new ArithmeticException();//对象抛出的异常catch处理
             }
-        } catch (Exception e) {
+        } catch (ArithmeticException e) {
             e.printStackTrace();
         }
         System.out.println("这里可以被执行");//即使m=0,也会被执行
     }
 
 
+
+    /**
+     * 被调用的方法抛出异常被处理后，程序会正常往下进行
+     */
     @Test
     public void test3_2() {
         System.out.println("===========before");
@@ -113,12 +100,6 @@ public class ThrowDemo {
     @Test
     public void test4() {
         int m = 0;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
-
         try {
             if (m == 0) {
                 throw new ArithmeticException();//手动抛出异常对象
@@ -136,18 +117,12 @@ public class ThrowDemo {
      */
     @Test
     public void test5() {
-        int m = 0;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
-
-        if (m == 0) {
+        File file=new File("/a.txt");
+        if (!file.exists()) {
             //这里抛出编译时异常，不处理编译不通过，可以try-catch处理
             try {
-                throw new IOException();
-            } catch (IOException e) {
+                throw new FileNotFoundException();
+            } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
         }
@@ -162,16 +137,11 @@ public class ThrowDemo {
      */
     @Test
     public void test5_2() throws IOException {
-        int m = 0;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
+        File file=new File("/a.txt");
 
-        if (m == 0) {
+        if (!file.exists()) {
             //这里抛出编译时异常，不处理编译不通过，可以throws,交给方法调用者处理
-            throw new IOException();//程序执行到这里的话会打印异常，并把异常throws出去，程序到此结束，后面不会被执行
+            throw new FileNotFoundException();//程序执行到这里的话会打印异常，并把异常throws出去，程序到此结束，后面不会被执行
         }
         System.out.println("sdfgdfg");
     }
@@ -179,17 +149,6 @@ public class ThrowDemo {
 
     @Test
     public void test5_3() throws IOException {
-        int m = 0;
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-        }
-        System.out.println(Arrays.toString(array));
-
-        if (m == 0) {
-            throw new RuntimeException();//程序执行到这里的话会打印异常，并把异常throws出去，程序到此结束，后面不会被执行
-        }
-        System.out.println("sdfgdfg");
     }
 
 

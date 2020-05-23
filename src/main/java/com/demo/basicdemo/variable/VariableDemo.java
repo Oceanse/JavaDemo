@@ -1,6 +1,6 @@
 package com.demo.basicdemo.variable;
 
-import com.demo.oop.inherit.demo2_this_super.Person;
+import com.demo.oop.inherit.demo2_this_super.Human;
 import org.testng.annotations.Test;
 
 import java.util.*;
@@ -83,8 +83,8 @@ public class VariableDemo {
         System.out.println(letter);
 
         //declare a variable called mother of reference type and assign it the value which is the "address" of the object :
-        Person parent = new Person("mother", 54);//parent指向母亲对象
-        parent = new Person("father", 64);//parent重新指向父亲对象
+        Human parent = new Human("mother", 54);//parent指向母亲对象
+        parent = new Human("father", 64);//parent重新指向父亲对象
 
 
         //方法体中的代码自上而下执行,  Java 中的变量需要先声明后使用

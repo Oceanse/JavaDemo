@@ -41,24 +41,24 @@ public class FileDemo {
 
     }
 
-    //相对路径文件
+    //相对路径-文件
     @Test
     public void test() {
          // windows操作系统中，文件路径的分隔符是反斜杠（“\”）
         //  在linux操作系统中，文件的分隔符是斜杠（“/”）
         File f = new File("testResource\\dir\\out.txt");//相对路径一定处在工程根目录之下
         System.out.println(f.getName());//路径末级文件名
-        System.out.println(f.getAbsolutePath());
+        System.out.println(f.getAbsolutePath());//绝对路径
         System.out.println(f.getParent());//路径末级文件名之上的全部路径
-        System.out.println(f.length());//获取文件大小
         System.out.println(f.exists());
-        System.out.println(f.isAbsolute());
         System.out.println(f.isDirectory());//f不存在，非目录
         System.out.println(f.isFile());//f不存在，非文件
+        System.out.println(f.isAbsolute());
+        System.out.println(f.length());//获取文件大小
     }
 
 
-    //相对路径文件
+    //绝对路径-文件
     @Test
     public void test2() {
         File f = new File("C:\\Users\\EPANHAI\\Documents\\git\\JavaDemo\\testResource\\out.txt");//相对路径一定处在工程根目录之下
@@ -72,9 +72,9 @@ public class FileDemo {
         System.out.println(f.isFile());
     }
 
-    //绝对路径目录
+    //绝对路径-目录
     @Test
-    public void test4() {
+    public void test3() {
         File f = new File("C:\\Users\\epanhai\\git");
         System.out.println(f.getName());//路径末级文件名
         System.out.println(f.getAbsolutePath());
@@ -86,9 +86,9 @@ public class FileDemo {
         System.out.println(f.isFile());
     }
 
-    //相对路径目录
+    //相对路径-目录
     @Test
-    public void test5() {
+    public void test4() {
         File f = new File("src\\main\\java");
         System.out.println(f.getName());//路径末级文件名
         System.out.println(f.getAbsolutePath());
@@ -103,7 +103,7 @@ public class FileDemo {
 
 
     @Test
-    public void test6() {
+    public void test5() {
         //  windows系统下分隔符是\,然后前面加上转义字符\,就变成了\\
         String separator = File.separator;//返回分隔符的String形式
         char separatorChar = File.separatorChar;//返回分隔符char形式
