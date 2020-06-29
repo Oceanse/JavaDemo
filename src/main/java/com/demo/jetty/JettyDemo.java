@@ -40,7 +40,7 @@ public class JettyDemo {
         Server server=new Server(8080);//监听8080端口
         server.setHandler(context);
         server.start();
-        server.join();
+        server.join();//Wait until the startup code is completed
     }
 
 }

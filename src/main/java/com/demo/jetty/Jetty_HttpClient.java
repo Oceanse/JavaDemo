@@ -28,7 +28,7 @@ public class Jetty_HttpClient {
 
         ContentResponse response = request.send();
         String contentAsString = response.getContentAsString();
-        System.out.println(contentAsString);
+        System.out.println("contentAsString====================: "+contentAsString);
         httpClient.stop();
 
 

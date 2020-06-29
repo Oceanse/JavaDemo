@@ -12,7 +12,7 @@ import java.io.IOException;
 public class JettyDemo3 {
 
      // url以及参数可以任意设置  http://localhost:8888/任意设置
-    //http://localhost:8888/hello/world?q1=1&q2=2
+    //http://localhost:8888/hello/world?name=1&passwd=2
     public static void main(String[] args) throws Exception {
         Server server = new Server(8888);
         server.setHandler(new HelloHandler());

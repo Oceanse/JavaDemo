@@ -1,4 +1,4 @@
-package com.demo.jetty.websocket.server;
+package com.demo.jetty.websocket.server2.demo2;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandler;
@@ -17,7 +17,7 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
  *
  *
  */
-public class StartServer3 {
+public class StartServer2 {
     public static void main(String args[]) {
         WebSocketHandler handler = new WebSocketHandler() {
             @Override
@@ -25,14 +25,14 @@ public class StartServer3 {
                 webSocketServletFactory.getPolicy().setIdleTimeout(10L * 60L * 1000L);
                 webSocketServletFactory.getPolicy().setAsyncWriteTimeout(10L * 1000L);
 
-                //Register a websocket class com.demo.pojo with the default WebSocketCreator.
-                webSocketServletFactory.register(AnnotatedEchoSocket3.class);
+                //Register a websocket class  with the default WebSocketCreator.
+                webSocketServletFactory.register(AnnotatedEchoSocket2.class);
             }
         };
 
 
         ContextHandler context = new ContextHandler();
-        context.setContextPath("/test3/");   //ws://127.0.0.1:7778/test3/
+        context.setContextPath("/test2/");   //ws://127.0.0.1:7778/test/
         context.setHandler(handler);
 
         Server server = new Server(7778);

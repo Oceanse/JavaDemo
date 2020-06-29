@@ -13,7 +13,7 @@ public class JettyDemo4 {
     private static int port = 8080;
 
     public static void main(String[] args) throws Exception {
-        Server server=new Server(port);
+
         ServletHolder servletHolder = new ServletHolder(HttpServletDispatcher.class);
         servletHolder.setInitParameter("resteasy.resources","com.demo.jetty.JettyController");//关联controller
         servletHolder.setInitParameter("resteasy.servlet.mapping.prefix", "/rest/v1/");//resteasy前缀   http://localhost:8080/base/rest/v1/xxx
@@ -21,7 +21,12 @@ public class JettyDemo4 {
 
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
         handler.setContextPath("/base");//设置上下问路径 http://localhost:8080/base
-        handler.addServlet(servletHolder, "/rest/*");//这里可以设置成/rest/*或者/rest/v1/*
+
+
+        //这里/rest/v1/*,实际是HttpServletDispatcher对应的url-pattern， HttpServletDispatcher负责把请求分配给某个Servlet
+        //这里设置成 /* 或者 /rest/* 或者 /rest/v1/*, prifix中 /rest/v1/ 都会符合该url-pattern，那么请求就会分配到prifix对应的url
+        handler.addServlet(servletHolder, "/rest/v1/*");
+        Server server=new Server(port);
         server.setHandler(handler);
         System.out.println(servletHolder.getInitParameter("param"));
         server.start();

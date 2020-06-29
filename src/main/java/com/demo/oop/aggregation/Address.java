@@ -1,8 +1,8 @@
 package com.demo.oop.aggregation;
 
 public class Address {
-    String city;
-    String province;
+   private String city;
+    private String province;
 
     public Address(String city, String province) {
         this.city = city;

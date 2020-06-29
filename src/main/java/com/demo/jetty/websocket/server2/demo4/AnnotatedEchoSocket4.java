@@ -1,9 +1,7 @@
-package com.demo.jetty.websocket.server;
+package com.demo.jetty.websocket.server2.demo4;
 
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.*;
-import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
-import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 
 import java.io.IOException;
 
@@ -13,18 +11,11 @@ import java.io.IOException;
  * Flags this POJO as being a WebSocket.
  * The class must be not abstract and public.
  */
+
+
 @WebSocket(maxTextMessageSize = 128 * 1024, maxBinaryMessageSize = 128 * 1024)
-//@WebServlet(name = "MyEcho WebSocket Servlet", urlPatterns = { "/echo2" })
-public class AnnotatedEchoSocket2 extends WebSocketServlet {
+public class AnnotatedEchoSocket4 {
     Session session;
-
-    @Override
-    public void configure(WebSocketServletFactory factory) {
-        factory.getPolicy().setIdleTimeout(0);//测试发现，这里必须设置为0，否则连接时候会报TimeoutException: Idle timeout expired: xxx ms，不知为什么
-
-       //Register a websocket class with the default WebSocketCreator.
-        factory.register(AnnotatedEchoSocket2.class);
-    }
 
     /**
      * @param session
@@ -38,22 +29,21 @@ public class AnnotatedEchoSocket2 extends WebSocketServlet {
     @OnWebSocketConnect
     public void onText(Session session) throws Exception {
         this.session=session;
-        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket2的onOpen方法的消息");
-
+        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket4的onOpen方法的消息");
     }
 
 
     @OnWebSocketClose
     public void onClose(int i, String string) throws IOException {
-        System.out.println("服务端2onClose。。。。");
-        //session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket2的onClose方法的消息");
+        System.out.println("服务端onClose。。。。");
+        //session.getRemote().sendString("这是来自服务端onClose方法的消息");
     }
 
 
     @OnWebSocketMessage
     public void onMessage(String msg) throws IOException {
         System.out.println("服务器收到消息 " + msg);
-        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket2的onMessage方法的消息");
+        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket4的onMessage方法的消息");
     }
 
 
@@ -65,7 +55,6 @@ public class AnnotatedEchoSocket2 extends WebSocketServlet {
      */
     @OnWebSocketError
     public void onError(Throwable e) {//测试发现参数必须是Throwable e，不能是Execption e,不知为什么
-        System.out.println("服务端AnnotatedEchoSocket2的异常" + e);
+        System.out.println("服务端AnnotatedEchoSocket4的异常" + e);
     }
-
 }

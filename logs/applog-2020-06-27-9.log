@@ -1,0 +1,141 @@
+2020-06-27 21:39:26,769 DEBUG o.e.j.u.l.Log [main] Logging to org.apache.logging.slf4j.Log4jLogger@3b2c72c2 via org.eclipse.jetty.util.log.Slf4jLog
+2020-06-27 21:39:26,775 INFO o.e.j.u.l.Log [main] Logging initialized @1915ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-06-27 21:39:26,833 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@10db82ae{STOPPED}[9.4.19.v20190610] added {QueuedThreadPool[qtp172032696]@a4102b8{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY],AUTO}
+2020-06-27 21:39:26,854 DEBUG o.e.j.u.c.ContainerLifeCycle [main] HttpConnectionFactory@49c386c8[HTTP/1.1] added {HttpConfiguration@56528192{32768/8192,8192/8192,https://:0,[]},POJO}
+2020-06-27 21:39:26,858 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@4b5a5ed1{null,[]}{0.0.0.0:0} added {Server@10db82ae{STOPPED}[9.4.19.v20190610],UNMANAGED}
+2020-06-27 21:39:26,858 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@4b5a5ed1{null,[]}{0.0.0.0:0} added {QueuedThreadPool[qtp172032696]@a4102b8{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY],AUTO}
+2020-06-27 21:39:26,859 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@4b5a5ed1{null,[]}{0.0.0.0:0} added {ScheduledExecutorScheduler@7c0c77c7{STOPPED},AUTO}
+2020-06-27 21:39:26,859 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@4b5a5ed1{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@7adda9cc,POJO}
+2020-06-27 21:39:26,860 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@4b5a5ed1{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@49c386c8[HTTP/1.1],AUTO}
+2020-06-27 21:39:26,860 DEBUG o.e.j.s.AbstractConnector [main] ServerConnector@4b5a5ed1{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@49c386c8[HTTP/1.1]
+2020-06-27 21:39:26,864 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@4b5a5ed1{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {SelectorManager@ServerConnector@4b5a5ed1{HTTP/1.1,[http/1.1]}{0.0.0.0:0},MANAGED}
+2020-06-27 21:39:26,865 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@10db82ae{STOPPED}[9.4.19.v20190610] added {ServerConnector@4b5a5ed1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080},AUTO}
+2020-06-27 21:39:26,883 DEBUG o.e.j.u.DecoratedObjectFactory [main] Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@67a20f67
+2020-06-27 21:39:26,890 DEBUG o.e.j.u.c.ContainerLifeCycle [main] o.e.j.s.ServletContextHandler@31c88ec8{/,null,UNAVAILABLE} added {org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1,MANAGED}
+2020-06-27 21:39:26,894 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1 added {ServletHandler@243c4f91{STOPPED},MANAGED}
+2020-06-27 21:39:26,910 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@10db82ae{STOPPED}[9.4.19.v20190610] added {o.e.j.s.ServletContextHandler@31c88ec8{/base,null,UNAVAILABLE},MANAGED}
+2020-06-27 21:39:26,910 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting Server@10db82ae{STOPPED}[9.4.19.v20190610]
+2020-06-27 21:39:26,913 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@10db82ae{STARTING}[9.4.19.v20190610] added {ErrorHandler@441772e{STOPPED},AUTO}
+2020-06-27 21:39:26,915 INFO o.e.j.s.Server [main] jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_201-b09
+2020-06-27 21:39:26,928 DEBUG o.e.j.s.h.AbstractHandler [main] starting Server@10db82ae{STARTING}[9.4.19.v20190610]
+2020-06-27 21:39:26,929 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting QueuedThreadPool[qtp172032696]@a4102b8{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY]
+2020-06-27 21:39:26,931 DEBUG o.e.j.u.t.ReservedThreadExecutor [main] ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}
+2020-06-27 21:39:26,932 DEBUG o.e.j.u.c.ContainerLifeCycle [main] QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=0<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}] added {ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0},AUTO}
+2020-06-27 21:39:26,932 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}
+2020-06-27 21:39:26,940 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2079ms ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}
+2020-06-27 21:39:26,940 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-13,5,main]
+2020-06-27 21:39:26,941 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-14,5,main]
+2020-06-27 21:39:26,942 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-15,5,main]
+2020-06-27 21:39:26,942 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-13] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=2<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,942 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-14] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=3<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,942 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-16,5,main]
+2020-06-27 21:39:26,942 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-17,5,main]
+2020-06-27 21:39:26,942 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-15] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=4<=200,i=1,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,943 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-18,5,main]
+2020-06-27 21:39:26,943 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-16] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=5<=200,i=2,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,943 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-19,5,main]
+2020-06-27 21:39:26,943 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-17] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=6<=200,i=4,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,951 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp172032696-20,5,main]
+2020-06-27 21:39:26,951 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-18] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=7<=200,i=4,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,951 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-19] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTING,8<=8<=200,i=5,r=-1,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,951 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2091ms QueuedThreadPool[qtp172032696]@a4102b8{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,952 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting o.e.j.s.ServletContextHandler@31c88ec8{/base,null,UNAVAILABLE}
+2020-06-27 21:39:26,952 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp172032696-20] Runner started for QueuedThreadPool[qtp172032696]@a4102b8{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@4f6ee6e4{s=0/8,p=0}]
+2020-06-27 21:39:26,958 DEBUG o.e.j.h.PreEncodedHttpField [main] HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@5c5eefef]
+2020-06-27 21:39:26,967 DEBUG o.e.j.s.h.AbstractHandler [main] starting o.e.j.s.ServletContextHandler@31c88ec8{/base,null,STARTING}
+2020-06-27 21:39:26,967 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1
+2020-06-27 21:39:26,970 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1 added {org.eclipse.jetty.server.session.DefaultSessionCache@57a3af25[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false],AUTO}
+2020-06-27 21:39:26,972 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.DefaultSessionCache@57a3af25[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] added {org.eclipse.jetty.server.session.NullSessionDataStore@4550bb58[passivating=false,graceSec=3600],AUTO}
+2020-06-27 21:39:26,973 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting DefaultSessionIdManager@49139829{STOPPED}[worker=null]
+2020-06-27 21:39:26,974 INFO o.e.j.s.s.DefaultSessionIdManager [main] DefaultSessionIdManager workerName=node0
+2020-06-27 21:39:26,976 INFO o.e.j.s.s.DefaultSessionIdManager [main] No SessionScavenger set, using defaults
+2020-06-27 21:39:26,978 DEBUG o.e.j.u.c.ContainerLifeCycle [main] DefaultSessionIdManager@49139829{STARTING}[worker=node0] added {HouseKeeper@4efbca5a{STOPPED}[interval=600000, ownscheduler=false],MANAGED}
+2020-06-27 21:39:26,978 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting HouseKeeper@4efbca5a{STOPPED}[interval=600000, ownscheduler=false]
+2020-06-27 21:39:26,979 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ScheduledExecutorScheduler@1b7cc17c{STOPPED}
+2020-06-27 21:39:26,980 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2120ms ScheduledExecutorScheduler@1b7cc17c{STARTED}
+2020-06-27 21:39:26,980 DEBUG o.e.j.s.s.HouseKeeper [main] Using own scheduler for scavenging
+2020-06-27 21:39:26,981 INFO o.e.j.s.s.HouseKeeper [main] node0 Scavenging every 660000ms
+2020-06-27 21:39:26,983 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2122ms HouseKeeper@4efbca5a{STARTED}[interval=660000, ownscheduler=true]
+2020-06-27 21:39:26,983 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2123ms DefaultSessionIdManager@49139829{STARTED}[worker=node0]
+2020-06-27 21:39:26,983 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@10db82ae{STARTING}[9.4.19.v20190610] added {DefaultSessionIdManager@49139829{STARTED}[worker=node0],MANAGED}
+2020-06-27 21:39:26,984 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1 added {DefaultSessionIdManager@49139829{STARTED}[worker=node0],UNMANAGED}
+2020-06-27 21:39:26,984 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ScheduledExecutorScheduler@1bd4fdd{STOPPED}
+2020-06-27 21:39:26,984 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2124ms ScheduledExecutorScheduler@1bd4fdd{STARTED}
+2020-06-27 21:39:26,985 DEBUG o.e.j.s.h.AbstractHandler [main] starting org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1
+2020-06-27 21:39:26,985 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ServletHandler@243c4f91{STOPPED}
+2020-06-27 21:39:26,989 DEBUG o.e.j.s.ServletHandler [main] Path=/path2/[EMBEDDED:null] mapped to servlet=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c[EMBEDDED:null]
+2020-06-27 21:39:26,991 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/path2/",pathDepth=2,group=EXACT],resource=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c@3e2e5eab==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=1]
+2020-06-27 21:39:26,992 DEBUG o.e.j.s.ServletHandler [main] Path=/path2_2/[EMBEDDED:null] mapped to servlet=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4[EMBEDDED:null]
+2020-06-27 21:39:26,992 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/path2_2/",pathDepth=2,group=EXACT],resource=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4@93a1dec0==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=2]
+2020-06-27 21:39:26,992 DEBUG o.e.j.s.ServletHandler [main] filterNameMap={}
+2020-06-27 21:39:26,992 DEBUG o.e.j.s.ServletHandler [main] pathFilters=null
+2020-06-27 21:39:26,992 DEBUG o.e.j.s.ServletHandler [main] servletFilterMap=null
+2020-06-27 21:39:26,993 DEBUG o.e.j.s.ServletHandler [main] servletPathMap=PathMappings[size=2]
+2020-06-27 21:39:26,993 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4@93a1dec0==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2,jsp=null,order=-1,inst=false,async=true, com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c@3e2e5eab==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket,jsp=null,order=-1,inst=false,async=true}
+2020-06-27 21:39:26,993 DEBUG o.e.j.s.ServletHandler [main] Adding Default404Servlet to ServletHandler@243c4f91{STARTING}
+2020-06-27 21:39:26,994 DEBUG o.e.j.s.ServletHandler [main] Path=/path2/[EMBEDDED:null] mapped to servlet=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c[EMBEDDED:null]
+2020-06-27 21:39:26,994 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/path2/",pathDepth=2,group=EXACT],resource=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c@3e2e5eab==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=1]
+2020-06-27 21:39:26,994 DEBUG o.e.j.s.ServletHandler [main] Path=/path2_2/[EMBEDDED:null] mapped to servlet=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4[EMBEDDED:null]
+2020-06-27 21:39:26,995 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/path2_2/",pathDepth=2,group=EXACT],resource=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4@93a1dec0==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=2]
+2020-06-27 21:39:26,995 DEBUG o.e.j.s.ServletHandler [main] Path=/[EMBEDDED:null] mapped to servlet=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-38d8f54a[EMBEDDED:null]
+2020-06-27 21:39:26,995 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/",pathDepth=-1,group=DEFAULT],resource=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-38d8f54a@4f4a9e09==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=3]
+2020-06-27 21:39:26,995 DEBUG o.e.j.s.ServletHandler [main] filterNameMap={}
+2020-06-27 21:39:26,995 DEBUG o.e.j.s.ServletHandler [main] pathFilters=null
+2020-06-27 21:39:26,995 DEBUG o.e.j.s.ServletHandler [main] servletFilterMap=null
+2020-06-27 21:39:26,996 DEBUG o.e.j.s.ServletHandler [main] servletPathMap=PathMappings[size=3]
+2020-06-27 21:39:26,996 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4@93a1dec0==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2,jsp=null,order=-1,inst=false,async=true, org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-38d8f54a=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-38d8f54a@4f4a9e09==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true, com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c=com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c@3e2e5eab==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket,jsp=null,order=-1,inst=false,async=true}
+2020-06-27 21:39:26,996 DEBUG o.e.j.s.h.AbstractHandler [main] starting ServletHandler@243c4f91{STARTING}
+2020-06-27 21:39:26,996 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2136ms ServletHandler@243c4f91{STARTED}
+2020-06-27 21:39:26,996 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.DefaultSessionCache@57a3af25[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+2020-06-27 21:39:26,997 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.NullSessionDataStore@4550bb58[passivating=false,graceSec=3600]
+2020-06-27 21:39:26,997 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2136ms org.eclipse.jetty.server.session.NullSessionDataStore@4550bb58[passivating=false,graceSec=3600]
+2020-06-27 21:39:26,997 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2136ms org.eclipse.jetty.server.session.DefaultSessionCache@57a3af25[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+2020-06-27 21:39:26,997 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2137ms org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1
+2020-06-27 21:39:27,002 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c@3e2e5eab==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket,jsp=null,order=-1,inst=false,async=true
+2020-06-27 21:39:27,008 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2148ms com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket-498d318c@3e2e5eab==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket,jsp=null,order=-1,inst=false,async=true
+2020-06-27 21:39:27,009 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4@93a1dec0==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2,jsp=null,order=-1,inst=false,async=true
+2020-06-27 21:39:27,009 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2149ms com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2-f5ac9e4@93a1dec0==com.demo.jetty.websocket.server2.demo1.AnnotatedEchoSocket2,jsp=null,order=-1,inst=false,async=true
+2020-06-27 21:39:27,010 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-38d8f54a@4f4a9e09==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
+2020-06-27 21:39:27,010 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2149ms org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-38d8f54a@4f4a9e09==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
+2020-06-27 21:39:27,010 INFO o.e.j.s.h.ContextHandler [main] Started o.e.j.s.ServletContextHandler@31c88ec8{/base,null,AVAILABLE}
+2020-06-27 21:39:27,010 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2150ms o.e.j.s.ServletContextHandler@31c88ec8{/base,null,AVAILABLE}
+2020-06-27 21:39:27,011 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ErrorHandler@441772e{STOPPED}
+2020-06-27 21:39:27,011 DEBUG o.e.j.s.h.AbstractHandler [main] starting ErrorHandler@441772e{STARTING}
+2020-06-27 21:39:27,011 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2151ms ErrorHandler@441772e{STARTED}
+2020-06-27 21:39:27,012 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ServerConnector@4b5a5ed1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 21:39:27,015 WARN o.e.j.u.c.AbstractLifeCycle [main] FAILED ServerConnector@4b5a5ed1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:308) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:396) [jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at com.demo.jetty.websocket.server2.demo1.StartServer.main(StartServer.java:18) [classes/:?]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_201]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[?:1.8.0_201]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[?:1.8.0_201]
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	... 7 more
+2020-06-27 21:39:27,057 WARN o.e.j.u.c.AbstractLifeCycle [main] FAILED Server@10db82ae{FAILED}[9.4.19.v20190610]: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:308) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:396) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at com.demo.jetty.websocket.server2.demo1.StartServer.main(StartServer.java:18) [classes/:?]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_201]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[?:1.8.0_201]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[?:1.8.0_201]
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342) ~[jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	... 7 more

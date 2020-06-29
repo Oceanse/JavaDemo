@@ -13,7 +13,7 @@ public class Employee {
 
     void display() {
         System.out.println(id + " " + name);
-        System.out.println(address.city + " " + address.province);
+        System.out.println(address.getCity() + " " + address.getProvince());
     }
 
 }

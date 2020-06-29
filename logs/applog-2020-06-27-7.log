@@ -1,0 +1,416 @@
+2020-06-27 18:25:58,449 DEBUG o.e.j.u.l.Log [main] Logging to org.apache.logging.slf4j.Log4jLogger@1dd92fe2 via org.eclipse.jetty.util.log.Slf4jLog
+2020-06-27 18:25:58,454 INFO o.e.j.u.l.Log [main] Logging initialized @1659ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-06-27 18:25:58,508 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@7ea37dbf{STOPPED}[9.4.19.v20190610] added {QueuedThreadPool[qtp433287555]@19d37183{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY],AUTO}
+2020-06-27 18:25:58,528 DEBUG o.e.j.u.c.ContainerLifeCycle [main] HttpConnectionFactory@1e802ef9[HTTP/1.1] added {HttpConfiguration@2b6faea6{32768/8192,8192/8192,https://:0,[]},POJO}
+2020-06-27 18:25:58,531 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{null,[]}{0.0.0.0:0} added {Server@7ea37dbf{STOPPED}[9.4.19.v20190610],UNMANAGED}
+2020-06-27 18:25:58,532 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{null,[]}{0.0.0.0:0} added {QueuedThreadPool[qtp433287555]@19d37183{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY],AUTO}
+2020-06-27 18:25:58,532 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{null,[]}{0.0.0.0:0} added {ScheduledExecutorScheduler@3cc2931c{STOPPED},AUTO}
+2020-06-27 18:25:58,532 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@20d28811,POJO}
+2020-06-27 18:25:58,533 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@1e802ef9[HTTP/1.1],AUTO}
+2020-06-27 18:25:58,533 DEBUG o.e.j.s.AbstractConnector [main] ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@1e802ef9[HTTP/1.1]
+2020-06-27 18:25:58,536 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:0},MANAGED}
+2020-06-27 18:25:58,537 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@7ea37dbf{STOPPED}[9.4.19.v20190610] added {ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080},AUTO}
+2020-06-27 18:25:58,551 DEBUG o.e.j.u.DecoratedObjectFactory [main] Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@4b0b0854
+2020-06-27 18:25:58,559 DEBUG o.e.j.u.c.ContainerLifeCycle [main] o.e.j.s.ServletContextHandler@15eb5ee5{/,null,UNAVAILABLE} added {org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1,MANAGED}
+2020-06-27 18:25:58,563 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 added {ServletHandler@619713e5{STOPPED},MANAGED}
+2020-06-27 18:25:58,564 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@7ea37dbf{STOPPED}[9.4.19.v20190610] added {o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,UNAVAILABLE},MANAGED}
+2020-06-27 18:25:58,565 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting Server@7ea37dbf{STOPPED}[9.4.19.v20190610]
+2020-06-27 18:25:58,566 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@7ea37dbf{STARTING}[9.4.19.v20190610] added {ErrorHandler@16ec5519{STOPPED},AUTO}
+2020-06-27 18:25:58,567 INFO o.e.j.s.Server [main] jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_201-b09
+2020-06-27 18:25:58,577 DEBUG o.e.j.s.h.AbstractHandler [main] starting Server@7ea37dbf{STARTING}[9.4.19.v20190610]
+2020-06-27 18:25:58,577 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting QueuedThreadPool[qtp433287555]@19d37183{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY]
+2020-06-27 18:25:58,579 DEBUG o.e.j.u.t.ReservedThreadExecutor [main] ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}
+2020-06-27 18:25:58,580 DEBUG o.e.j.u.c.ContainerLifeCycle [main] QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=0<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}] added {ReservedThreadExecutor@1d9b7cce{s=0/8,p=0},AUTO}
+2020-06-27 18:25:58,580 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}
+2020-06-27 18:25:58,585 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1790ms ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}
+2020-06-27 18:25:58,586 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-14,5,main]
+2020-06-27 18:25:58,586 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-15,5,main]
+2020-06-27 18:25:58,586 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-16,5,main]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-17,5,main]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-14] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=3<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-15] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=4<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-18,5,main]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-19,5,main]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-16] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=4<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-17] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=5<=200,i=2,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-20,5,main]
+2020-06-27 18:25:58,587 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-18] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=6<=200,i=2,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,593 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp433287555-21,5,main]
+2020-06-27 18:25:58,594 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-19] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=8<=200,i=4,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,594 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-20] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTING,8<=8<=200,i=4,r=-1,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,594 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1799ms QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,594 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,UNAVAILABLE}
+2020-06-27 18:25:58,594 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-21] Runner started for QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,598 DEBUG o.e.j.h.PreEncodedHttpField [main] HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@4f18837a]
+2020-06-27 18:25:58,603 DEBUG o.e.j.s.h.AbstractHandler [main] starting o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,STARTING}
+2020-06-27 18:25:58,604 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1
+2020-06-27 18:25:58,608 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 added {org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false],AUTO}
+2020-06-27 18:25:58,610 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] added {org.eclipse.jetty.server.session.NullSessionDataStore@16293aa2[passivating=false,graceSec=3600],AUTO}
+2020-06-27 18:25:58,611 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting DefaultSessionIdManager@72d1ad2e{STOPPED}[worker=null]
+2020-06-27 18:25:58,611 INFO o.e.j.s.s.DefaultSessionIdManager [main] DefaultSessionIdManager workerName=node0
+2020-06-27 18:25:58,611 INFO o.e.j.s.s.DefaultSessionIdManager [main] No SessionScavenger set, using defaults
+2020-06-27 18:25:58,612 DEBUG o.e.j.u.c.ContainerLifeCycle [main] DefaultSessionIdManager@72d1ad2e{STARTING}[worker=node0] added {HouseKeeper@38c6f217{STOPPED}[interval=600000, ownscheduler=false],MANAGED}
+2020-06-27 18:25:58,612 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting HouseKeeper@38c6f217{STOPPED}[interval=600000, ownscheduler=false]
+2020-06-27 18:25:58,612 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ScheduledExecutorScheduler@478190fc{STOPPED}
+2020-06-27 18:25:58,613 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1818ms ScheduledExecutorScheduler@478190fc{STARTED}
+2020-06-27 18:25:58,613 DEBUG o.e.j.s.s.HouseKeeper [main] Using own scheduler for scavenging
+2020-06-27 18:25:58,614 INFO o.e.j.s.s.HouseKeeper [main] node0 Scavenging every 660000ms
+2020-06-27 18:25:58,615 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1820ms HouseKeeper@38c6f217{STARTED}[interval=660000, ownscheduler=true]
+2020-06-27 18:25:58,615 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1820ms DefaultSessionIdManager@72d1ad2e{STARTED}[worker=node0]
+2020-06-27 18:25:58,615 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@7ea37dbf{STARTING}[9.4.19.v20190610] added {DefaultSessionIdManager@72d1ad2e{STARTED}[worker=node0],MANAGED}
+2020-06-27 18:25:58,616 DEBUG o.e.j.u.c.ContainerLifeCycle [main] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 added {DefaultSessionIdManager@72d1ad2e{STARTED}[worker=node0],UNMANAGED}
+2020-06-27 18:25:58,616 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ScheduledExecutorScheduler@1d2adfbe{STOPPED}
+2020-06-27 18:25:58,616 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1821ms ScheduledExecutorScheduler@1d2adfbe{STARTED}
+2020-06-27 18:25:58,617 DEBUG o.e.j.s.h.AbstractHandler [main] starting org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1
+2020-06-27 18:25:58,617 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ServletHandler@619713e5{STOPPED}
+2020-06-27 18:25:58,617 DEBUG o.e.j.s.ServletHandler [main] filterNameMap={}
+2020-06-27 18:25:58,617 DEBUG o.e.j.s.ServletHandler [main] pathFilters=null
+2020-06-27 18:25:58,617 DEBUG o.e.j.s.ServletHandler [main] servletFilterMap=null
+2020-06-27 18:25:58,617 DEBUG o.e.j.s.ServletHandler [main] servletPathMap=null
+2020-06-27 18:25:58,618 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={}
+2020-06-27 18:25:58,618 DEBUG o.e.j.s.ServletHandler [main] Adding Default404Servlet to ServletHandler@619713e5{STARTING}
+2020-06-27 18:25:58,624 DEBUG o.e.j.s.ServletHandler [main] Path=/[EMBEDDED:null] mapped to servlet=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a[EMBEDDED:null]
+2020-06-27 18:25:58,625 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/",pathDepth=-1,group=DEFAULT],resource=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a@95d09eb==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=1]
+2020-06-27 18:25:58,626 DEBUG o.e.j.s.ServletHandler [main] filterNameMap={}
+2020-06-27 18:25:58,626 DEBUG o.e.j.s.ServletHandler [main] pathFilters=null
+2020-06-27 18:25:58,626 DEBUG o.e.j.s.ServletHandler [main] servletFilterMap=null
+2020-06-27 18:25:58,626 DEBUG o.e.j.s.ServletHandler [main] servletPathMap=PathMappings[size=1]
+2020-06-27 18:25:58,626 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a@95d09eb==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true}
+2020-06-27 18:25:58,626 DEBUG o.e.j.s.h.AbstractHandler [main] starting ServletHandler@619713e5{STARTING}
+2020-06-27 18:25:58,626 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1831ms ServletHandler@619713e5{STARTED}
+2020-06-27 18:25:58,627 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+2020-06-27 18:25:58,627 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.NullSessionDataStore@16293aa2[passivating=false,graceSec=3600]
+2020-06-27 18:25:58,627 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1832ms org.eclipse.jetty.server.session.NullSessionDataStore@16293aa2[passivating=false,graceSec=3600]
+2020-06-27 18:25:58,627 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1832ms org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
+2020-06-27 18:25:58,627 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1832ms org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1
+2020-06-27 18:25:58,629 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a@95d09eb==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
+2020-06-27 18:25:58,631 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1835ms org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a@95d09eb==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
+2020-06-27 18:25:58,631 INFO o.e.j.s.h.ContextHandler [main] Started o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,AVAILABLE}
+2020-06-27 18:25:58,631 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1836ms o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,AVAILABLE}
+2020-06-27 18:25:58,631 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ErrorHandler@16ec5519{STOPPED}
+2020-06-27 18:25:58,631 DEBUG o.e.j.s.h.AbstractHandler [main] starting ErrorHandler@16ec5519{STARTING}
+2020-06-27 18:25:58,631 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1836ms ErrorHandler@16ec5519{STARTED}
+2020-06-27 18:25:58,631 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 18:25:58,634 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8080],POJO}
+2020-06-27 18:25:58,635 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ScheduledExecutorScheduler@3cc2931c{STOPPED}
+2020-06-27 18:25:58,635 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1839ms ScheduledExecutorScheduler@3cc2931c{STARTED}
+2020-06-27 18:25:58,635 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting HttpConnectionFactory@1e802ef9[HTTP/1.1]
+2020-06-27 18:25:58,635 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1840ms HttpConnectionFactory@1e802ef9[HTTP/1.1]
+2020-06-27 18:25:58,636 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 18:25:58,646 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.644+08:00 added {SelectorProducer@77888435,POJO}
+2020-06-27 18:25:58,646 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.646+08:00 added {QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}],UNMANAGED}
+2020-06-27 18:25:58,647 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.647+08:00 created
+2020-06-27 18:25:58,647 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@33d512c1{STOPPED} id=0 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.647+08:00,MANAGED}
+2020-06-27 18:25:58,647 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080} added {ManagedSelector@33d512c1{STOPPED} id=0 keys=-1 selected=-1 updates=0,AUTO}
+2020-06-27 18:25:58,648 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.648+08:00 added {SelectorProducer@639c2c1d,POJO}
+2020-06-27 18:25:58,648 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.648+08:00 added {QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}],UNMANAGED}
+2020-06-27 18:25:58,648 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.648+08:00 created
+2020-06-27 18:25:58,649 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@5fe94a96{STOPPED} id=1 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.649+08:00,MANAGED}
+2020-06-27 18:25:58,649 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080} added {ManagedSelector@5fe94a96{STOPPED} id=1 keys=-1 selected=-1 updates=0,AUTO}
+2020-06-27 18:25:58,650 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.649+08:00 added {SelectorProducer@765d7657,POJO}
+2020-06-27 18:25:58,650 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.65+08:00 added {QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}],UNMANAGED}
+2020-06-27 18:25:58,650 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.65+08:00 created
+2020-06-27 18:25:58,651 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@74235045{STOPPED} id=2 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.651+08:00,MANAGED}
+2020-06-27 18:25:58,651 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080} added {ManagedSelector@74235045{STOPPED} id=2 keys=-1 selected=-1 updates=0,AUTO}
+2020-06-27 18:25:58,651 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.651+08:00 added {SelectorProducer@2d3379b4,POJO}
+2020-06-27 18:25:58,651 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.651+08:00 added {QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}],UNMANAGED}
+2020-06-27 18:25:58,651 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.651+08:00 created
+2020-06-27 18:25:58,652 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@30c15d8b{STOPPED} id=3 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.652+08:00,MANAGED}
+2020-06-27 18:25:58,652 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080} added {ManagedSelector@30c15d8b{STOPPED} id=3 keys=-1 selected=-1 updates=0,AUTO}
+2020-06-27 18:25:58,652 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@33d512c1{STOPPED} id=0 keys=-1 selected=-1 updates=0
+2020-06-27 18:25:58,653 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.653+08:00
+2020-06-27 18:25:58,653 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1858ms EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.653+08:00
+2020-06-27 18:25:58,660 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@557caf28 startThread=false
+2020-06-27 18:25:58,660 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-14] run org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@557caf28 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,660 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp433287555-14] EatWhatYouKill@7cc0cdad/SelectorProducer@77888435/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.66+08:00 tryProduce false
+2020-06-27 18:25:58,660 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@408d971b on ManagedSelector@33d512c1{STARTING} id=0 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,662 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-14] updateable 1
+2020-06-27 18:25:58,663 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-14] update org.eclipse.jetty.io.ManagedSelector$Start@408d971b
+2020-06-27 18:25:58,663 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-14] updates 0
+2020-06-27 18:25:58,663 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1868ms ManagedSelector@33d512c1{STARTED} id=0 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,664 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-14] Selector sun.nio.ch.WindowsSelectorImpl@32d8bc0b waiting with 0 keys
+2020-06-27 18:25:58,664 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@5fe94a96{STOPPED} id=1 keys=-1 selected=-1 updates=0
+2020-06-27 18:25:58,664 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.664+08:00
+2020-06-27 18:25:58,664 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1869ms EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.664+08:00
+2020-06-27 18:25:58,665 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@6c6cb480 startThread=false
+2020-06-27 18:25:58,666 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-15] run org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@6c6cb480 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,666 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@3c46e67a on ManagedSelector@5fe94a96{STARTING} id=1 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,666 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp433287555-15] EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.666+08:00 tryProduce false
+2020-06-27 18:25:58,666 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updateable 1
+2020-06-27 18:25:58,666 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] update org.eclipse.jetty.io.ManagedSelector$Start@3c46e67a
+2020-06-27 18:25:58,666 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updates 0
+2020-06-27 18:25:58,666 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1871ms ManagedSelector@5fe94a96{STARTED} id=1 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,666 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf waiting with 0 keys
+2020-06-27 18:25:58,666 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@74235045{STOPPED} id=2 keys=-1 selected=-1 updates=0
+2020-06-27 18:25:58,667 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.667+08:00
+2020-06-27 18:25:58,667 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1872ms EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.667+08:00
+2020-06-27 18:25:58,668 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@c730b35 startThread=false
+2020-06-27 18:25:58,668 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-16] run org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@c730b35 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,668 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@206a70ef on ManagedSelector@74235045{STARTING} id=2 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,668 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp433287555-16] EatWhatYouKill@443118b0/SelectorProducer@765d7657/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.668+08:00 tryProduce false
+2020-06-27 18:25:58,668 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-16] updateable 1
+2020-06-27 18:25:58,668 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-16] update org.eclipse.jetty.io.ManagedSelector$Start@206a70ef
+2020-06-27 18:25:58,668 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-16] updates 0
+2020-06-27 18:25:58,668 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1873ms ManagedSelector@74235045{STARTED} id=2 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,668 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-16] Selector sun.nio.ch.WindowsSelectorImpl@3066bd05 waiting with 0 keys
+2020-06-27 18:25:58,669 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@30c15d8b{STOPPED} id=3 keys=-1 selected=-1 updates=0
+2020-06-27 18:25:58,669 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.669+08:00
+2020-06-27 18:25:58,669 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1874ms EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.669+08:00
+2020-06-27 18:25:58,670 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@292b08d6 startThread=false
+2020-06-27 18:25:58,670 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-17] run org.eclipse.jetty.io.ManagedSelector$$Lambda$29/1976870338@292b08d6 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,670 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@22555ebf on ManagedSelector@30c15d8b{STARTING} id=3 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,670 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp433287555-17] EatWhatYouKill@618b19ad/SelectorProducer@2d3379b4/IDLE/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:25:58.67+08:00 tryProduce false
+2020-06-27 18:25:58,670 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-17] updateable 1
+2020-06-27 18:25:58,670 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-17] update org.eclipse.jetty.io.ManagedSelector$Start@22555ebf
+2020-06-27 18:25:58,670 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-17] updates 0
+2020-06-27 18:25:58,671 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1875ms ManagedSelector@30c15d8b{STARTED} id=3 keys=0 selected=0 updates=0
+2020-06-27 18:25:58,671 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-17] Selector sun.nio.ch.WindowsSelectorImpl@721d099f waiting with 0 keys
+2020-06-27 18:25:58,671 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1876ms SelectorManager@ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 18:25:58,672 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080} added {acceptor-0@34e9fd99,POJO}
+2020-06-27 18:25:58,673 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue acceptor-0@34e9fd99 startThread=false
+2020-06-27 18:25:58,673 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-18] run acceptor-0@34e9fd99 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=3,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:25:58,673 INFO o.e.j.s.AbstractConnector [main] Started ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 18:25:58,673 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1878ms ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 18:25:58,673 INFO o.e.j.s.Server [main] Started @1878ms
+2020-06-27 18:25:58,674 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1878ms Server@7ea37dbf{STARTED}[9.4.19.v20190610]
+2020-06-27 18:26:46,833 DEBUG o.e.j.i.ManagedSelector [qtp433287555-18-acceptor-0@34e9fd99-ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}] Queued change org.eclipse.jetty.io.ManagedSelector$Accept@11b57963 on ManagedSelector@5fe94a96{STARTED} id=1 keys=0 selected=0 updates=0
+2020-06-27 18:26:46,834 DEBUG o.e.j.i.ManagedSelector [qtp433287555-18-acceptor-0@34e9fd99-ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}] Wakeup on submit ManagedSelector@5fe94a96{STARTED} id=1 keys=0 selected=0 updates=1
+2020-06-27 18:26:46,835 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken with none selected
+2020-06-27 18:26:46,835 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken up from select, 0/0/0 selected
+2020-06-27 18:26:46,835 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf processing 0 keys, 1 updates
+2020-06-27 18:26:46,835 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updateable 1
+2020-06-27 18:26:46,836 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] update org.eclipse.jetty.io.ManagedSelector$Accept@11b57963
+2020-06-27 18:26:46,836 DEBUG o.e.j.u.t.QueuedThreadPool [qtp433287555-15] queue org.eclipse.jetty.io.ManagedSelector$Accept@11b57963 startThread=false
+2020-06-27 18:26:46,836 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-19] run org.eclipse.jetty.io.ManagedSelector$Accept@11b57963 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:26:46,836 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updates 0
+2020-06-27 18:26:46,837 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf waiting with 1 keys
+2020-06-27 18:26:46,845 DEBUG o.e.j.i.IdleTimeout [qtp433287555-19] SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=0}-><null> idle timeout check, elapsed: 4 ms, remaining: 29996 ms
+2020-06-27 18:26:46,881 DEBUG o.e.j.s.HttpChannel [qtp433287555-19] new HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} -> SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=40/30000}{io=0/0,kio=0,kro=0}-><null>,null,HttpChannelState@39364cb0{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+2020-06-27 18:26:46,889 DEBUG o.e.j.s.HttpConnection [qtp433287555-19] New HTTP Connection HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=48/30000}{io=0/0,kio=0,kro=0}-><null>
+2020-06-27 18:26:46,890 DEBUG o.e.j.i.AbstractEndPoint [qtp433287555-19] onOpen SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=49/30000}{io=0/0,kio=0,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,891 DEBUG o.e.j.i.AbstractConnection [qtp433287555-19] onOpen HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=50/30000}{io=0/0,kio=0,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,891 DEBUG o.e.j.i.AbstractConnection [qtp433287555-19] fillInterested HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=50/30000}{io=0/0,kio=0,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,892 DEBUG o.e.j.i.FillInterest [qtp433287555-19] interested FillInterest@7573d875{AC.ReadCB@11bd60e7{HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=0/30000}{io=0/0,kio=0,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}}}
+2020-06-27 18:26:46,892 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-19] changeInterests p=false 0->1 for SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=0/30000}{io=0/1,kio=0,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,893 DEBUG o.e.j.i.ManagedSelector [qtp433287555-19] Queued change org.eclipse.jetty.io.ChannelEndPoint$1@3a9c4aa1 on ManagedSelector@5fe94a96{STARTED} id=1 keys=1 selected=0 updates=0
+2020-06-27 18:26:46,893 DEBUG o.e.j.i.ManagedSelector [qtp433287555-19] Wakeup on submit ManagedSelector@5fe94a96{STARTED} id=1 keys=1 selected=0 updates=1
+2020-06-27 18:26:46,893 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken with none selected
+2020-06-27 18:26:46,894 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken up from select, 0/0/1 selected
+2020-06-27 18:26:46,894 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf processing 0 keys, 1 updates
+2020-06-27 18:26:46,894 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updateable 1
+2020-06-27 18:26:46,894 DEBUG o.e.j.i.ManagedSelector [qtp433287555-19] Created SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=1/30000}{io=0/1,kio=0,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,894 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] update org.eclipse.jetty.io.ChannelEndPoint$1@3a9c4aa1
+2020-06-27 18:26:46,894 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-15] Key interests updated 0 -> 1 on SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=2/30000}{io=1/1,kio=1,kro=0}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,895 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updates 0
+2020-06-27 18:26:46,895 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf waiting with 1 keys
+2020-06-27 18:26:46,894 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-19] ran org.eclipse.jetty.io.ManagedSelector$Accept@11b57963 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:26:46,895 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken up from select, 1/1/1 selected
+2020-06-27 18:26:46,895 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf processing 1 keys, 0 updates
+2020-06-27 18:26:46,896 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] selected 1 sun.nio.ch.SelectionKeyImpl@2e3c02cf SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=3/30000}{io=1/1,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} 
+2020-06-27 18:26:46,896 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-15] onSelected 1->0 r=true w=false for SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=4/30000}{io=1/0,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,897 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-15] task CEP:SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=4/30000}{io=1/0,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING
+2020-06-27 18:26:46,897 DEBUG o.e.j.u.t.ReservedThreadExecutor [qtp433287555-15] ReservedThreadExecutor@1d9b7cce{s=0/8,p=0} tryExecute EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/PRODUCING/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=3,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:26:46.897+08:00
+2020-06-27 18:26:46,898 DEBUG o.e.j.u.t.ReservedThreadExecutor [qtp433287555-15] ReservedThreadExecutor@1d9b7cce{s=0/8,p=1} startReservedThread p=1
+2020-06-27 18:26:46,899 DEBUG o.e.j.u.t.QueuedThreadPool [qtp433287555-15] queue ReservedThreadExecutor@1d9b7cce{s=0/8,p=1}@5a1fa3cf startThread=false
+2020-06-27 18:26:46,900 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-20] run ReservedThreadExecutor@1d9b7cce{s=0/8,p=1}@5a1fa3cf in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=1}]
+2020-06-27 18:26:46,900 DEBUG o.e.j.u.t.ReservedThreadExecutor$ReservedThread [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=1/8,p=1}@5a1fa3cf started
+2020-06-27 18:26:46,900 DEBUG o.e.j.u.t.ReservedThreadExecutor$ReservedThread [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=1/8,p=0}@5a1fa3cf waiting
+2020-06-27 18:26:46,900 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp433287555-15] EatWhatYouKill@515c6049/SelectorProducer@639c2c1d/PRODUCING/p=false/QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=1}][pc=0,pic=0,pec=0,epc=0]@2020-06-27T18:26:46.9+08:00 m=PRODUCE_EXECUTE_CONSUME t=CEP:SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=8/30000}{io=1/0,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING/BLOCKING
+2020-06-27 18:26:46,901 DEBUG o.e.j.u.t.QueuedThreadPool [qtp433287555-15] queue CEP:SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=9/30000}{io=1/0,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING startThread=false
+2020-06-27 18:26:46,901 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-21] run CEP:SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=9/30000}{io=1/0,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=1,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=1/8,p=0}]
+2020-06-27 18:26:46,901 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updateable 0
+2020-06-27 18:26:46,901 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updates 0
+2020-06-27 18:26:46,902 DEBUG o.e.j.i.FillInterest [qtp433287555-21] fillable FillInterest@7573d875{AC.ReadCB@11bd60e7{HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=9/30000}{io=1/0,kio=1,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}}}
+2020-06-27 18:26:46,902 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-15] Key interests updated 1 -> 0 on SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=FI,flush=-,to=9/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,902 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf waiting with 1 keys
+2020-06-27 18:26:46,903 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=10/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} onFillable enter HttpChannelState@39364cb0{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+2020-06-27 18:26:46,908 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-21] filled 164 HeapByteBuffer@50b15497[p=0,l=164,c=8192,r=164]={<<<GET /base/echo2/ ...: websocket\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,909 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=4/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} filled 164 HeapByteBuffer@50b15497[p=0,l=164,c=8192,r=164]={<<<GET /base/echo2/ ...: websocket\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,909 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=5/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@50b15497[p=0,l=164,c=8192,r=164]={<<<GET /base/echo2/ ...: websocket\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+2020-06-27 18:26:46,910 DEBUG o.e.j.h.HttpParser [qtp433287555-21] parseNext s=START HeapByteBuffer@50b15497[p=0,l=164,c=8192,r=164]={<<<GET /base/echo2/ ...: websocket\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,910 DEBUG o.e.j.h.HttpParser [qtp433287555-21] START --> SPACE1
+2020-06-27 18:26:46,914 DEBUG o.e.j.h.HttpParser [qtp433287555-21] SPACE1 --> URI
+2020-06-27 18:26:46,914 DEBUG o.e.j.h.HttpParser [qtp433287555-21] URI --> SPACE2
+2020-06-27 18:26:46,915 DEBUG o.e.j.h.HttpParser [qtp433287555-21] SPACE2 --> REQUEST_VERSION
+2020-06-27 18:26:46,915 DEBUG o.e.j.h.HttpParser [qtp433287555-21] REQUEST_VERSION --> HEADER
+2020-06-27 18:26:46,917 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Connection: Upgrade --> IN_VALUE
+2020-06-27 18:26:46,917 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Connection: Upgrade --> FIELD
+2020-06-27 18:26:46,922 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Host --> VALUE
+2020-06-27 18:26:46,922 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Host --> IN_VALUE
+2020-06-27 18:26:46,922 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Host --> FIELD
+2020-06-27 18:26:46,924 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Sec-WebSocket-Key --> VALUE
+2020-06-27 18:26:46,925 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Sec-WebSocket-Key --> IN_VALUE
+2020-06-27 18:26:46,925 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Sec-WebSocket-Key --> FIELD
+2020-06-27 18:26:46,925 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Sec-WebSocket-Version --> VALUE
+2020-06-27 18:26:46,925 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Sec-WebSocket-Version --> IN_VALUE
+2020-06-27 18:26:46,925 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Sec-WebSocket-Version --> FIELD
+2020-06-27 18:26:46,926 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Upgrade --> VALUE
+2020-06-27 18:26:46,926 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Upgrade --> IN_VALUE
+2020-06-27 18:26:46,927 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER:Upgrade --> FIELD
+2020-06-27 18:26:46,927 DEBUG o.e.j.h.HttpParser [qtp433287555-21] HEADER --> END
+2020-06-27 18:26:46,927 DEBUG o.e.j.s.HttpChannelOverHttp [qtp433287555-21] upgrade HttpChannelOverHttp@15ecd263{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} Upgrade: websocket
+2020-06-27 18:26:46,928 DEBUG o.e.j.s.HttpChannelOverHttp [qtp433287555-21] No factory for Upgrade: websocket in ServerConnector@96def03{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-06-27 18:26:46,930 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] REQUEST for //127.0.0.1:8080/base/echo2/ on HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=//127.0.0.1:8080/base/echo2/,age=1}
+GET //127.0.0.1:8080/base/echo2/ HTTP/1.1
+Connection: Upgrade
+Host: 127.0.0.1:8080
+Sec-WebSocket-Key: qldfXWBza09wStttGLzgPQ==
+Sec-WebSocket-Version: 13
+Upgrade: websocket
+
+
+2020-06-27 18:26:46,931 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=//127.0.0.1:8080/base/echo2/,age=3} onContentComplete
+2020-06-27 18:26:46,932 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=//127.0.0.1:8080/base/echo2/,age=3} onRequestComplete
+2020-06-27 18:26:46,932 DEBUG o.e.j.s.HttpInput [qtp433287555-21] HttpInputOverHTTP@78d3bd1f[c=0,q=0,[0]=null,s=STREAM] addContent EOF
+2020-06-27 18:26:46,933 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=29/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=END,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=//127.0.0.1:8080/base/echo2/,age=5} parsed true HttpParser{s=END,0 of -1}
+2020-06-27 18:26:46,934 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] releaseRequestBuffer HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=29/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=END,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=//127.0.0.1:8080/base/echo2/,age=5}
+2020-06-27 18:26:46,936 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=//127.0.0.1:8080/base/echo2/,age=8} handle //127.0.0.1:8080/base/echo2/ 
+2020-06-27 18:26:46,936 DEBUG o.e.j.s.HttpChannelState [qtp433287555-21] handling HttpChannelState@39364cb0{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+2020-06-27 18:26:46,938 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=DISPATCHED,uri=//127.0.0.1:8080/base/echo2/,age=10} action DISPATCH
+2020-06-27 18:26:46,939 DEBUG o.e.j.s.Server [qtp433287555-21] REQUEST GET /base/echo2/ on HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=DISPATCHED,uri=//127.0.0.1:8080/base/echo2/,age=11}
+2020-06-27 18:26:46,939 DEBUG o.e.j.s.h.ContextHandler [qtp433287555-21] scope null||/base/echo2/ @ o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,AVAILABLE}
+2020-06-27 18:26:46,940 DEBUG o.e.j.s.h.ContextHandler [qtp433287555-21] context=/base||/echo2/ @ o.e.j.s.ServletContextHandler@15eb5ee5{/base,null,AVAILABLE}
+2020-06-27 18:26:46,940 DEBUG o.e.j.s.s.SessionHandler [qtp433287555-21] SessionHandler.doScope
+2020-06-27 18:26:46,940 DEBUG o.e.j.s.s.SessionHandler [qtp433287555-21] sessionHandler=org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 session=null
+2020-06-27 18:26:46,941 DEBUG o.e.j.s.ServletHandler [qtp433287555-21] servlet /base|/echo2/|null -> org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a@95d09eb==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
+2020-06-27 18:26:46,941 DEBUG o.e.j.s.ServletHandler [qtp433287555-21] chain=null
+2020-06-27 18:26:46,945 DEBUG o.e.j.s.ServletHolder [qtp433287555-21] Servlet.init org.eclipse.jetty.servlet.ServletHandler$Default404Servlet@6f533096 for org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-4efbca5a
+2020-06-27 18:26:46,949 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] sendResponse info=null content=DirectByteBuffer@14dcfbff[p=0,l=328,c=32768,r=328]={<<<<html>\n<head>\n<me.../body>\n</html>\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=true committing=true callback=Blocker@22a9fd6e{null}
+2020-06-27 18:26:46,949 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] COMMIT for /base/echo2/ on HttpChannelOverHttp@15ecd263{r=1,c=true,c=false/false,a=DISPATCHED,uri=//127.0.0.1:8080/base/echo2/,age=21}
+404 Not Found HTTP/1.1
+Date: Sat, 27 Jun 2020 10:26:46 GMT
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Type: text/html;charset=iso-8859-1
+
+
+2020-06-27 18:26:46,952 DEBUG o.e.j.s.HttpConnection$SendCallback [qtp433287555-21] org.eclipse.jetty.server.HttpConnection$SendCallback@2fe417c1[PROCESSING][i=HTTP/1.1{s=404,h=3,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$SendCallback@28cf3816] generate: NEED_HEADER (null,[p=0,l=328,c=32768,r=328],true)@START
+2020-06-27 18:26:46,953 DEBUG o.e.j.h.HttpGenerator [qtp433287555-21] generateHeaders HTTP/1.1{s=404,h=3,cl=-1} last=true content=DirectByteBuffer@14dcfbff[p=0,l=328,c=32768,r=328]={<<<<html>\n<head>\n<me.../body>\n</html>\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,953 DEBUG o.e.j.h.HttpGenerator [qtp433287555-21] Date: Sat, 27 Jun 2020 10:26:46 GMT
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Type: text/html;charset=iso-8859-1
+
+
+2020-06-27 18:26:46,953 DEBUG o.e.j.h.HttpGenerator [qtp433287555-21] CONTENT_LENGTH
+2020-06-27 18:26:46,954 DEBUG o.e.j.s.HttpConnection$SendCallback [qtp433287555-21] org.eclipse.jetty.server.HttpConnection$SendCallback@2fe417c1[PROCESSING][i=HTTP/1.1{s=404,h=3,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$SendCallback@28cf3816] generate: FLUSH ([p=0,l=211,c=8192,r=211],[p=0,l=328,c=32768,r=328],true)@COMPLETING
+2020-06-27 18:26:46,954 DEBUG o.e.j.i.WriteFlusher [qtp433287555-21] write: WriteFlusher@5cd065e1{IDLE}->null [HeapByteBuffer@50b15497[p=0,l=211,c=8192,r=211]={<<<HTTP/1.1 404 Not ....v20190610)\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@14dcfbff[p=0,l=328,c=32768,r=328]={<<<<html>\n<head>\n<me.../body>\n</html>\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+2020-06-27 18:26:46,954 DEBUG o.e.j.i.WriteFlusher [qtp433287555-21] update WriteFlusher@5cd065e1{WRITING}->null:IDLE-->WRITING
+2020-06-27 18:26:46,956 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-21] flushed 539 SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=W,to=51/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=END,0 of -1},g=HttpGenerator@fb32b3c{s=COMPLETING}]=>HttpChannelOverHttp@15ecd263{r=1,c=true,c=false/false,a=DISPATCHED,uri=//127.0.0.1:8080/base/echo2/,age=28}
+2020-06-27 18:26:46,956 DEBUG o.e.j.i.WriteFlusher [qtp433287555-21] Flushed=true written=539 remaining=0 WriteFlusher@5cd065e1{WRITING}->null
+2020-06-27 18:26:46,956 DEBUG o.e.j.i.WriteFlusher [qtp433287555-21] update WriteFlusher@5cd065e1{IDLE}->null:WRITING-->IDLE
+2020-06-27 18:26:46,957 DEBUG o.e.j.s.HttpConnection$SendCallback [qtp433287555-21] org.eclipse.jetty.server.HttpConnection$SendCallback@2fe417c1[PROCESSING][i=HTTP/1.1{s=404,h=3,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$SendCallback@28cf3816] generate: DONE ([p=211,l=211,c=8192,r=0],[p=328,l=328,c=32768,r=0],true)@END
+2020-06-27 18:26:46,958 DEBUG o.e.j.s.s.SessionHandler [qtp433287555-21] FinalSession=null, old_session_handler=null, this=org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1, calling complete=true
+2020-06-27 18:26:46,959 DEBUG o.e.j.s.s.SessionHandler [qtp433287555-21] Complete called with session null
+2020-06-27 18:26:46,959 DEBUG o.e.j.s.Server [qtp433287555-21] handled=true async=false committed=true on HttpChannelOverHttp@15ecd263{r=1,c=true,c=false/true,a=DISPATCHED,uri=//127.0.0.1:8080/base/echo2/,age=31}
+2020-06-27 18:26:46,959 DEBUG o.e.j.s.HttpChannelState [qtp433287555-21] unhandle HttpChannelState@39364cb0{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+2020-06-27 18:26:46,960 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] HttpChannelOverHttp@15ecd263{r=1,c=true,c=false/true,a=COMPLETING,uri=//127.0.0.1:8080/base/echo2/,age=32} action COMPLETE
+2020-06-27 18:26:46,960 DEBUG o.e.j.s.HttpChannelState [qtp433287555-21] onComplete HttpChannelState@39364cb0{s=COMPLETING a=NOT_ASYNC i=false r=IDLE w=false}
+2020-06-27 18:26:46,960 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] COMPLETE for /base/echo2/ written=328
+2020-06-27 18:26:46,963 DEBUG o.e.j.s.HttpChannelState [qtp433287555-21] recycle HttpChannelState@39364cb0{s=COMPLETED a=NOT_ASYNC i=false r=IDLE w=false}
+2020-06-27 18:26:46,963 DEBUG o.e.j.h.HttpParser [qtp433287555-21] reset HttpParser{s=END,0 of -1}
+2020-06-27 18:26:46,964 DEBUG o.e.j.h.HttpParser [qtp433287555-21] END --> START
+2020-06-27 18:26:46,964 DEBUG o.e.j.s.HttpChannel [qtp433287555-21] HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0} handle exit, result COMPLETE
+2020-06-27 18:26:46,964 DEBUG o.e.j.i.AbstractEndPoint [qtp433287555-21] shutdownInput SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,OPEN,fill=-,flush=-,to=7/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,964 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-21] filled -1 HeapByteBuffer@50b15497[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 404 Not ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,964 DEBUG o.e.j.h.HttpParser [qtp433287555-21] atEOF HttpParser{s=START,0 of -1}
+2020-06-27 18:26:46,965 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,ISHUT,fill=-,flush=-,to=8/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0} filled -1 HeapByteBuffer@50b15497[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 404 Not ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,965 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,ISHUT,fill=-,flush=-,to=8/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=START,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0} parse HeapByteBuffer@50b15497[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 404 Not ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+2020-06-27 18:26:46,965 DEBUG o.e.j.h.HttpParser [qtp433287555-21] parseNext s=START HeapByteBuffer@50b15497[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 404 Not ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-06-27 18:26:46,965 DEBUG o.e.j.h.HttpParser [qtp433287555-21] START --> CLOSED
+2020-06-27 18:26:46,966 DEBUG o.e.j.i.AbstractEndPoint [qtp433287555-21] close SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,ISHUT,fill=-,flush=-,to=9/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,966 DEBUG o.e.j.i.AbstractEndPoint [qtp433287555-21] close(null) SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,ISHUT,fill=-,flush=-,to=9/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,966 DEBUG o.e.j.i.ChannelEndPoint [qtp433287555-21] doClose SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=10/30000}{io=0/0,kio=0,kro=1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:46,967 DEBUG o.e.j.i.WriteFlusher [qtp433287555-21] ignored: WriteFlusher@5cd065e1{IDLE}->null
+java.nio.channels.ClosedChannelException: null
+	at org.eclipse.jetty.io.WriteFlusher.onClose(WriteFlusher.java:492) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.AbstractEndPoint.onClose(AbstractEndPoint.java:353) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.ChannelEndPoint.onClose(ChannelEndPoint.java:215) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.AbstractEndPoint.doOnClose(AbstractEndPoint.java:225) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:192) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.AbstractEndPoint.close(AbstractEndPoint.java:175) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.AbstractConnection.close(AbstractConnection.java:248) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.HttpChannelOverHttp.earlyEOF(HttpChannelOverHttp.java:234) [jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:1552) [jetty-http-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.HttpConnection.parseRequestBuffer(HttpConnection.java:369) [jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257) [jetty-server-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117) [jetty-io-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:781) [jetty-util-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:917) [jetty-util-9.4.19.v20190610.jar:9.4.19.v20190610]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-06-27 18:26:47,012 DEBUG o.e.j.i.FillInterest [qtp433287555-21] onClose FillInterest@7573d875{null}
+2020-06-27 18:26:47,013 DEBUG o.e.j.i.ManagedSelector [qtp433287555-21] Wakeup ManagedSelector@5fe94a96{STARTED} id=1 keys=1 selected=0 updates=0
+2020-06-27 18:26:47,013 DEBUG o.e.j.u.t.QueuedThreadPool [qtp433287555-21] queue org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@b7a9819 startThread=false
+2020-06-27 18:26:47,013 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken with none selected
+2020-06-27 18:26:47,013 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-19] run org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@b7a9819 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=0,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=1/8,p=0}]
+2020-06-27 18:26:47,013 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf woken up from select, 0/0/0 selected
+2020-06-27 18:26:47,013 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=57/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0} parsed false HttpParser{s=CLOSED,0 of -1}
+2020-06-27 18:26:47,013 DEBUG o.e.j.i.ManagedSelector$DestroyEndPoint [qtp433287555-19] Destroyed SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=57/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:47,013 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf processing 0 keys, 0 updates
+2020-06-27 18:26:47,014 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updateable 0
+2020-06-27 18:26:47,014 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] releaseRequestBuffer HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=57/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:47,014 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] updates 0
+2020-06-27 18:26:47,014 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp433287555-15] Selector sun.nio.ch.WindowsSelectorImpl@24c469bf waiting with 0 keys
+2020-06-27 18:26:47,014 DEBUG o.e.j.i.AbstractEndPoint [qtp433287555-21] shutdownOutput SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=57/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:47,014 DEBUG o.e.j.i.AbstractConnection [qtp433287555-19] onClose HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=57/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-06-27 18:26:47,014 DEBUG o.e.j.s.HttpConnection [qtp433287555-21] HttpConnection@11bd60e7::SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=58/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0} onFillable exit HttpChannelState@39364cb0{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+2020-06-27 18:26:47,014 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-19] ran org.eclipse.jetty.io.ManagedSelector$DestroyEndPoint@b7a9819 in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=0,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=1/8,p=0}]
+2020-06-27 18:26:47,015 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-21] ran CEP:SocketChannelEndPoint@5bebd68e{/127.0.0.1:52542<->/127.0.0.1:8080,CLOSED,fill=-,flush=-,to=58/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@11bd60e7[p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator@fb32b3c{s=START}]=>HttpChannelOverHttp@15ecd263{r=1,c=false,c=false/false,a=IDLE,uri=null,age=0}:runFillable:BLOCKING in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=1,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=1/8,p=0}]
+2020-06-27 18:27:46,885 DEBUG o.e.j.u.t.ReservedThreadExecutor$ReservedThread [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=1/8,p=0}@5a1fa3cf IDLE
+2020-06-27 18:27:46,886 DEBUG o.e.j.u.t.ReservedThreadExecutor [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=1/8,p=0} tryExecute STOP!
+2020-06-27 18:27:46,886 DEBUG o.e.j.u.t.ReservedThreadExecutor$ReservedThread [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}@5a1fa3cf offer STOP!
+2020-06-27 18:27:46,886 DEBUG o.e.j.u.t.ReservedThreadExecutor$ReservedThread [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}@5a1fa3cf task=STOP!
+2020-06-27 18:27:46,886 DEBUG o.e.j.u.t.ReservedThreadExecutor$ReservedThread [qtp433287555-20] ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}@5a1fa3cf Exited
+2020-06-27 18:27:46,886 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp433287555-20] ran ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}@5a1fa3cf in QueuedThreadPool[qtp433287555]@19d37183{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@1d9b7cce{s=0/8,p=0}]
+2020-06-27 18:36:58,489 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 18:36:58,490 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 18:36:58,490 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 18:36:58,490 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 18:47:58,514 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 18:47:58,515 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 18:47:58,516 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 18:47:58,516 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 18:58:58,616 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 18:58:58,616 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 18:58:58,616 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 18:58:58,616 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 19:09:58,520 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 19:09:58,521 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 19:09:58,522 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 19:09:58,522 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 19:20:58,491 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 19:20:58,492 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 19:20:58,493 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 19:20:58,494 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 19:31:58,587 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 19:31:58,588 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 19:31:58,589 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 19:31:58,589 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 19:42:58,728 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 19:42:58,728 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 19:42:58,728 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 19:42:58,728 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 19:53:58,780 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 19:53:58,781 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 19:53:58,781 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 19:53:58,782 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 20:04:58,618 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 20:04:58,619 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 20:04:58,620 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 20:04:58,620 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 20:15:58,506 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 20:15:58,506 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 20:15:58,507 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 20:15:58,507 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 20:26:58,456 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 20:26:58,456 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 20:26:58,456 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 20:26:58,457 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 20:39:00,504 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 20:39:00,505 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 20:39:00,505 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 20:39:00,505 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []
+2020-06-27 20:50:00,573 DEBUG o.e.j.s.s.HouseKeeper [Session-HouseKeeper-38c6f217] node0 scavenging sessions
+2020-06-27 20:50:00,574 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging sessions
+2020-06-27 20:50:00,574 DEBUG o.e.j.s.s.SessionHandler [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.SessionHandler558216562==dftMaxIdleSec=-1 scavenging session ids []
+2020-06-27 20:50:00,574 DEBUG o.e.j.s.s.AbstractSessionCache [Session-HouseKeeper-38c6f217] org.eclipse.jetty.server.session.DefaultSessionCache@515aebb0[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false] checking expiration on []

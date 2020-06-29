@@ -1,4 +1,4 @@
-package com.demo.jetty.websocket.server;
+package com.demo.jetty.websocket.server2.demo3;
 
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.*;
@@ -13,7 +13,7 @@ import java.io.IOException;
  * The class must be not abstract and public.  这个类必需是非抽象的公共类
  */
 @WebSocket(maxTextMessageSize = 128 * 1024, maxBinaryMessageSize = 128 * 1024)
-public class AnnotatedEchoSocket {
+public class AnnotatedEchoSocket3 {
     Session session;
 
     /**
@@ -26,18 +26,18 @@ public class AnnotatedEchoSocket {
     @OnWebSocketConnect
     public void onOpen(Session session) throws Exception {
         this.session = session;
-        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket的onOpen方法的消息");
+        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket3的onOpen方法的消息");
     }
 
     @OnWebSocketMessage
     public void onMessage(String msg) throws IOException {
-        System.out.println("服务器收到消息 " + msg);
-        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket的onMessage方法的消息");
+        System.out.println("服务器3收到消息 " + msg);
+        session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket3的onMessage方法的消息");
     }
 
     @OnWebSocketClose
     public void onClose(int i, String string) {
-        System.out.println("服务端onClose。。。。");
+        System.out.println("服务端3onClose。。。。");
         //session.getRemote().sendString("这是来自服务端onClose方法的消息");该方法是连接关闭时候触发，所以send消息没有意义
     }
 
@@ -50,7 +50,7 @@ public class AnnotatedEchoSocket {
      */
     @OnWebSocketError
     public void onError(Throwable e) {
-        System.out.println("服务端AnnotatedEchoSocket的异常" + e);
+        System.out.println("服务端AnnotatedEchoSocket3的异常" + e);
     }
 
 

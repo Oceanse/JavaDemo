@@ -1,4 +1,4 @@
-package com.demo.jetty.websocket.server;
+package com.demo.jetty.websocket.server2.demo1;
 
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.*;
@@ -14,16 +14,18 @@ import java.io.IOException;
  * The class must be not abstract and public.
  */
 @WebSocket(maxTextMessageSize = 128 * 1024, maxBinaryMessageSize = 128 * 1024)
-//@WebServlet(name = "MyEcho WebSocket Servlet", urlPatterns = { "/echo2" })
 public class AnnotatedEchoSocket2 extends WebSocketServlet {
     Session session;
 
+
+    /**
+     * 在WebSocket类中，对自己WebSocket类注册
+     * @param factory
+     */
     @Override
     public void configure(WebSocketServletFactory factory) {
         factory.getPolicy().setIdleTimeout(0);//测试发现，这里必须设置为0，否则连接时候会报TimeoutException: Idle timeout expired: xxx ms，不知为什么
-
-       //Register a websocket class with the default WebSocketCreator.
-        factory.register(AnnotatedEchoSocket2.class);
+        factory.register(AnnotatedEchoSocket2.class);//Register a websocket class with the default WebSocketCreator.
     }
 
     /**
@@ -39,14 +41,13 @@ public class AnnotatedEchoSocket2 extends WebSocketServlet {
     public void onText(Session session) throws Exception {
         this.session=session;
         session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket2的onOpen方法的消息");
-
     }
 
 
     @OnWebSocketClose
     public void onClose(int i, String string) throws IOException {
         System.out.println("服务端2onClose。。。。");
-        //session.getRemote().sendString("这是来自服务端AnnotatedEchoSocket2的onClose方法的消息");
+        //session.getRemote().sendString("这是来自服务端onClose方法的消息");
     }
 
 

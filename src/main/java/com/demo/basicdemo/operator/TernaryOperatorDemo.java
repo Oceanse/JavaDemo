@@ -1,8 +1,6 @@
 package com.demo.basicdemo.operator;
 
-import org.apache.logging.log4j.core.util.JsonUtils;
 import org.testng.annotations.Test;
-import org.w3c.dom.ls.LSOutput;
 
 
 /**
@@ -13,7 +11,7 @@ import org.w3c.dom.ls.LSOutput;
  * boolean表达式为true则执行表达式 1 ;boolean表达式为 false 则执行表达式 2
  * 有时候可用来替换if-else
  * <p>
- * 表达式a>b?b>c?1:0:2： =是从右向左结合（右结合）的，那么该表达式被解析为a>b?(b>c?1:0):2
+ * 表达式a>b?b>c?1:0:2 是从右向左结合（右结合）的，那么该表达式被解析为a>b?(b>c?1:0):2
  */
 public class TernaryOperatorDemo {
 
@@ -40,7 +38,7 @@ public class TernaryOperatorDemo {
         * */
         int i = 1;
         int j = 2;
-        int max = (i < j) ? i : j;//求两个数的最大值
+        int max = (i > j) ? i : j;//求两个数的最大值
         System.out.println(max);
 
 
@@ -50,7 +48,7 @@ public class TernaryOperatorDemo {
           else
             max=j;
         * */
-        int min = (i > j) ? i : j;//求两个数的最小值
+        int min = (i < j) ? i : j;//求两个数的最小值
         System.out.println(min);
 
 

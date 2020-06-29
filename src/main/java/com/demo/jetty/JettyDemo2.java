@@ -19,11 +19,15 @@ public class JettyDemo2 {
     static int i = 30;
 
     public static void main(String[] args) throws Exception {
-        Server server = new Server(8080);
+
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.setContextPath("/hello");//设置根url localhost:8080/hello
+
+        //设置根url localhost:8080/hello
+        context.setContextPath("/hello");
+
         //只能访问localhost:8080/hello/a 来访问HelloServlet2
         context.addServlet(new ServletHolder(new HelloServlet2()), "/a");
+        Server server = new Server(8080);
         server.setHandler(context);
 
         //context.addServlet(new ServletHolder(new HelloServlet2()), "/*"); 访问localhost:8080/hello/a, localhost:8080/hello/a都行(通配符)
@@ -39,7 +43,7 @@ public class JettyDemo2 {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println(i--);
+                System.out.println("当前i值是： "+i--);
                 if (System.currentTimeMillis() - init > 30000) {//server启动时间大于30s时候
                     System.out.println((System.currentTimeMillis() - init)/1000);//打印server启动时间
                     latch.countDown();//计时器锁初始值为1，减1变成0，

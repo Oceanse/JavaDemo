@@ -17,8 +17,8 @@ public class NumberDemo {
 
     /**
      * 对于不带任何后缀的整数:
-     * 1 如果将一个在byte/short/char范围内的整数赋值给byte/short/char变量，那么系统会自动把这个数当成byte/short/char类型
-     * 2 其他情况下把任意一个整数赋值给int/long/float/double变量,系统会把这个变量当成int
+     * 1 如果将一个在byte/short/char范围内的整数常量或者整数常量表达式赋值给byte/short/char变量，那么系统会自动把这个数当成byte/short/char类型
+     * 2 其他情况下这个整数都是int类型(把任意一个整数赋值给int/long/float/double变量,系统会把这个变量当成int)
      * 3 如果直接使用不带后缀的整型常量，这个整型常量会被当作int
      *
      *对于不带任何后缀的浮点数：
@@ -45,6 +45,11 @@ public class NumberDemo {
         //cntrl + 点击println验证
         System.out.println(1);
         System.out.println(1+1);
+
+        byte b2=1+1;//1+1的结果是byte类型
+        short s2=1+1;//1+1的结果是short类型
+        char c2=1+1;//1+1的结果是char类型
+        System.out.println(b2);
 
         //这里的1.1和(1+1.1)结果的类型都是double
         //cntrl + 点击println验证

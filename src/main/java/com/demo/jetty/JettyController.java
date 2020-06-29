@@ -29,7 +29,7 @@ import javax.ws.rs.core.MediaType;
 public class JettyController {
 
     @GET
-    @Path("/subpath")
+    @Path("/hello")
     @Consumes(MediaType.TEXT_PLAIN)
     public String getInfo() {
         return "hello jetty";

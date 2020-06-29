@@ -1,11 +1,10 @@
-package com.demo.jetty.websocket.server;
+package com.demo.jetty.websocket.server2.demo3;
 
-import com.demo.jetty.websocket.server2.demo3.AnnotatedEchoSocket3;
 import org.eclipse.jetty.websocket.servlet.ServletUpgradeRequest;
 import org.eclipse.jetty.websocket.servlet.ServletUpgradeResponse;
 import org.eclipse.jetty.websocket.servlet.WebSocketCreator;
 
-public class MyAdvancedEchoCreator  implements WebSocketCreator {
+public class MyAdvancedEchoCreator implements WebSocketCreator {
 
 
     AnnotatedEchoSocket3 annotatedEchoSocket3;
