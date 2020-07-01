@@ -1,11 +1,11 @@
-package com.demo.jetty.websocket.client;
-
-import java.net.URI;
-import java.util.concurrent.TimeUnit;
+package com.demo.jetty.websocket.client.demo3;
 
 import com.demo.jetty.websocket.server.SimpleEchoSocket;
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.eclipse.jetty.websocket.client.WebSocketClient;
+
+import java.net.URI;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Example of a simple Echo Client.

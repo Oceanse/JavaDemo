@@ -12,8 +12,8 @@ public class StartServer {
         handler.setContextPath("/base");//设置上下问路径 http://localhost:8080/base
 
         //两个servlet和两个path匹配，注意path后面的/要和client端请求url中的/同有同无，保持一致
-        handler.addServlet(new ServletHolder(AnnotatedEchoSocket.class), "/path2/");
-        handler.addServlet(new ServletHolder(AnnotatedEchoSocket2.class), "/path2_2/");
+        handler.addServlet(new ServletHolder(AnnotatedEchoSocket.class), "/path1/");
+        handler.addServlet(new ServletHolder(AnnotatedEchoSocket2.class), "/path2/");
         server.setHandler(handler);
         server.start();
 

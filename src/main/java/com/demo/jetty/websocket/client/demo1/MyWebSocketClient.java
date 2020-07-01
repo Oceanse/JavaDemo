@@ -1,4 +1,4 @@
-package com.demo.jetty.websocket.client;
+package com.demo.jetty.websocket.client.demo1;
 
 
 import org.java_websocket.client.WebSocketClient;
@@ -44,8 +44,8 @@ public class MyWebSocketClient extends WebSocketClient {
 
     //client端请求url中的/要和startServer中上下文路径要同有同无，保持一致
     static String url = "ws://127.0.0.1:7778/test/";
-    static String url2 = "ws://127.0.0.1:8080/base/path2/";
-    static String url2_2 = "ws://127.0.0.1:8080/base/path2_2/";
+    static String url2 = "ws://127.0.0.1:8080/base/path1/";
+    static String url2_2 = "ws://127.0.0.1:8080/base/path2/";
     static String url3 = "ws://127.0.0.1:7778/test3/";
     static String url4 = "ws://127.0.0.1:8080/base/path4/echo/";
 
