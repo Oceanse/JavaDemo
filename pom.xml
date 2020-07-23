@@ -98,9 +98,8 @@
         </dependency>
 
 
-        <!--和CLASSPATH以及JavaClass相关
-        org.apache.bcel.Repository,
-        org.apache.bcel.classfile.JavaClass-->
+      <!--The Byte Code Engineering Library (BCEL™) is intended to give users
+       a convenient way to analyze, create, and manipulate (binary) Java class files -->
         <dependency>
             <groupId>org.apache.bcel</groupId>
             <artifactId>bcel</artifactId>
@@ -186,6 +185,12 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.3</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -242,6 +247,31 @@
                                     </excludes>
                                 </filter>
                             </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.alibaba</groupId>
+                                    <artifactId>fastjson</artifactId>
+                                    <version>1.2.54</version>
+                                    <includes>META-INF</includes>
+                                    <outputDirectory>${project.build.directory}/libs/</outputDirectory>
+                                </artifactItem>
+                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>

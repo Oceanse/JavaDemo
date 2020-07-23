@@ -276,7 +276,7 @@ Host: localhost:8080
 2020-06-27 17:29:34,893 DEBUG o.e.j.s.h.ContextHandler [qtp1704629915-16] context=/base||/hi @ o.e.j.s.ServletContextHandler@647fd8ce{/base,null,AVAILABLE}
 2020-06-27 17:29:34,893 DEBUG o.e.j.s.s.SessionHandler [qtp1704629915-16] SessionHandler.doScope
 2020-06-27 17:29:34,893 DEBUG o.e.j.s.s.SessionHandler [qtp1704629915-16] sessionHandler=org.eclipse.jetty.server.session.SessionHandler22671767==dftMaxIdleSec=-1 session=null
-2020-06-27 17:29:34,893 DEBUG o.e.j.s.ServletHandler [qtp1704629915-16] servlet /base|/hi|null -> com.demo.jetty.HiServlet-3aefe5e5@38434de6==com.demo.jetty.HiServlet,jsp=null,order=-1,inst=true,async=true
+2020-06-27 17:29:34,893 DEBUG o.e.j.s.ServletHandler [qtp1704629915-16] servlet /base|/hi|null -> com.demo.jetty.jettydemo1.HiServlet-3aefe5e5@38434de6==com.demo.jetty.jettydemo1.HiServlet,jsp=null,order=-1,inst=true,async=true
 2020-06-27 17:29:34,893 DEBUG o.e.j.s.ServletHandler [qtp1704629915-16] chain=null
 2020-06-27 17:29:34,893 DEBUG o.e.j.s.s.SessionHandler [qtp1704629915-16] FinalSession=null, old_session_handler=null, this=org.eclipse.jetty.server.session.SessionHandler22671767==dftMaxIdleSec=-1, calling complete=true
 2020-06-27 17:29:34,893 DEBUG o.e.j.s.s.SessionHandler [qtp1704629915-16] Complete called with session null

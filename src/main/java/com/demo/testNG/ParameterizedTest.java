@@ -7,48 +7,50 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
+/**
+ * 参数定义在suite.xml中， 通过@Parameters注解传递到测试方法中
+ */
 public class ParameterizedTest {
 
 
-    /*@DataProvider(name = "mapParamMethod")
-    public Object[][] mapParamMethod() {
-    final XmlTest currentXmlTest = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
-    final Map<String, String> parameters = Reporter.getCurrentTestResult().getMethod()
-            .findMethodParameters(currentXmlTest);*/
-    @BeforeClass
-    public static ITestResult getTestClassName(){
-        ITestResult it = Reporter.getCurrentTestResult();
-        return it;
-    }
-
-
     // 定义数据源
-    @DataProvider(name = "test")
+    @DataProvider(name = "paramData")
     public Object[][] createData() {
-        return new Object[][]{{"dadaorufeng",29},{"zhangsan",28}};
+        return new Object[][]{{"dadaorufeng", 29}, {"zhangsan", 28}};
     }
 
     // 使用数据源
-    @Test(dataProvider = "test")
+    @Test(dataProvider = "paramData")
     public void verifyData(String name, int age) {
         System.out.println("name:" + name + ",age:" + age);
     }
 
 
-
+    /**
+     * 从param.xml中获取参数<parameter name="name" value="Tank" />
+     * @param myname
+     */
     @Test
-    @Parameters("name")//从xml中获取参数
-    public void verifyData2(String name) {
+    @Parameters("name")
+    public void verifyData2(String myname) {
         System.out.println();
-        System.out.println("name2:" + name );
+        System.out.println("name:" + myname);
     }
 
+
+    /**
+     * 从param.xml中获取参数
+     *  <parameter name="length" value="10" />
+     *  <parameter name="width" value="5" />
+     *
+     * @param length
+     * @param width
+     */
     @Test
-    @Parameters({"name","age"})//从xml中获取参数
-    public void verifyData3(String name,int age) {
+    @Parameters({"length", "width"})
+    public void verifyData3(String length, String width) {
         System.out.println();
-        System.out.println("name3:" + name+" age: "+age );
+        System.out.println( " long: " + length+" width:" + width);
     }
 }
 

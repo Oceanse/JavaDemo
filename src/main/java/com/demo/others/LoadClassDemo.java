@@ -17,24 +17,24 @@ public class LoadClassDemo {
 
     @Test
     public void test(){
-        JavaClass javaClass = Repository.lookupClass(LoadClassDemo.class);
+      /*  JavaClass javaClass = Repository.lookupClass(LoadClassDemo.class);
         ClassGen classGen = new ClassGen(javaClass);
         Method[] methods = classGen.getMethods();   //import com.sun.org.apache.bcel.internal.classfile.Method
 
-        /*等价于
+        *//*等价于
         Class clazz=LoadClassDemo.class;
         Method[] methods = clazz.getDeclaredMethods();   import java.lang.reflect.Method;
-        */
+        *//*
 
         for (Method method : methods) {
             System.out.println(method.getName());
-        }
+        }*/
     }
 
 
     @Test
     public void test2() {
-        String path = "C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar/";
+      /*  String path = "C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar/";
         //String path = "C:/Program Files/Java/jdk1.8.0_201/jre/lib/";不可以
 
         //把path路径下的所有文件加入到classpath
@@ -47,7 +47,7 @@ public class LoadClassDemo {
         Method[] methods = javaClass.getMethods();
         for (Method method : methods) {
             System.out.println(method.getName());
-        }
+        }*/
 
     }
 

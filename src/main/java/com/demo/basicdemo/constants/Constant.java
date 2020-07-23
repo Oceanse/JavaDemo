@@ -2,6 +2,9 @@ package com.demo.basicdemo.constants;
 
 import org.testng.annotations.Test;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class Constant {
 
 
@@ -31,6 +34,11 @@ public class Constant {
     final int M=1;
     final boolean FLAG=true;
 
+
+    private final static Map<String, String> workChannels = new ConcurrentHashMap<>();
+    private final static String names="aa";
+    private final  int ages=123;
+
     @Test
     public void test(){
         final String NAME="ocean";
@@ -38,6 +46,12 @@ public class Constant {
         int m=new Constant().M;//常量值赋值给变量
         double d=Math.PI;//这里PI是static final
 
+
+
+
+        workChannels.put("name","tom");
+        // names="cc";
+        //ages=456;
     }
 
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+    <parameter name="name" value="Tank" />
+    <parameter name="length" value="10" />
+    <parameter name="width" value="5" />
+    <test name="ParameterizedTest">
+        <classes>
+            <class name="com.demo.testNG.ParameterizedTest">
+            <methods>
+                <include name="verifyData2" />
+                <include name="verifyData3" />
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite>

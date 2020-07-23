@@ -1,0 +1,301 @@
+2020-07-10 17:49:03,597 DEBUG o.e.j.u.l.Log [main] Logging to org.apache.logging.slf4j.Log4jLogger@445b295b via org.eclipse.jetty.util.log.Slf4jLog
+2020-07-10 17:49:03,616 INFO o.e.j.u.l.Log [main] Logging initialized @2754ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-07-10 17:49:03,641 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@50caa560{STOPPED}[9.4.19.v20190610] added {QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY],AUTO}
+2020-07-10 17:49:03,664 DEBUG o.e.j.u.c.ContainerLifeCycle [main] HttpConnectionFactory@c333c60[HTTP/1.1] added {HttpConfiguration@79da8dc5{32768/8192,8192/8192,https://:0,[]},POJO}
+2020-07-10 17:49:03,667 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{null,[]}{0.0.0.0:0} added {Server@50caa560{STOPPED}[9.4.19.v20190610],UNMANAGED}
+2020-07-10 17:49:03,668 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{null,[]}{0.0.0.0:0} added {QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY],AUTO}
+2020-07-10 17:49:03,669 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{null,[]}{0.0.0.0:0} added {ScheduledExecutorScheduler@44821a96{STOPPED},AUTO}
+2020-07-10 17:49:03,670 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@a3d8174,POJO}
+2020-07-10 17:49:03,670 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@c333c60[HTTP/1.1],AUTO}
+2020-07-10 17:49:03,671 DEBUG o.e.j.s.AbstractConnector [main] ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@c333c60[HTTP/1.1]
+2020-07-10 17:49:03,675 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:0},MANAGED}
+2020-07-10 17:49:03,675 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@50caa560{STOPPED}[9.4.19.v20190610] added {ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085},AUTO}
+2020-07-10 17:49:03,676 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting Server@50caa560{STOPPED}[9.4.19.v20190610]
+2020-07-10 17:49:03,681 DEBUG o.e.j.u.c.ContainerLifeCycle [main] Server@50caa560{STARTING}[9.4.19.v20190610] added {ErrorHandler@34f5090e{STOPPED},AUTO}
+2020-07-10 17:49:03,682 INFO o.e.j.s.Server [main] jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_251-b08
+2020-07-10 17:49:03,695 DEBUG o.e.j.s.h.AbstractHandler [main] starting Server@50caa560{STARTING}[9.4.19.v20190610]
+2020-07-10 17:49:03,695 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPED,8<=0<=200,i=0,r=-1,q=0}[NO_TRY]
+2020-07-10 17:49:03,698 DEBUG o.e.j.u.t.ReservedThreadExecutor [main] ReservedThreadExecutor@101952da{s=0/8,p=0}
+2020-07-10 17:49:03,698 DEBUG o.e.j.u.c.ContainerLifeCycle [main] QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=0<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}] added {ReservedThreadExecutor@101952da{s=0/8,p=0},AUTO}
+2020-07-10 17:49:03,699 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ReservedThreadExecutor@101952da{s=0/8,p=0}
+2020-07-10 17:49:03,701 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2840ms ReservedThreadExecutor@101952da{s=0/8,p=0}
+2020-07-10 17:49:03,702 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-14,5,main]
+2020-07-10 17:49:03,702 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-15,5,main]
+2020-07-10 17:49:03,703 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-16,5,main]
+2020-07-10 17:49:03,703 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-14] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=2<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,703 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-17,5,main]
+2020-07-10 17:49:03,703 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-15] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=3<=200,i=0,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,703 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-16] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=4<=200,i=1,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,704 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-18,5,main]
+2020-07-10 17:49:03,704 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-17] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=5<=200,i=2,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,704 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-19,5,main]
+2020-07-10 17:49:03,704 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-18] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=6<=200,i=3,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,704 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-20,5,main]
+2020-07-10 17:49:03,705 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-19] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=7<=200,i=4,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,705 DEBUG o.e.j.u.t.QueuedThreadPool [main] Starting Thread[qtp1647766367-21,5,main]
+2020-07-10 17:49:03,705 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-20] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTING,8<=8<=200,i=6,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,705 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2844ms QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,705 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-21] Runner started for QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,706 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ErrorHandler@34f5090e{STOPPED}
+2020-07-10 17:49:03,706 DEBUG o.e.j.s.h.AbstractHandler [main] starting ErrorHandler@34f5090e{STARTING}
+2020-07-10 17:49:03,706 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2845ms ErrorHandler@34f5090e{STARTED}
+2020-07-10 17:49:03,707 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,710 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:10085],POJO}
+2020-07-10 17:49:03,711 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ScheduledExecutorScheduler@44821a96{STOPPED}
+2020-07-10 17:49:03,713 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2852ms ScheduledExecutorScheduler@44821a96{STARTED}
+2020-07-10 17:49:03,713 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting HttpConnectionFactory@c333c60[HTTP/1.1]
+2020-07-10 17:49:03,714 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2852ms HttpConnectionFactory@c333c60[HTTP/1.1]
+2020-07-10 17:49:03,714 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,729 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.726+08:00 added {SelectorProducer@4d465b11,POJO}
+2020-07-10 17:49:03,730 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.729+08:00 added {QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}],UNMANAGED}
+2020-07-10 17:49:03,731 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.73+08:00 created
+2020-07-10 17:49:03,732 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@56cdfb3b{STOPPED} id=0 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.731+08:00,MANAGED}
+2020-07-10 17:49:03,732 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} added {ManagedSelector@56cdfb3b{STOPPED} id=0 keys=-1 selected=-1 updates=0,AUTO}
+2020-07-10 17:49:03,733 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.732+08:00 added {SelectorProducer@20ccf40b,POJO}
+2020-07-10 17:49:03,733 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.733+08:00 added {QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}],UNMANAGED}
+2020-07-10 17:49:03,733 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.733+08:00 created
+2020-07-10 17:49:03,734 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@2fb3536e{STOPPED} id=1 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.734+08:00,MANAGED}
+2020-07-10 17:49:03,734 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} added {ManagedSelector@2fb3536e{STOPPED} id=1 keys=-1 selected=-1 updates=0,AUTO}
+2020-07-10 17:49:03,735 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.734+08:00 added {SelectorProducer@35aea049,POJO}
+2020-07-10 17:49:03,735 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.735+08:00 added {QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}],UNMANAGED}
+2020-07-10 17:49:03,736 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.736+08:00 created
+2020-07-10 17:49:03,737 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@7205765b{STOPPED} id=2 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.737+08:00,MANAGED}
+2020-07-10 17:49:03,737 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} added {ManagedSelector@7205765b{STOPPED} id=2 keys=-1 selected=-1 updates=0,AUTO}
+2020-07-10 17:49:03,738 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.738+08:00 added {SelectorProducer@22ef9844,POJO}
+2020-07-10 17:49:03,739 DEBUG o.e.j.u.c.ContainerLifeCycle [main] EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.738+08:00 added {QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}],UNMANAGED}
+2020-07-10 17:49:03,739 DEBUG o.e.j.u.t.s.EatWhatYouKill [main] EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.739+08:00 created
+2020-07-10 17:49:03,740 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ManagedSelector@6283d8b8{STOPPED} id=3 keys=-1 selected=-1 updates=0 added {EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.74+08:00,MANAGED}
+2020-07-10 17:49:03,740 DEBUG o.e.j.u.c.ContainerLifeCycle [main] SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} added {ManagedSelector@6283d8b8{STOPPED} id=3 keys=-1 selected=-1 updates=0,AUTO}
+2020-07-10 17:49:03,740 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@56cdfb3b{STOPPED} id=0 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,741 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.74+08:00
+2020-07-10 17:49:03,741 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2880ms EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=8,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.741+08:00
+2020-07-10 17:49:03,749 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@58695725 startThread=false
+2020-07-10 17:49:03,749 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-14] run org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@58695725 in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,750 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@543588e6 on ManagedSelector@56cdfb3b{STARTING} id=0 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,750 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp1647766367-14] EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.75+08:00 tryProduce false
+2020-07-10 17:49:03,753 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] updateable 1
+2020-07-10 17:49:03,753 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] update org.eclipse.jetty.io.ManagedSelector$Start@543588e6
+2020-07-10 17:49:03,753 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] updates 0
+2020-07-10 17:49:03,753 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 waiting with 0 keys
+2020-07-10 17:49:03,753 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2892ms ManagedSelector@56cdfb3b{STARTED} id=0 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,754 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@2fb3536e{STOPPED} id=1 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,754 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.754+08:00
+2020-07-10 17:49:03,755 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2893ms EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.755+08:00
+2020-07-10 17:49:03,756 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-15] run org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@f5acb9d in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,756 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@f5acb9d startThread=false
+2020-07-10 17:49:03,757 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp1647766367-15] EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.756+08:00 tryProduce false
+2020-07-10 17:49:03,757 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@4fb3ee4e on ManagedSelector@2fb3536e{STARTING} id=1 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,757 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updateable 0
+2020-07-10 17:49:03,757 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updates 1
+2020-07-10 17:49:03,757 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] wakeup on updates SelectorProducer@20ccf40b
+2020-07-10 17:49:03,757 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b waiting with 0 keys
+2020-07-10 17:49:03,757 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken with none selected
+2020-07-10 17:49:03,758 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,758 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b processing 0 keys, 1 updates
+2020-07-10 17:49:03,758 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updateable 1
+2020-07-10 17:49:03,758 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] update org.eclipse.jetty.io.ManagedSelector$Start@4fb3ee4e
+2020-07-10 17:49:03,758 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updates 0
+2020-07-10 17:49:03,758 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b waiting with 0 keys
+2020-07-10 17:49:03,758 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2897ms ManagedSelector@2fb3536e{STARTED} id=1 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,759 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@7205765b{STOPPED} id=2 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,759 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.759+08:00
+2020-07-10 17:49:03,760 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2898ms EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.759+08:00
+2020-07-10 17:49:03,761 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@5d7148e2 startThread=false
+2020-07-10 17:49:03,761 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-16] run org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@5d7148e2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,762 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@25fb8912 on ManagedSelector@7205765b{STARTING} id=2 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,762 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp1647766367-16] EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.762+08:00 tryProduce false
+2020-07-10 17:49:03,762 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] updateable 1
+2020-07-10 17:49:03,762 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] update org.eclipse.jetty.io.ManagedSelector$Start@25fb8912
+2020-07-10 17:49:03,762 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] updates 0
+2020-07-10 17:49:03,763 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 waiting with 0 keys
+2020-07-10 17:49:03,763 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2901ms ManagedSelector@7205765b{STARTED} id=2 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,763 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ManagedSelector@6283d8b8{STOPPED} id=3 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,764 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.763+08:00
+2020-07-10 17:49:03,764 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2902ms EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.764+08:00
+2020-07-10 17:49:03,766 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-17] run org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@7c24b813 in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,766 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@7c24b813 startThread=false
+2020-07-10 17:49:03,766 DEBUG o.e.j.u.t.s.EatWhatYouKill [qtp1647766367-17] EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.766+08:00 tryProduce false
+2020-07-10 17:49:03,766 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$Start@2c35e847 on ManagedSelector@6283d8b8{STARTING} id=3 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,766 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updateable 0
+2020-07-10 17:49:03,766 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updates 1
+2020-07-10 17:49:03,766 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] wakeup on updates SelectorProducer@22ef9844
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 waiting with 0 keys
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 woken with none selected
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 processing 0 keys, 1 updates
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updateable 1
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] update org.eclipse.jetty.io.ManagedSelector$Start@2c35e847
+2020-07-10 17:49:03,767 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updates 0
+2020-07-10 17:49:03,768 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2906ms ManagedSelector@6283d8b8{STARTED} id=3 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,768 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 waiting with 0 keys
+2020-07-10 17:49:03,768 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2906ms SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,769 DEBUG o.e.j.u.c.ContainerLifeCycle [main] ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} added {acceptor-0@5ba3f27a,POJO}
+2020-07-10 17:49:03,770 DEBUG o.e.j.u.t.QueuedThreadPool [main] queue acceptor-0@5ba3f27a startThread=false
+2020-07-10 17:49:03,770 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-18] run acceptor-0@5ba3f27a in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=3,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,770 INFO o.e.j.s.AbstractConnector [main] Started ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,771 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2909ms ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,771 INFO o.e.j.s.Server [main] Started @2909ms
+2020-07-10 17:49:03,771 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @2909ms Server@50caa560{STARTED}[9.4.19.v20190610]
+2020-07-10 17:49:03,773 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping Server@50caa560{STARTED}[9.4.19.v20190610]
+2020-07-10 17:49:03,773 DEBUG o.e.j.i.ManagedSelector [qtp1647766367-18-acceptor-0@5ba3f27a-ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}] Queued change org.eclipse.jetty.io.ManagedSelector$Accept@145f01cc on ManagedSelector@2fb3536e{STARTED} id=1 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,773 DEBUG o.e.j.s.Server [main] doStop Server@50caa560{STOPPING}[9.4.19.v20190610]
+2020-07-10 17:49:03,773 DEBUG o.e.j.i.ManagedSelector [qtp1647766367-18-acceptor-0@5ba3f27a-ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}] Wakeup on submit ManagedSelector@2fb3536e{STARTED} id=1 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,774 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken with none selected
+2020-07-10 17:49:03,774 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,774 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b processing 0 keys, 1 updates
+2020-07-10 17:49:03,774 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updateable 1
+2020-07-10 17:49:03,774 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] update org.eclipse.jetty.io.ManagedSelector$Accept@145f01cc
+2020-07-10 17:49:03,775 DEBUG o.e.j.u.t.QueuedThreadPool [qtp1647766367-15] queue org.eclipse.jetty.io.ManagedSelector$Accept@145f01cc startThread=false
+2020-07-10 17:49:03,775 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-19] run org.eclipse.jetty.io.ManagedSelector$Accept@145f01cc in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,775 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updates 0
+2020-07-10 17:49:03,775 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b waiting with 1 keys
+2020-07-10 17:49:03,778 DEBUG o.e.j.s.h.AbstractHandlerContainer [main] Graceful shutdown Server@50caa560{STOPPING}[9.4.19.v20190610] by 
+2020-07-10 17:49:03,778 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,779 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-18] ran qtp1647766367-18-acceptor-0@5ba3f27a-ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085} in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=2,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,779 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,779 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ManagedSelector@6283d8b8{STARTED} id=3 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,780 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$CloseConnections@d5b810e on ManagedSelector@6283d8b8{STOPPING} id=3 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,780 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@6283d8b8{STOPPING} id=3 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 woken with none selected
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 processing 0 keys, 1 updates
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updateable 1
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] update org.eclipse.jetty.io.ManagedSelector$CloseConnections@d5b810e
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$CloseConnections [qtp1647766367-17] Closing 0 connections on ManagedSelector@6283d8b8{STOPPING} id=3 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updates 0
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 waiting with 0 keys
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$StopSelector@43dac38f on ManagedSelector@6283d8b8{STOPPING} id=3 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@6283d8b8{STOPPING} id=3 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,781 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 woken with none selected
+2020-07-10 17:49:03,782 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,782 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] Selector sun.nio.ch.WindowsSelectorImpl@37770f95 processing 0 keys, 1 updates
+2020-07-10 17:49:03,782 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updateable 1
+2020-07-10 17:49:03,782 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] update org.eclipse.jetty.io.ManagedSelector$StopSelector@43dac38f
+2020-07-10 17:49:03,782 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-17] updates 0
+2020-07-10 17:49:03,783 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping EatWhatYouKill@47987356/SelectorProducer@22ef9844/PRODUCING/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=3,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.783+08:00
+2020-07-10 17:49:03,783 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-17] ran org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@7c24b813 in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=3,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,783 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED EatWhatYouKill@47987356/SelectorProducer@22ef9844/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.783+08:00
+2020-07-10 17:49:03,784 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ManagedSelector@6283d8b8{STOPPED} id=3 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,784 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ManagedSelector@7205765b{STARTED} id=2 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,785 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$CloseConnections@342c38f8 on ManagedSelector@7205765b{STOPPING} id=2 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,785 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@7205765b{STOPPING} id=2 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,786 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 woken with none selected
+2020-07-10 17:49:03,786 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,786 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 processing 0 keys, 1 updates
+2020-07-10 17:49:03,786 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] updateable 1
+2020-07-10 17:49:03,786 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] update org.eclipse.jetty.io.ManagedSelector$CloseConnections@342c38f8
+2020-07-10 17:49:03,787 DEBUG o.e.j.i.ManagedSelector$CloseConnections [qtp1647766367-16] Closing 0 connections on ManagedSelector@7205765b{STOPPING} id=2 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,787 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] updates 0
+2020-07-10 17:49:03,787 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 waiting with 0 keys
+2020-07-10 17:49:03,787 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$StopSelector@c88a337 on ManagedSelector@7205765b{STOPPING} id=2 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,787 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@7205765b{STOPPING} id=2 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,788 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 woken with none selected
+2020-07-10 17:49:03,788 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,788 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] Selector sun.nio.ch.WindowsSelectorImpl@a10aa54 processing 0 keys, 1 updates
+2020-07-10 17:49:03,788 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] updateable 1
+2020-07-10 17:49:03,789 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] update org.eclipse.jetty.io.ManagedSelector$StopSelector@c88a337
+2020-07-10 17:49:03,789 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-16] updates 0
+2020-07-10 17:49:03,790 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-16] ran org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@5d7148e2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,790 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping EatWhatYouKill@169e6180/SelectorProducer@35aea049/PRODUCING/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=4,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.79+08:00
+2020-07-10 17:49:03,791 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED EatWhatYouKill@169e6180/SelectorProducer@35aea049/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.791+08:00
+2020-07-10 17:49:03,791 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ManagedSelector@7205765b{STOPPED} id=2 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,792 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ManagedSelector@2fb3536e{STARTED} id=1 keys=1 selected=0 updates=0
+2020-07-10 17:49:03,792 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$CloseConnections@5d0a1059 on ManagedSelector@2fb3536e{STOPPING} id=1 keys=1 selected=0 updates=0
+2020-07-10 17:49:03,792 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@2fb3536e{STOPPING} id=1 keys=1 selected=0 updates=1
+2020-07-10 17:49:03,793 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken with none selected
+2020-07-10 17:49:03,793 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken up from select, 0/0/1 selected
+2020-07-10 17:49:03,793 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b processing 0 keys, 1 updates
+2020-07-10 17:49:03,793 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updateable 1
+2020-07-10 17:49:03,794 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] update org.eclipse.jetty.io.ManagedSelector$CloseConnections@5d0a1059
+2020-07-10 17:49:03,794 DEBUG o.e.j.i.ManagedSelector$CloseConnections [qtp1647766367-15] Closing 1 connections on ManagedSelector@2fb3536e{STOPPING} id=1 keys=1 selected=0 updates=0
+2020-07-10 17:49:03,794 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updates 0
+2020-07-10 17:49:03,794 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b waiting with 1 keys
+2020-07-10 17:49:03,794 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$StopSelector@485966cc on ManagedSelector@2fb3536e{STOPPING} id=1 keys=1 selected=0 updates=0
+2020-07-10 17:49:03,794 DEBUG o.e.j.i.IdleTimeout [qtp1647766367-19] SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=-,flush=-,to=12/30000}{io=0/0,kio=0,kro=0}-><null> idle timeout check, elapsed: 11 ms, remaining: 29989 ms
+2020-07-10 17:49:03,795 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@2fb3536e{STOPPING} id=1 keys=1 selected=0 updates=1
+2020-07-10 17:49:03,795 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken with none selected
+2020-07-10 17:49:03,795 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b woken up from select, 0/0/1 selected
+2020-07-10 17:49:03,795 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] Selector sun.nio.ch.WindowsSelectorImpl@504bdb3b processing 0 keys, 1 updates
+2020-07-10 17:49:03,795 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updateable 1
+2020-07-10 17:49:03,796 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] update org.eclipse.jetty.io.ManagedSelector$StopSelector@485966cc
+2020-07-10 17:49:03,796 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-15] updates 0
+2020-07-10 17:49:03,797 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-15] ran org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@f5acb9d in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,797 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/PRODUCING/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=5,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.796+08:00
+2020-07-10 17:49:03,797 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED EatWhatYouKill@2b91004a/SelectorProducer@20ccf40b/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.797+08:00
+2020-07-10 17:49:03,798 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ManagedSelector@2fb3536e{STOPPED} id=1 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,798 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ManagedSelector@56cdfb3b{STARTED} id=0 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,798 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$CloseConnections@1de76cc7 on ManagedSelector@56cdfb3b{STOPPING} id=0 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,799 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@56cdfb3b{STOPPING} id=0 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,799 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 woken with none selected
+2020-07-10 17:49:03,799 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,799 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 processing 0 keys, 1 updates
+2020-07-10 17:49:03,800 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] updateable 1
+2020-07-10 17:49:03,800 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] update org.eclipse.jetty.io.ManagedSelector$CloseConnections@1de76cc7
+2020-07-10 17:49:03,800 DEBUG o.e.j.i.ManagedSelector$CloseConnections [qtp1647766367-14] Closing 0 connections on ManagedSelector@56cdfb3b{STOPPING} id=0 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,800 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] updates 0
+2020-07-10 17:49:03,800 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 waiting with 0 keys
+2020-07-10 17:49:03,800 DEBUG o.e.j.i.ManagedSelector [main] Queued change org.eclipse.jetty.io.ManagedSelector$StopSelector@54bff557 on ManagedSelector@56cdfb3b{STOPPING} id=0 keys=0 selected=0 updates=0
+2020-07-10 17:49:03,801 DEBUG o.e.j.i.ManagedSelector [main] Wakeup on submit ManagedSelector@56cdfb3b{STOPPING} id=0 keys=0 selected=0 updates=1
+2020-07-10 17:49:03,801 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 woken with none selected
+2020-07-10 17:49:03,801 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 woken up from select, 0/0/0 selected
+2020-07-10 17:49:03,801 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] Selector sun.nio.ch.WindowsSelectorImpl@57d358a0 processing 0 keys, 1 updates
+2020-07-10 17:49:03,801 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] updateable 1
+2020-07-10 17:49:03,802 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] update org.eclipse.jetty.io.ManagedSelector$StopSelector@54bff557
+2020-07-10 17:49:03,802 DEBUG o.e.j.i.ManagedSelector$SelectorProducer [qtp1647766367-14] updates 0
+2020-07-10 17:49:03,803 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping EatWhatYouKill@78123e82/SelectorProducer@4d465b11/PRODUCING/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.802+08:00
+2020-07-10 17:49:03,803 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-14] ran org.eclipse.jetty.io.ManagedSelector$$Lambda$68/1636050357@58695725 in QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=6,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,803 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED EatWhatYouKill@78123e82/SelectorProducer@4d465b11/IDLE/p=false/QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}][pc=0,pic=0,pec=0,epc=0]@2020-07-10T17:49:03.803+08:00
+2020-07-10 17:49:03,803 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ManagedSelector@56cdfb3b{STOPPED} id=0 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,804 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED SelectorManager@ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,804 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping HttpConnectionFactory@c333c60[HTTP/1.1]
+2020-07-10 17:49:03,804 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED HttpConnectionFactory@c333c60[HTTP/1.1]
+2020-07-10 17:49:03,804 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ScheduledExecutorScheduler@44821a96{STARTED}
+2020-07-10 17:49:03,804 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ScheduledExecutorScheduler@44821a96{STOPPED}
+2020-07-10 17:49:03,805 INFO o.e.j.s.AbstractConnector [main] Stopped ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,805 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ServerConnector@53976f5c{HTTP/1.1,[http/1.1]}{0.0.0.0:10085}
+2020-07-10 17:49:03,805 DEBUG o.e.j.s.h.AbstractHandler [main] stopping Server@50caa560{STOPPING}[9.4.19.v20190610]
+2020-07-10 17:49:03,806 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ErrorHandler@34f5090e{STARTED}
+2020-07-10 17:49:03,806 DEBUG o.e.j.s.h.AbstractHandler [main] stopping ErrorHandler@34f5090e{STOPPING}
+2020-07-10 17:49:03,806 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ErrorHandler@34f5090e{STOPPED}
+2020-07-10 17:49:03,807 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping QueuedThreadPool[qtp1647766367]@6236eb5f{STARTED,8<=8<=200,i=7,r=8,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,807 DEBUG o.e.j.u.t.QueuedThreadPool [main] Stopping QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=8<=200,i=7,r=-1,q=0}[ReservedThreadExecutor@101952da{s=0/8,p=0}]
+2020-07-10 17:49:03,807 DEBUG o.e.j.u.c.AbstractLifeCycle [main] stopping ReservedThreadExecutor@101952da{s=0/8,p=0}
+2020-07-10 17:49:03,807 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED ReservedThreadExecutor@101952da{s=0/8,p=0}
+2020-07-10 17:49:03,807 DEBUG o.e.j.h.PreEncodedHttpField [qtp1647766367-19] HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@2885c950]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-20] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=7}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool [main] Waiting for Thread[qtp1647766367-21,5,main] for 14999
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-15] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=2}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-17] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=3}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-20] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-17] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-16] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=2}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-21] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=5}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-17] Thread[qtp1647766367-17,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-18] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=5}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-15] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-20] Thread[qtp1647766367-20,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-21] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-15] Thread[qtp1647766367-15,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-14] run org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,808 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-16] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-18] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-14] ran org.eclipse.jetty.util.thread.QueuedThreadPool$$Lambda$49/1995250556@7b64bef2 in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-16] Thread[qtp1647766367-16,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-14] Thread[qtp1647766367-14,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-18] Thread[qtp1647766367-18,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,809 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-21] Thread[qtp1647766367-21,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,810 DEBUG o.e.j.u.t.QueuedThreadPool [main] Waiting for Thread[qtp1647766367-16,5,] for 14998
+2020-07-10 17:49:03,810 DEBUG o.e.j.u.t.QueuedThreadPool [main] Waiting for Thread[qtp1647766367-19,5,main] for 14997
+2020-07-10 17:49:03,856 DEBUG o.e.j.s.HttpChannel [qtp1647766367-19] new HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0} -> SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=-,flush=-,to=74/30000}{io=0/0,kio=-1,kro=-1}-><null>,null,HttpChannelState@1e5aab2b{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+2020-07-10 17:49:03,865 DEBUG o.e.j.s.HttpConnection [qtp1647766367-19] New HTTP Connection HttpConnection@6b457681::SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=-,flush=-,to=84/30000}{io=0/0,kio=-1,kro=-1}-><null>
+2020-07-10 17:49:03,866 DEBUG o.e.j.i.AbstractEndPoint [qtp1647766367-19] onOpen SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=-,flush=-,to=84/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@6b457681[p=HttpParser{s=START,0 of -1},g=HttpGenerator@1c1ec8fd{s=START}]=>HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-07-10 17:49:03,867 DEBUG o.e.j.i.AbstractConnection [qtp1647766367-19] onOpen HttpConnection@6b457681::SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=-,flush=-,to=85/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@6b457681[p=HttpParser{s=START,0 of -1},g=HttpGenerator@1c1ec8fd{s=START}]=>HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-07-10 17:49:03,867 DEBUG o.e.j.i.AbstractConnection [qtp1647766367-19] fillInterested HttpConnection@6b457681::SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=-,flush=-,to=85/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@6b457681[p=HttpParser{s=START,0 of -1},g=HttpGenerator@1c1ec8fd{s=START}]=>HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-07-10 17:49:03,867 DEBUG o.e.j.i.FillInterest [qtp1647766367-19] interested FillInterest@5caf4481{AC.ReadCB@6b457681{HttpConnection@6b457681::SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=FI,flush=-,to=0/30000}{io=0/0,kio=-1,kro=-1}->HttpConnection@6b457681[p=HttpParser{s=START,0 of -1},g=HttpGenerator@1c1ec8fd{s=START}]=>HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}}}
+2020-07-10 17:49:03,869 DEBUG o.e.j.i.ChannelEndPoint [qtp1647766367-19] changeInterests p=false 0->1 for SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=FI,flush=-,to=0/30000}{io=0/1,kio=-1,kro=-1}->HttpConnection@6b457681[p=HttpParser{s=START,0 of -1},g=HttpGenerator@1c1ec8fd{s=START}]=>HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-07-10 17:49:03,870 DEBUG o.e.j.i.ManagedSelector [qtp1647766367-19] Queued change org.eclipse.jetty.io.ChannelEndPoint$1@32842094 on ManagedSelector@2fb3536e{STOPPED} id=1 keys=-1 selected=-1 updates=0
+2020-07-10 17:49:03,870 DEBUG o.e.j.i.ManagedSelector [qtp1647766367-19] Created SocketChannelEndPoint@268501d4{/127.0.0.1:60268<->/127.0.0.1:10085,OPEN,fill=FI,flush=-,to=3/30000}{io=0/1,kio=-1,kro=-1}->HttpConnection@6b457681[p=HttpParser{s=START,0 of -1},g=HttpGenerator@1c1ec8fd{s=START}]=>HttpChannelOverHttp@524fad10{r=0,c=false,c=false/false,a=IDLE,uri=null,age=0}
+2020-07-10 17:49:03,871 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-19] ran org.eclipse.jetty.io.ManagedSelector$Accept@145f01cc in QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,871 DEBUG o.e.j.u.t.QueuedThreadPool$Runner [qtp1647766367-19] Thread[qtp1647766367-19,5,main] exited for QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPING,8<=0<=200,i=7,r=-1,q=1}[NO_TRY]
+2020-07-10 17:49:03,871 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED QueuedThreadPool[qtp1647766367]@6236eb5f{STOPPED,8<=0<=200,i=7,r=-1,q=0}[NO_TRY]
+2020-07-10 17:49:03,871 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STOPPED Server@50caa560{STOPPED}[9.4.19.v20190610]

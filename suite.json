@@ -1,0 +1,146 @@
+{
+  "uuid": "b0db72385451456a8187beefe38075b0",
+  "reportSummary": {
+    "suiteName": "DemoSuite",
+    "runBy": "epanhai",
+    "startTime": "2020-07-22 11:14:13.498",
+    "endTime": "Not Finished",
+    "duration": "00:00:49",
+    "startTimeInMillis": 1595387653498,
+    "endTimeInMillis": 0,
+    "testSuiteResult": "TERMINATED",
+    "testSuiteVerdict": true
+  },
+  "testcases": {
+    "1": {
+      "customId": "Closed_Parent_Step",
+      "name": "testClosedParentStep",
+      "fullName": "testClosedParentStep::DemoNestedStep",
+      "sourceCodePath": null,
+      "heading": "Specify a close step as parent step",
+      "startTime": "2020-07-22 11:14:59.766",
+      "endTime": "2020-07-22 11:14:59.925",
+      "startTimeInMillis": 1595387699766,
+      "endTimeInMillis": 1595387699925,
+      "type": "TestCase",
+      "state": "SKIP",
+      "subState": "",
+      "fwType": "TestNG",
+      "parameters": [
+      ],
+      "parametersMap": {
+      },
+      "additionalInfo": [
+      ],
+      "errorInfos": [
+      ],
+      "fetchLogs": null,
+      "failureInfo": null,
+      "previousId": 0,
+      "nextId": 0,
+      "labels": [
+        "ALL"
+      ],
+      "group": "DEFAULT",
+      "metaInfo": {
+        "testAuthor": null,
+        "metaFile": [
+          "1_meta.json"
+        ],
+        "fileName": [
+          "1_testClosedParentStep_0.json"
+        ],
+        "step": {
+          "3": [
+            "1_3_0.json"
+          ],
+          "6": [
+            "1_6_0.json"
+          ],
+          "8": [
+            "1_8_0.json"
+          ]
+        },
+        "subpage": {
+        }
+      },
+      "hasBgStep": false,
+      "index": 1,
+      "duration": 159
+    },
+    "2": {
+      "customId": "NestedStepID",
+      "name": "testNestedStep",
+      "fullName": "testNestedStep::DemoNestedStep",
+      "sourceCodePath": null,
+      "heading": "NestedStepName",
+      "startTime": "2020-07-22 11:15:00.150",
+      "endTime": "2020-07-22 11:15:01.294",
+      "startTimeInMillis": 1595387700150,
+      "endTimeInMillis": 1595387701294,
+      "type": "TestCase",
+      "state": "PASSED",
+      "subState": "",
+      "fwType": "TestNG",
+      "parameters": [
+      ],
+      "parametersMap": {
+      },
+      "additionalInfo": [
+      ],
+      "errorInfos": [
+      ],
+      "fetchLogs": null,
+      "failureInfo": null,
+      "previousId": 0,
+      "nextId": 0,
+      "labels": [
+        "ALL"
+      ],
+      "group": "DEFAULT",
+      "metaInfo": {
+        "testAuthor": null,
+        "metaFile": [
+          "2_meta.json"
+        ],
+        "fileName": [
+          "2_testNestedStep_0.json"
+        ],
+        "step": {
+          "12": [
+            "2_12_0.json"
+          ],
+          "2": [
+            "2_2_0.json"
+          ],
+          "14": [
+            "2_14_0.json"
+          ],
+          "4": [
+            "2_4_0.json"
+          ],
+          "16": [
+            "2_16_0.json"
+          ],
+          "6": [
+            "2_6_0.json"
+          ],
+          "18": [
+            "2_18_0.json"
+          ],
+          "8": [
+            "2_8_0.json"
+          ],
+          "10": [
+            "2_10_0.json"
+          ]
+        },
+        "subpage": {
+        }
+      },
+      "hasBgStep": false,
+      "index": 2,
+      "duration": 1144
+    }
+  }
+}

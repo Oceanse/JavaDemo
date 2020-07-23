@@ -20,7 +20,7 @@ import java.util.stream.Stream;
  */
 public class JarFileDemo {
 
-    File file = new File("C:\\Users\\epanhai\\.m2\\repository\\se\\ericsson\\jcat\\jcat-demo\\R6A0178-SNAPSHOT\\jcat-demo-R6A0178-SNAPSHOT.jar");
+    File file = new File("C:\\Users\\epanhai\\.m2\\repository\\se\\ericsson\\jcat\\jcat-demo\\R6C0022\\jcat-demo-R6C0022-jar-with-dependencies.jar");
 
 
     /**
@@ -52,7 +52,7 @@ public class JarFileDemo {
         JarFile jarFile;
 
         if (file.exists()) {
-            jarFile = new JarFile(file);////通过把将JAR文件位置传给构造函数，创建一个JarFile的实例, 把JarFile想象成类似List的集合
+            jarFile = new JarFile(file);//通过把将JAR文件位置传给构造函数，创建一个JarFile的实例, 把JarFile想象成类似List的集合
         } else {
             throw new IOException("Jar file is not avaliable");
         }

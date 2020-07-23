@@ -35,7 +35,7 @@ public class FileUtilsDemo {
 
         System.out.println(FileUtils.getTempDirectory());//获取临时目录
         System.out.println(FileUtils.getUserDirectory());//获取用户主目录
-
+        System.out.println(FileUtils.getFile(FileUtils.getUserDirectory(), "mylog"));//Construct a file from the set of name elements
 
 
         FileUtils.touch(new File("newfile.txt"));//创建文件，如果文件存在则更新时间；如果不存在，创建一个空文件

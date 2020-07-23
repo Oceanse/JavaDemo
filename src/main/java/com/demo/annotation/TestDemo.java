@@ -22,6 +22,7 @@ public class TestDemo{
     @Test
     public void testAnno(){
         AnnoDemo annotation = TestDemo.class.getAnnotation(AnnoDemo.class);
+        System.out.println(annotation);//@com.demo.annotation.AnnoDemo(value=anno)
         String value = annotation.value();
         System.out.println("value="+value);
     }

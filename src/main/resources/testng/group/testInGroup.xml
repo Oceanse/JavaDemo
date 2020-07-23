@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <groups>
+        <run>
+            <include name="driver"/><!--筛选driver组的方法来执行-->
+          <!--  <exclude name="driver"/>排除driver组的方法来执行-->
+
+        </run>
+    </groups>
+    <test name="Test">
+        <classes>
+            <class name="com.demo.testNG.group.GroupDemo"/>
+            <class name="com.demo.testNG.group.GroupDemo2"/>
+        </classes>
+    </test>
+</suite>

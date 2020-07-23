@@ -49,7 +49,7 @@ import java.nio.file.StandardCopyOption;
  *
  *
  * FileInputStream:看这个名字就知道用于从文件中读取信息到内存中(obtains input bytes from a file in a file system)
- * FileInputStream的构造方法
+ * FileOutputStream的构造方法
  * 1、 public FileOutputStream(File file)：根据File对象为参数创建对象；如果没有这个文件，会创建该文件;如果有这个文件，会清空这个文件的数据.
  * 2、 public FileOutputStream(String name)： 根据名称字符串为参数创建对象；如果没有这个文件，会创建该文件;如果有这个文件，会清空这个文件的数据.
  * 3、public FileOutputStream(File file, boolean append)；如果没有这个文件，会创建该文件;如果有这个文件，在这个文件后面追加数据.

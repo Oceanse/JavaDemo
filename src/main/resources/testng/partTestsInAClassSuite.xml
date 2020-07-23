@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="allTestsInAClassSuite" configfailurepolicy="continue">
+    <test name="allTestsInAClass">
+        <classes>
+            <class name="com.demo.testNG.Before_AfterDemo">
+                <methods>
+                    <include name="testExample1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

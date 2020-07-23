@@ -19,8 +19,11 @@ public class JettyDem3 {
     public void test() throws Exception {
         Server server = new Server(8081);
 
+        //This handle will serve static content
         ResourceHandler resourceHandler = new ResourceHandler();
         resourceHandler.setResourceBase("C:\\Users\\epanhai");
+
+        //true if directories are listed.
         resourceHandler.setDirectoriesListed(true);
         server.setHandler(resourceHandler);
 

@@ -46,7 +46,7 @@ HttpServletDispatcher根据请求的url调用不同的controller
 
 Server server=new Server(port);
 ServletHolder servletHolder = new ServletHolder(HttpServletDispatcher.class);
-servletHolder.setInitParameter("resteasy.resources","com.demo.jetty.JettyController");//关联controller
+servletHolder.setInitParameter("resteasy.resources","com.demo.jetty.jettydemo4.RestEasyController");//关联controller
 servletHolder.setInitParameter("resteasy.servlet.mapping.prefix", "/rest/v1/");//resteasy前缀   http://localhost:8080/base/rest/v1/xxx
 
 ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);

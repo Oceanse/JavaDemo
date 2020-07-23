@@ -63,23 +63,23 @@
 2020-06-23 13:02:39,660 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1927ms ScheduledExecutorScheduler@55183b20{STARTED}
 2020-06-23 13:02:39,661 DEBUG o.e.j.s.h.AbstractHandler [main] starting org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1
 2020-06-23 13:02:39,661 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting ServletHandler@243c4f91{STOPPED}
-2020-06-23 13:02:39,663 DEBUG o.e.j.s.ServletHandler [main] Path=/a[EMBEDDED:null] mapped to servlet=com.demo.jetty.HelloServlet2-402bba4f[EMBEDDED:null]
-2020-06-23 13:02:39,666 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/a",pathDepth=1,group=EXACT],resource=com.demo.jetty.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.HelloServlet2,jsp=null,order=-1,inst=true,async=true] to PathMappings[size=1]
+2020-06-23 13:02:39,663 DEBUG o.e.j.s.ServletHandler [main] Path=/a[EMBEDDED:null] mapped to servlet=com.demo.jetty.jettydemo2.HelloServlet2-402bba4f[EMBEDDED:null]
+2020-06-23 13:02:39,666 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/a",pathDepth=1,group=EXACT],resource=com.demo.jetty.jettydemo2.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.jettydemo2.HelloServlet2,jsp=null,order=-1,inst=true,async=true] to PathMappings[size=1]
 2020-06-23 13:02:39,666 DEBUG o.e.j.s.ServletHandler [main] filterNameMap={}
 2020-06-23 13:02:39,667 DEBUG o.e.j.s.ServletHandler [main] pathFilters=null
 2020-06-23 13:02:39,667 DEBUG o.e.j.s.ServletHandler [main] servletFilterMap=null
 2020-06-23 13:02:39,668 DEBUG o.e.j.s.ServletHandler [main] servletPathMap=PathMappings[size=1]
-2020-06-23 13:02:39,669 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={com.demo.jetty.HelloServlet2-402bba4f=com.demo.jetty.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.HelloServlet2,jsp=null,order=-1,inst=true,async=true}
+2020-06-23 13:02:39,669 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={com.demo.jetty.jettydemo2.HelloServlet2-402bba4f=com.demo.jetty.jettydemo2.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.jettydemo2.HelloServlet2,jsp=null,order=-1,inst=true,async=true}
 2020-06-23 13:02:39,669 DEBUG o.e.j.s.ServletHandler [main] Adding Default404Servlet to ServletHandler@243c4f91{STARTING}
-2020-06-23 13:02:39,670 DEBUG o.e.j.s.ServletHandler [main] Path=/a[EMBEDDED:null] mapped to servlet=com.demo.jetty.HelloServlet2-402bba4f[EMBEDDED:null]
-2020-06-23 13:02:39,670 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/a",pathDepth=1,group=EXACT],resource=com.demo.jetty.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.HelloServlet2,jsp=null,order=-1,inst=true,async=true] to PathMappings[size=1]
+2020-06-23 13:02:39,670 DEBUG o.e.j.s.ServletHandler [main] Path=/a[EMBEDDED:null] mapped to servlet=com.demo.jetty.jettydemo2.HelloServlet2-402bba4f[EMBEDDED:null]
+2020-06-23 13:02:39,670 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/a",pathDepth=1,group=EXACT],resource=com.demo.jetty.jettydemo2.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.jettydemo2.HelloServlet2,jsp=null,order=-1,inst=true,async=true] to PathMappings[size=1]
 2020-06-23 13:02:39,671 DEBUG o.e.j.s.ServletHandler [main] Path=/[EMBEDDED:null] mapped to servlet=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76[EMBEDDED:null]
 2020-06-23 13:02:39,671 DEBUG o.e.j.h.p.PathMappings [main] Added MappedResource[pathSpec=ServletPathSpec["/",pathDepth=-1,group=DEFAULT],resource=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76@ed861638==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true] to PathMappings[size=2]
 2020-06-23 13:02:39,671 DEBUG o.e.j.s.ServletHandler [main] filterNameMap={}
 2020-06-23 13:02:39,672 DEBUG o.e.j.s.ServletHandler [main] pathFilters=null
 2020-06-23 13:02:39,672 DEBUG o.e.j.s.ServletHandler [main] servletFilterMap=null
 2020-06-23 13:02:39,672 DEBUG o.e.j.s.ServletHandler [main] servletPathMap=PathMappings[size=2]
-2020-06-23 13:02:39,672 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={com.demo.jetty.HelloServlet2-402bba4f=com.demo.jetty.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.HelloServlet2,jsp=null,order=-1,inst=true,async=true, org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76@ed861638==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true}
+2020-06-23 13:02:39,672 DEBUG o.e.j.s.ServletHandler [main] servletNameMap={com.demo.jetty.jettydemo2.HelloServlet2-402bba4f=com.demo.jetty.jettydemo2.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.jettydemo2.HelloServlet2,jsp=null,order=-1,inst=true,async=true, org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76@ed861638==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true}
 2020-06-23 13:02:39,672 DEBUG o.e.j.s.h.AbstractHandler [main] starting ServletHandler@243c4f91{STARTING}
 2020-06-23 13:02:39,672 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1939ms ServletHandler@243c4f91{STARTED}
 2020-06-23 13:02:39,673 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.server.session.DefaultSessionCache@2b662a77[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
@@ -87,9 +87,9 @@
 2020-06-23 13:02:39,673 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1940ms org.eclipse.jetty.server.session.NullSessionDataStore@4ec4f3a0[passivating=false,graceSec=3600]
 2020-06-23 13:02:39,673 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1940ms org.eclipse.jetty.server.session.DefaultSessionCache@2b662a77[evict=-1,removeUnloadable=false,saveOnCreate=false,saveOnInactiveEvict=false]
 2020-06-23 13:02:39,673 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1940ms org.eclipse.jetty.server.session.SessionHandler482082765==dftMaxIdleSec=-1
-2020-06-23 13:02:39,676 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting com.demo.jetty.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.HelloServlet2,jsp=null,order=-1,inst=true,async=true
-2020-06-23 13:02:39,678 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1945ms com.demo.jetty.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.HelloServlet2,jsp=null,order=-1,inst=true,async=true
-2020-06-23 13:02:39,680 DEBUG o.e.j.s.ServletHolder [main] Servlet.init com.demo.jetty.HelloServlet2@128d2484 for com.demo.jetty.HelloServlet2-402bba4f
+2020-06-23 13:02:39,676 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting com.demo.jetty.jettydemo2.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.jettydemo2.HelloServlet2,jsp=null,order=-1,inst=true,async=true
+2020-06-23 13:02:39,678 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1945ms com.demo.jetty.jettydemo2.HelloServlet2-402bba4f@db98bbd9==com.demo.jetty.jettydemo2.HelloServlet2,jsp=null,order=-1,inst=true,async=true
+2020-06-23 13:02:39,680 DEBUG o.e.j.s.ServletHolder [main] Servlet.init com.demo.jetty.jettydemo2.HelloServlet2@128d2484 for com.demo.jetty.jettydemo2.HelloServlet2-402bba4f
 2020-06-23 13:02:39,681 DEBUG o.e.j.u.c.AbstractLifeCycle [main] starting org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76@ed861638==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
 2020-06-23 13:02:39,681 DEBUG o.e.j.u.c.AbstractLifeCycle [main] STARTED @1948ms org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-49e53c76@ed861638==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,jsp=null,order=-1,inst=false,async=true
 2020-06-23 13:02:39,681 INFO o.e.j.s.h.ContextHandler [main] Started o.e.j.s.ServletContextHandler@31c88ec8{/hello,null,AVAILABLE}

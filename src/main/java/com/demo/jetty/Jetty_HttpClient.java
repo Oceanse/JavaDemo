@@ -99,7 +99,7 @@ public class Jetty_HttpClient {
     }
 
     /**
-     * com.demo.jetty.JettyDemo4 处理请求
+     * com.demo.jetty.jettydemo4.JettyDemo4 处理请求
      * @throws Exception
      */
     @Test

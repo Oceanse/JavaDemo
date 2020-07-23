@@ -7,10 +7,12 @@ import java.util.ServiceLoader;
 
 public class TestMyServiceLoader{
 
-    /*在ServiceLoader.load的时候，根据传入的接口类，
-    遍历META-INF/services目录下的以该类命名的文件中的所有类，并实例化返回。
+    /*
+      1 在ServiceLoader.load的时候，根据传入的接口类，遍历META-INF/services目录下的该接口类的所有实现类，并实例化返回。
 
-    ServiceLoader实现了Iterable接口，所以可以通过ServiceLoader来遍历所有在配置文件中定义的类的实例。
+      2 META-INF/services/，是ServiceLoader中约定的接口与实现类的关系配置目录，文件名是接口全限定类名，内容是接口对应的具体实现类，如果有多个实现类，分别将不同的实现类都分别作为每一行去配置
+
+      3 ServiceLoader实现了Iterable接口，所以可以通过ServiceLoader来遍历所有在配置文件中定义的类的实例。
 
    ServiceLoader：一个简单的服务提供者加载设施。服务 是一个熟知的接口和类（通常为抽象类）集合
 

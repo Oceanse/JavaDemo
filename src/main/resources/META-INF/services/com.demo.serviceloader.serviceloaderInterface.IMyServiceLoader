@@ -1,2 +1,2 @@
-serviceloader.serviceloaderImple.MyServiceLoaderImpl1
-com.demo.serviceloader.serviceloaderImple.MyServiceLoaderImpl2
+com.demo.serviceloader.serviceloaderImpl.MyServiceLoaderImpl1
+com.demo.serviceloader.serviceloaderImpl.MyServiceLoaderImpl2
