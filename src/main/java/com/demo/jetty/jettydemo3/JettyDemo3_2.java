@@ -4,6 +4,7 @@ package com.demo.jetty.jettydemo3;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.AbstractHandler;
+import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.HandlerList;
 
 import javax.servlet.ServletException;
@@ -35,6 +36,8 @@ import java.io.IOException;
  * HandlerList只要有一个Handler将请求标记为已处理，或抛出异常，Handler的调用就到此结束。
  * HandlerCollection则是不管是否抛出异常或者把请求标记为结束，都会执行到最后一个Handler。
  *
+ * 测试发现：多个handler只能共享一个basepath
+ *
  */
 public class JettyDemo3_2 {
     public static void main(String[] args) throws Exception {
@@ -42,8 +45,13 @@ public class JettyDemo3_2 {
         list.addHandler(new First());
         list.addHandler(new Second());
         list.addHandler(new Third());
+
+        ContextHandler context = new ContextHandler();
+        context.setContextPath("/test3/");   // http://localhost:8888/test3/xxx,
+        context.setHandler(list);
+
         Server server = new Server(8888);
-        server.setHandler(list);
+        server.setHandler(context);
         server.start();
         server.join();
     }

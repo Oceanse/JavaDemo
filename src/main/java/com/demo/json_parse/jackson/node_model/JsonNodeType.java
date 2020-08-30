@@ -39,8 +39,7 @@ public class JsonNodeType {
         System.out.println(rootNode.isArray());
 
         String json2 = "{\"name\":\"ocean\"}";
-        ObjectMapper mapper2 = new ObjectMapper();
-        JsonNode rootNode2 = mapper.readTree(json);
+        JsonNode rootNode2 = mapper.readTree(json2);
         System.out.println();
         System.out.println(rootNode.isValueNode());
         System.out.println(rootNode.isObject());

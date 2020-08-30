@@ -1,14 +1,15 @@
 服务端
 ==========================================================================================================
 方式1
-org.eclipse.jetty.server.Server+Servlet 提供restful服务
-url:localhost:8080/base/hello
-ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-context.setContextPath("/base");
-context.addServlet(new ServletHolder(new HelloServlet()), "/hello");
-Server server=new Server(8080);//监听8080端口
-server.setHandler(context);
-server.start();
+jetty Server+Servlet 提供restful服务
+
+ // ServletContextHandler 设置basepath以及servlet和相应的子path
+ ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+ context.setContextPath("/base");
+ context.addServlet(new ServletHolder(new HelloServlet()), "/hello");  //localhost:8080/base/hello
+ Server server=new Server(8080);//监听8080端口
+ server.setHandler(context);
+ server.start();
 
 class HelloServlet extends HttpServlet {
  @Override
@@ -18,15 +19,24 @@ class HelloServlet extends HttpServlet {
     }
 }
 
+
+
+
+
 ==========================================================================================================
 方式2
-org.eclipse.jetty.server.Server+AbstractHandler  提供restful服务
-url以及参数可以任意设置  http://localhost:8888/任意设置   比如http://localhost:8888/hello/world?q1=1&q2=2
+jetty Server + Handler  提供restful服务
+AbstractHandler是一种Handler(处理器)，可以理解成一种和servlet作用类似的处理器
+ContextHandler可以设置path以及相应的Handler
 
-Server server = new Server(8888);
-server.setHandler(new HelloHandler());
-server.start();
-server.join();
+
+ Server server = new Server(8888);
+ ContextHandler context = new ContextHandler();
+ context.setContextPath("/test/"); // http://localhost:8888/test/xxx,
+ context.setHandler(new HelloHandler());//setHandler(Handler handler)   通过setHandler来设置处理器
+ server.setHandler(context);
+ server.start();
+ server.join();
 
 class HelloHandler extends AbstractHandler {
 
@@ -40,7 +50,7 @@ class HelloHandler extends AbstractHandler {
 
 ==========================================================================================================
 方式3
-org.eclipse.jetty.server.Server+resteasy  提供restful服务
+jetty erver+resteasy  提供restful服务
 HttpServletDispatcher根据请求的url调用不同的controller
 
 
@@ -72,16 +82,6 @@ public class JettyController {
 
 
 
-客户端
-==========================================================================================================
- org.eclipse.jetty.client.HttpClient去call服务端restful api
- HttpClient httpClient = new HttpClient();
- httpClient.start();
- ContentResponse response=httpClient.newRequest("http://localhost:8080/base/hi?name=ocean&passwd=123123").method(HttpMethod.GET).send()
- ContentResponse response = httpClient.GET("http://localhost:8080/base/hi?name=ocean&passwd=123123");
- String contentAsString = response.getContentAsString();
- httpClient.stop();
-
 
 
 
@@ -93,9 +93,6 @@ websocket
 概览：
 All WebSocket’s are created via whatever WebSocketCreator you have registered with the WebSocketServletFactory.
 WebSocketServletFactory给WebSocketCreator提供注册服务，WebSocketCreator创建WebSocket
-
-
-
 
 
 WebSocketServletFactory:
@@ -113,7 +110,6 @@ webSocketServletFactory.setCreator(WebSocketCreator var1)
 When you want a custom WebSocketCreator, use WebSocketServletFactory.setCreator(WebSocketCreator creator)
 and the WebSocketServletFactory will use your creator for all incoming Upgrade requests on this servlet.用来注册WebSocketCreator
 通过webSocketServletFactory.setCreator(WebSocketCreator var1)自定义WebSocketCreator
-
 
 
 
@@ -136,4 +132,217 @@ public class MyAdvancedEchoCreator  implements WebSocketCreator {
     }
     return annotatedEchoSocket;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+websocket客户端
+==========================================================================================================
+
+ restful客户端
+ org.eclipse.jetty.client.HttpClient去call服务端restful api
+ HttpClient httpClient = new HttpClient();
+ httpClient.start();
+ ContentResponse response=httpClient.newRequest("http://localhost:8080/base/hi?name=ocean&passwd=123123").method(HttpMethod.GET).send()
+ ContentResponse response = httpClient.GET("http://localhost:8080/base/hi?name=ocean&passwd=123123");
+ String contentAsString = response.getContentAsString();
+ httpClient.stop();
+
+
+
+
+
+
+
+
+
+
+
+ websocket客户端
+
+ 形式1：
+ 通过继承WebSocketClient使得子类成为具备客户端性质的websocket，也就是自己本身是一个websocket class,
+ 并且能够对server端的websocket发起主动连接
+
+ public class MyWebSocketClient extends WebSocketClient {
+
+      public static void main(String[] args) {
+        MyWebSocketClient myClient=new MyWebSocketClient(""ws://127.0.0.1:7778/test2/"")
+        myClient.connect();
+      }
+
+
+      public MyWebSocketClient(String url) throws URISyntaxException {
+         super(new URI(url));
+     }
+
+      @Override
+      public void onOpen(ServerHandshake shake){...}
+
+       @Override
+       public void onMessage(String paramString){...}
+
+       @Override
+       public void onClose(int paramInt, String paramString, boolean paramBoolean){...}
+ }
+
+
+
+
+
+形式2：
+@WebSocket +  WebSocketClient
+@WebSocket标记MySocketClient是一个websocket class,
+WebSocketClient 能够connect 客户端websocket连接服务端websocket
+
+@WebSocket(maxTextMessageSize = 64 * 1024)
+public class MySocketClient {
+
+    private String id;
+
+    public MySocketClient(String id) {
+        this.id = id;
+    }
+
+    @OnWebSocketMessage
+    public void onMessage(Session session, String message){...}
+
+    @OnWebSocketConnect
+    public void onConnect(Session session) {...}
+
+
+    public static void main(String[] args) throws Exception {
+        WebSocketClient client = new WebSocketClient();
+        client.start();
+
+        MySocketClient mySocketClient=new MySocketClient();
+        URI echoUri = new URI("ws://127.0.0.1:8080/base/path1/");
+        ClientUpgradeRequest request = new ClientUpgradeRequest();
+
+        //connect(客户端websocket对象，服务端websocketurl, 升级请求)
+        Future<Session> session = client.connect(mySocketClient, echoUri, request);
+        session.get(60, TimeUnit.SECONDS).setIdleTimeout(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+服务端websocket:
+
+形式1：
+jetty server + @WebSocket + WebSocketServlet
+jetty server 对外提供web服务（这里是websocket服务）
+@WebSocket表明注解的类是websocket class
+WebSocketServlet用来初始化websocket class， 并且使得websocket class具备servlet性质
+
+
+@WebSocket
+public class AnnotatedEchoSocket extends WebSocketServlet{
+
+    @OnWebSocketConnect
+    public void onText(Session session){...}
+
+     @OnWebSocketClose
+     public void onClose(int i, String string){...}
+
+      @OnWebSocketMessage
+      public void onMessage(String msg){...}
+
+}
+
+
+public class StartServer {
+    public static void main(String[] args) throws Exception {
+        Server server=new Server(8080);
+
+        ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        handler.setContextPath("/base");  //设置上下问路径 ws://localhost:8080/base
+
+        handler.addServlet(new ServletHolder(AnnotatedEchoSocket.class), "/path1/"); //ws://localhost:8080/base/path1/
+        server.setHandler(handler);
+        server.start();
+
+        server.join();
+    }
+}
+
+
+
+
+
+形式2：
+jetty server + @WebSocket + Handler
+jetty server 对外提供web服务（这里是websocket服务）
+@WebSocket表明注解的类是websocket class
+WebSocketHandler用来初始化websocket class， 在websocket class上包一层hanler
+
+@WebSocket
+public class AnnotatedEchoSocket extends WebSocketServlet{
+
+    @OnWebSocketConnect
+    public void onText(Session session){...}
+
+     @OnWebSocketClose
+     public void onClose(int i, String string){...}
+
+      @OnWebSocketMessage
+      public void onMessage(String msg){...}
+
+}
+
+
+
+
+public class StartServer2 {
+
+    public static void main(String args[]) {
+        WebSocketHandler handler = new WebSocketHandler() {
+            @Override
+            public void configure(WebSocketServletFactory webSocketServletFactory) {
+                webSocketServletFactory.register(AnnotatedEchoSocket2.class);
+            }
+        };
+
+
+        ContextHandler context = new ContextHandler();
+        context.setContextPath("/test2/");   //ws://127.0.0.1:7778/test2/
+        context.setHandler(handler);
+
+        Server server = new Server(7778);
+        server.setHandler(context);
+            server.start();
+
+    }
+}
+
+
+
+
 

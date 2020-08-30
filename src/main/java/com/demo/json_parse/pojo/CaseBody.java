@@ -10,15 +10,6 @@ public class CaseBody {
     private Map<String,String> parameters;
     private String id;
 
-    public String getConfigurationData() {
-        return configurationData;
-    }
-
-    public void setConfigurationData(String configurationData) {
-        this.configurationData = configurationData;
-    }
-
-    private String configurationData;
 
     public String getPackageName() {
         return packageName;
@@ -70,14 +61,13 @@ public class CaseBody {
 
     @Override
     public String toString() {
-        return "TestCaseRequestBody{" +
+        return "CaseBody{" +
                 "packageName='" + packageName + '\'' +
                 ", ClassName='" + ClassName + '\'' +
                 ", methodName='" + methodName + '\'' +
                 ", name='" + name + '\'' +
                 ", parameters=" + parameters +
                 ", id='" + id + '\'' +
-                ", configurationData='" + configurationData + '\'' +
                 '}';
     }
 }

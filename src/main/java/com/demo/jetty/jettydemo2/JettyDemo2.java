@@ -44,7 +44,7 @@ public class JettyDemo2 {
             @Override
             public void run() {
                 System.out.println("当前i值是： "+i--);
-                if (System.currentTimeMillis() - init > 30000) {//server启动时间大于30s时候
+                if (System.currentTimeMillis() - init > 10000) {//server启动时间大于30s时候
                     System.out.println((System.currentTimeMillis() - init)/1000);//打印server启动时间
                     latch.countDown();//计时器锁初始值为1，减1变成0，
                 }

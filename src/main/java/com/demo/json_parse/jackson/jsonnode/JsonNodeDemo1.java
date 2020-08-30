@@ -119,7 +119,7 @@ public class JsonNodeDemo1 {
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         // json 消息
-        File path = new File("suite.json");
+        File path = new File("testResource//suite.json");
 
         //获取rootNode
         JsonNode rootNode = objectMapper.readTree(path);

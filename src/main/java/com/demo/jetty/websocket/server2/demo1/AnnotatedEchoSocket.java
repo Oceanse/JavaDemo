@@ -11,9 +11,13 @@ import java.io.IOException;
 /**
  * https://www.eclipse.org/jetty/documentation/current/jetty-websocket-api-annotations.html
  *
- * @WebSocket A required class level com.demo.annotation.
- * Flags this POJO as being a WebSocket.
- * The class must be not abstract and public.
+ * jetty server + @WebSocket + WebSocketServlet 使得 AnnotatedEchoSocket具有servlet性质的服务端websocket
+ *
+ * @WebSocket: Flags this POJO as being a WebSocket class.The class must be not abstract and public.
+ * WebSocketServlet: Abstract Servlet used to bridge the Servlet API to the WebSocket API.
+ * WebSocketServlet个人理解：
+ *   1主要是继承他的configure方法来注册WebSocket class(实例化WebSocket class)
+ *   2 标明子类本质上仍然是一个Servlet
  */
 @WebSocket(maxTextMessageSize = 128 * 1024, maxBinaryMessageSize = 128 * 1024)
 public class AnnotatedEchoSocket extends WebSocketServlet {
@@ -21,6 +25,7 @@ public class AnnotatedEchoSocket extends WebSocketServlet {
 
 
     /**
+     * register your websockets with the  WebSocketServletFactory
      * 在WebSocket类中，对自己WebSocket类注册
      * @param factory
      */
@@ -34,7 +39,7 @@ public class AnnotatedEchoSocket extends WebSocketServlet {
 
     /**
      * @param session
-     * @OnWebSocketConnect An optional method level com.demo.annotation.
+     * @OnWebSocketConnect An optional method level
      * <p>
      * Flags one method in the class as receiving the On Connect event.
      * <p>

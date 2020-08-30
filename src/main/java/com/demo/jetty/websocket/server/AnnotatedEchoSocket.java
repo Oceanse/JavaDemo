@@ -7,7 +7,6 @@ import java.io.IOException;
 
 
 /**
- * @WebSocket注解用在服务端的handler
  * @WebSocket A required class level com.demo.annotation.  一个必需的类级别注解
  * Flags this POJO as being a WebSocket.   标记当前类为WebSocket类
  * The class must be not abstract and public.  这个类必需是非抽象的公共类

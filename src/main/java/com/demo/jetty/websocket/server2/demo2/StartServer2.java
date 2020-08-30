@@ -6,16 +6,10 @@ import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 
 
-/**    WebSocketServletFactory来自于<artifactId>websocket-servlet</artifactId，
- *     Basic WebSocketServletFactory for working with Jetty-based WebSocketServlets
- *        <dependency>
- *             <groupId>org.eclipse.jetty.websocket</groupId>
- *             <artifactId>websocket-servlet</artifactId>
- *             <version>9.4.19.v20190610</version>
- *         </dependency>
- *
- *
- *
+/**
+ * WebSocketHandler本质是一个handler,作用如下：
+ * 1 注册(实例化) websocket class：AnnotatedEchoSocket2
+ * 2 在websocket class:AnnotatedEchoSocket2包了一层hanler
  */
 public class StartServer2 {
     public static void main(String args[]) {
@@ -32,7 +26,7 @@ public class StartServer2 {
 
 
         ContextHandler context = new ContextHandler();
-        context.setContextPath("/test2/");   //ws://127.0.0.1:7778/test/
+        context.setContextPath("/test2/");   //ws://127.0.0.1:7778/test2/
         context.setHandler(handler);
 
         Server server = new Server(7778);

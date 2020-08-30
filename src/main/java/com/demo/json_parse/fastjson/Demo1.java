@@ -27,8 +27,8 @@ public class Demo1 {
 
 
     /**
-     * JSONobject是FastJson提供的对象，实际就是一个map,只不过map对其进行了封装，
-     * String和JSONObject相互转换
+     * 序列化和反序列化
+     * JSONObject是FastJson提供的对象，实际就是一个map,只不过map对其进行了封装，
      */
     @Test
     public void test() {
@@ -44,15 +44,18 @@ public class Demo1 {
         JSONObject jsonobj = JSON.parseObject(jsonStr);
 
         //JSONObject对象转成String
-        String str = jsonobj.toJSONString();
+        String str = JSON.toJSONString(jsonobj);// 或者String str = jsonobj.toJSONString();
 
         System.out.println("jsonobj: " + jsonobj);
         System.out.println("str: " + str);
     }
 
 
+
+
     /**
-     * java对象转成json字符串：若java对象的属性没有赋值，转化后的json字符串中将不包含对应的key
+     * java对象序列化
+     * 若java对象的属性没有赋值，转化后的json字符串中将不包含对应的key
      */
     @Test
     public void test2() {
@@ -76,28 +79,71 @@ public class Demo1 {
     }
 
 
+
+
     /**
-     * 判断json是否包含某个key: 转成JSONObject后进行判断
-     * $表示根元素
+     * 反序列化
+     * 数组字符串不能转化为JSONObject对象
+     * java.lang.ClassCastException: com.alibaba.fastjson.JSONArray cannot be cast to com.alibaba.fastjson.JSONObject
      */
     @Test
-    public void test2x() {
-        //方式1,不能判断多级路径
-        System.out.println("containsKey方式==================");
-        System.out.println(jsonobj.containsKey("score"));
-        System.out.println(jsonobj.containsKey("score.chinese"));
+    public void test3() {
 
-        //方式2,可判断多级路径
-        System.out.println();
-        System.out.println("JSONPath.contains方式==================");
-        System.out.println(JSONPath.contains(jsonobj, "$.score"));
-        System.out.println(JSONPath.contains(jsonobj, "$.score.chinese"));
+        // [{"resourceId": 123},{"name": "testjar"}]
+        String jsonStr = "[{\"resourceId\": 123},{\"name\": \"testjar\"}]";
+        JSONObject jsonobj = JSON.parseObject(jsonStr);
+        System.out.println(jsonobj);
     }
 
 
-    //解析jsonobj指定path下的value
+    /**
+     * 反序列化
+     * 数组字符串转化为JSONArray对象
+     */
     @Test
-    public void test3() {
+    public void test3_2() {
+
+        //[{"resourceId": 123},{"name": "testjar"}]
+        String jsonStr = "[{\"resourceId\": 123},{\"name\": \"testjar\"}]";
+        JSONArray jsonArray = JSON.parseArray(jsonStr);
+        System.out.println(jsonStr);
+    }
+
+    /**
+     * java对象反序列化
+     * json相对java bean中多余的属性没有任何影响，缺少的属性对应的java对象的属性值是默认值
+     */
+    @Test
+    public void test3_3() {
+
+        String jsonStr = "{\n" +
+                "    \"className\" : \"ThroughputTest\",\n" +
+                "    \"methodName\" : \"testThroughput\",\n" +
+                "    \"configurationData\" : \"1b60235f-8b23-4b0b-b6d6-a5939d0c9735\",\n" +
+                "    \"parameters\" : {\n" +
+                "      \"ueConfigurationId\" : \"commonRealUEConfig\",\n" +
+                "      \"throughputParametersId\" : \"para\",\n" +
+                "      \"testId\" : \"ThroughputTest\"\n" +
+                "    },\n" +
+                "    \"id\" : \"testcase\",\n" +
+                "    \"name\" : \"ThroughputTest\"\n" +
+                "  }";
+
+        CaseBody testCaseRequestBody = JSONObject.parseObject(jsonStr, CaseBody.class);
+        System.out.println(testCaseRequestBody.toString());
+    }
+
+
+
+
+
+
+    /**
+     *  读
+     *  解析jsonobj指定path下的value
+     */
+    @Test
+    public void test4() {
 
         //JSONPath.eval 可解析多级路径
         System.out.println("JSONPath.eval=====================");
@@ -120,86 +166,56 @@ public class Demo1 {
 
 
     /**
+     * 改
      * JSONobject是FastJson提供的对象，实际就是一个map
      * 通过put更新jsonobj对应某个key的值
      */
     @Test
-    public void test4() {
+    public void test5() {
 
         //JSONPath.read对任意路径keypath下的值进行设置
         System.out.println(JSONPath.eval(jsonobj, "$.score.math"));
         JSONPath.set(jsonobj, "$.score.math", 150);
         System.out.println(JSONPath.eval(jsonobj, "$.score.math"));
 
-        //jsonobj.put貌似只能对最外层的key的value进行设置
-        jsonobj.put("sex", "man");
-        System.out.println("jsonStr after put:" + jsonobj);
 
     }
 
 
     /**
+     * 增
      * JSONobject是FastJson提供的对象，实际就是一个map
      * 可通过put方法对json增加键值对
      */
     @Test
-    public void test5() {
+    public void test6() {
         System.out.println(jsonobj);
         jsonobj.put("sex", "man");
         jsonobj.put("book", Arrays.asList("think in java", "springboot"));
         System.out.println(jsonobj);
+        System.out.println(JSON.toJSONString(jsonobj));
     }
 
 
-    /**
-     * 数组字符串不能转化为JSONObject对象
-     * java.lang.ClassCastException: com.alibaba.fastjson.JSONArray cannot be cast to com.alibaba.fastjson.JSONObject
-     */
-    @Test
-    public void test6() {
-
-        // [{"resourceId": 123},{"name": "testjar"}]
-        String jsonStr = "[{\"resourceId\": 123},{\"name\": \"testjar\"}]";
-        JSONObject jsonobj = JSON.parseObject(jsonStr);
-        System.out.println(jsonobj);
-    }
 
 
     /**
-     * 数组字符串转化为JSONArray对象
+     * 反序列化后判断json是否包含某个key: 转成JSONObject后进行判断
+     * $表示根元素
      */
     @Test
     public void test7() {
+        //方式1,不能判断多级路径
+        System.out.println("containsKey方式==================");
+        System.out.println(jsonobj.containsKey("score"));
+        System.out.println(jsonobj.containsKey("score.chinese"));
 
-        //[{"resourceId": 123},{"name": "testjar"}]
-        String jsonStr = "[{\"resourceId\": 123},{\"name\": \"testjar\"}]";
-        JSONArray jsonArray = JSON.parseArray(jsonStr);
-        System.out.println(jsonStr);
+        //方式2,可判断多级路径
+        System.out.println();
+        System.out.println("JSONPath.contains方式==================");
+        System.out.println(JSONPath.contains(jsonobj, "$.score"));
+        System.out.println(JSONPath.contains(jsonobj, "$.score.chinese"));
     }
-
-
-    /**
-     * 将json字符串转成对应的实体类
-     * T parseObject(String text, Class<T> clazz)
-     */
-    @Test
-    public void test8() {
-        String jsonStr = "{\n" +
-                "    \"className\" : \"ThroughputTest\",\n" +
-                "    \"packageName\" : \"com.ericsson.msran.test.performance.tests\",\n" +
-                "    \"methodName\" : \"testThroughput\",\n" +
-                "    \"configurationData\" : \"1b60235f-8b23-4b0b-b6d6-a5939d0c9735\",\n" +
-                "    \"parameters\" : {\n" +
-                "      \"ueConfigurationId\" : \"commonRealUEConfig\",\n" +
-                "      \"throughputParametersId\" : \"para\",\n" +
-                "      \"testId\" : \"ThroughputTest\"\n" +
-                "    },\n" +
-                "    \"id\" : \"testcase\",\n" +
-                "    \"name\" : \"ThroughputTest\"\n" +
-                "  }";
-
-        CaseBody testCaseRequestBody = JSONObject.parseObject(jsonStr, CaseBody.class);
-        System.out.println(testCaseRequestBody.toString());
-    }
-
 }
+
+

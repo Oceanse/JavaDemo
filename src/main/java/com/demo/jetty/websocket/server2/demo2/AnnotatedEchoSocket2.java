@@ -7,9 +7,10 @@ import java.io.IOException;
 
 
 /**
- * @WebSocket A required class level com.demo.annotation.
- * Flags this POJO as being a WebSocket.
+ * @WebSocket: Flags this POJO as being a WebSocket class.
  * The class must be not abstract and public.
+ *
+ * 这里AnnotatedEchoSocket2只是一个websocket class
  */
 @WebSocket(maxTextMessageSize = 128 * 1024, maxBinaryMessageSize = 128 * 1024)
 public class AnnotatedEchoSocket2 {

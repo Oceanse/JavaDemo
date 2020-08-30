@@ -46,14 +46,14 @@ public class MyWebSocketClient extends WebSocketClient {
     static String url = "ws://127.0.0.1:7778/test/";
     static String url2 = "ws://127.0.0.1:8080/base/path1/";
     static String url2_2 = "ws://127.0.0.1:8080/base/path2/";
-    static String url3 = "ws://127.0.0.1:7778/test3/";
+    static String url3 = "ws://127.0.0.1:7778/test2/";
     static String url4 = "ws://127.0.0.1:8080/base/path4/echo/";
 
     static MyWebSocketClient myClient;
 
     public static void main(String[] args) throws URISyntaxException, InterruptedException {
 
-        myClient = new MyWebSocketClient(url4);
+        myClient = new MyWebSocketClient(url3);
 
         System.out.println("before connect: " + myClient.getReadyState());//还没有进行连接时候返回 NOT_YET_CONNECTED
 

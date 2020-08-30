@@ -1,6 +1,5 @@
 package com.demo.jetty.websocket.client.demo3;
 
-import com.demo.jetty.websocket.server.SimpleEchoSocket;
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.eclipse.jetty.websocket.client.WebSocketClient;
 
@@ -13,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class SimpleEchoClient {
 
     public static void main(String[] args) {
-        String destUri = "ws://echo.websocket.org";
+        String destUri = "ws://127.0.0.1:8080/base/path1/";
         if (args.length > 0) {
             destUri = args[0];
         }

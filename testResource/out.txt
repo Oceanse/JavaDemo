@@ -1,1 +1,1 @@
-中
+{"packageName":"mygroup","methodName":"mymethod","name":null,"parameters":{"name":"ocean"},"id":null,"className":"Myclass"}

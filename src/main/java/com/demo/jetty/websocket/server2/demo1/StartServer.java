@@ -9,11 +9,11 @@ public class StartServer {
         Server server=new Server(8080);
 
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        handler.setContextPath("/base");//设置上下问路径 http://localhost:8080/base
+        handler.setContextPath("/base");//设置上下问路径 ws://localhost:8080/base
 
         //两个servlet和两个path匹配，注意path后面的/要和client端请求url中的/同有同无，保持一致
-        handler.addServlet(new ServletHolder(AnnotatedEchoSocket.class), "/path1/");
-        handler.addServlet(new ServletHolder(AnnotatedEchoSocket2.class), "/path2/");
+        handler.addServlet(new ServletHolder(AnnotatedEchoSocket.class), "/path1/");//ws://localhost:8080/base/path1/
+        handler.addServlet(new ServletHolder(AnnotatedEchoSocket2.class), "/path2/");//ws://localhost:8080/base/pat21/
         server.setHandler(handler);
         server.start();
 

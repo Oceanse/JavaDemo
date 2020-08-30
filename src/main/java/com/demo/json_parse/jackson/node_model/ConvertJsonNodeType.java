@@ -52,7 +52,7 @@ public class ConvertJsonNodeType {
         String name = nameNode.asText();
         System.out.println(name);
 
-        //返回valuenode的String形式
+        //返回valuenode的int形式
         JsonNode ageNode = rootNode.get("age");
         int age = ageNode.asInt();
         System.out.println(age);
@@ -79,11 +79,13 @@ public class ConvertJsonNodeType {
                 "    }\n" +
                 "}";
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode rootNode = mapper.readTree(json);
+        JsonNode scoretNode = mapper.readTree(json).get("score");
+        JsonNode hobbytNode = mapper.readTree(json).get("hobby");
 
-        //对象node不能转成String,类型转换有错时将不能被打印
-        String root = rootNode.asText();
-        System.out.println(root);
-
+        //对象/数组node不能转成String,类型转换有错时将不能被打印
+        String score = scoretNode.asText();
+        String hobby = hobbytNode.asText();
+        System.out.println(score);
+        System.out.println(hobby);
     }
 }
