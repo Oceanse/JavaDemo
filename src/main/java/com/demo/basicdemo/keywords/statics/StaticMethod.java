@@ -37,19 +37,32 @@ public class StaticMethod {
     public static void test2() {
     }
 
+
     /**
      *  静态方法不能访问实例变量和实例方法
      */
     public static void test3() {
-        //test();
-        //System.out.println(n);
 
-        //调用本类static 方法，可省略类名
-        test2();
+        StaticMethod.test2();//通过类访问静态方法
+        new StaticMethod().test2();//通过对象访问静态方法
+        test2();//等价于this.test2()，对于静态方法来说，即使当前对象没有生成，this.静态方法 也不会报错，他会从当前类中寻找这个方法
 
-        //调用本类static 变量，可省略类名
-        double r=1;
-        System.out.println(PI*r*r);
+        double pi = StaticMethod.PI;//通过类访问静态变量
+        double pi2 = new StaticMethod().PI;//通过对象访问静态变量
+        double pi3 = PI;//从当前类中找这个变量，也就是调用当前类的static变量时候可省略类名或者对象名
+
+
+    }
+
+    /**
+     *  静态方法不能通过this访问实例变量和实例方法
+     *  this代表调用test4方法的当前对象，test4方法在执行时候可能还没有产生对象，所以this.test()或报错
+     */
+    public static void test4() {
+        //test(); //等价于 this.test()
+        //this.test()
+        //System.out.println(PI); ////等价于 this.PI
+        //System.out.println(this.PI);
     }
 
 

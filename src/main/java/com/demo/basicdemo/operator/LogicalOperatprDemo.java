@@ -14,7 +14,7 @@ public class LogicalOperatprDemo {
         // &&和||短路
         // 所谓短路，就是当参与运算的一个操作数已经足以推断出这个表达式的值的时候，另外一个操作数（有可能是表达式）就不会 执行
 
-        int i=2;
+        int i=1;
         boolean b=false;
         if((b) & (i++)>0){//i++会被执行
         }
@@ -28,7 +28,7 @@ public class LogicalOperatprDemo {
         System.out.println("i2: "+i2);
 
 
-        int i3=2;
+        int i3=3;
         boolean b3=true;
         if((b3) | (i3--)>0){
         }
@@ -44,7 +44,7 @@ public class LogicalOperatprDemo {
 
 
     /**
-     *  //!单目运算符，只需要一个操作数；操作数是结果为布尔类型的变量/常量/表达式
+     *  !单目运算符，只需要一个操作数；操作数是结果为布尔类型的变量/常量/表达式
      *  操作数为true,则返回false;操作数为false,则返回true
      */
     @Test
@@ -67,7 +67,7 @@ public class LogicalOperatprDemo {
     /**
      * 非：~
      * 运算规则：如果位为0，结果是1，如果位为1，结果是0.
-     */
+     *//*
     @Test
     public void test4(){
         byte b=0B01100000;//最高符号位是0说明是正数，转成十进制96，原码反码补码一致；
@@ -79,6 +79,6 @@ public class LogicalOperatprDemo {
         //原码：11100001十进制： -97
         System.out.println(~b);
 
-    }
+    }*/
 
 }

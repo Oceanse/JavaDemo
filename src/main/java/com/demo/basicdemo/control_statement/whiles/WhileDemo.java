@@ -2,20 +2,13 @@ package com.demo.basicdemo.control_statement.whiles;
 
 import org.testng.annotations.Test;
 
-/*
- * while(条件表达式){
- *    循环体
- *  }
- *
- *  先判断条件表达式-->循环体-->条件表达式---.....
- *
- *
+/**
  *  初始化条件
  *  while(条件表达式){
  *    循环体(包含更新条件)
  *  }
- *
- * 循环体可能一次都不会执行
+ * 先判断条件表达式-->循环体-->条件表达式--->.....
+ * 如果条件表达式一开始就是false, 循环体一次都不会执行
  * */
 public class WhileDemo {
 
@@ -27,6 +20,33 @@ public class WhileDemo {
             Thread.sleep(1000);
         }
         //System.out.println("这里永远无法执行"); 这里放开会编译不通过，提示unreachable
+    }
+
+
+    /**
+     * 循环体只有一句时候可以省略{}，不建议这么做，因为这样会降低程序的可读性
+     */
+    @Test
+    public void test1_2()  {
+        int i=10;
+        while (i>0)
+            System.out.println(i--);
+        System.out.println("我不属于while循环");
+
+    }
+
+
+    /**
+     * 死循环
+     * ;也是一个合法的语句，是特殊的空语句
+     * 由于空语句没有迭代条件，所以陷入死循环
+     */
+    @Test
+    public void test1_3()  {
+        int i=10;
+        while (i>0);
+        System.out.println("我不属于while循环，但是永远得不到执行机会");
+
     }
 
 

@@ -130,7 +130,7 @@ public class DateDemo {
             Date date = sdf.parse(str);
             System.out.println(date);
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
+            // TODO AutoConvert-generated catch block
             e.printStackTrace();
         }
     }

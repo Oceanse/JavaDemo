@@ -4,14 +4,13 @@ import org.testng.annotations.Test;
 
 
 /**
- * 条件运算符（？：）也称为三元运算符
- * <p>
- * 语法：boolean表达式？表达式 1：表达式 2, 表达式1和表达式2可以是常量,变量或表达式
- * <p>
+ * 条件运算符（？：）也称为三目运算符
+ *
+ * 语法：boolean变量/表达式？表达式 1：表达式 2,     表达式1和表达式2可以是常量,变量或表达式
+ *
  * boolean表达式为true则执行表达式 1 ;boolean表达式为 false 则执行表达式 2
  * 有时候可用来替换if-else
- * <p>
- * 表达式a>b?b>c?1:0:2 是从右向左结合（右结合）的，那么该表达式被解析为a>b?(b>c?1:0):2
+ *
  */
 public class TernaryOperatorDemo {
 
@@ -29,12 +28,11 @@ public class TernaryOperatorDemo {
      */
     @Test
     public void test2() {
-
-        /*
-        * if(i<j)
-             min=i;
+       /*
+         if(i>j)
+             ma=i;
           else
-            min=j;
+            max=j;
         * */
         int i = 1;
         int j = 2;
@@ -43,10 +41,10 @@ public class TernaryOperatorDemo {
 
 
         /*
-        * if(i>j)
-             ma=i;
+          if(i<j)
+             min=i;
           else
-            max=j;
+            min=j;
         * */
         int min = (i < j) ? i : j;//求两个数的最小值
         System.out.println(min);
@@ -73,11 +71,11 @@ public class TernaryOperatorDemo {
     /**
      * int number=-13;
      * if(number>0){
-     * System.out.println("POSITIVE");
+     *      System.out.println("POSITIVE");
      * }else if(number<0){
-     * System.out.println("NEGATIVE");
+     *      System.out.println("NEGATIVE");
      * }else{
-     * System.out.println("ZERO");
+     *      System.out.println("ZERO");
      * }
      */
     @Test

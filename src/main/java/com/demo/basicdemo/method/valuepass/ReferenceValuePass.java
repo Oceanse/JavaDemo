@@ -16,19 +16,17 @@ public class ReferenceValuePass {
      */
     @Test
     public void test(){
-        User user = new User();
-        user.setAge(30);
-        System.out.println("main: "+user.getAge());
-        //这里传递的是user引用变量保存的堆内存地址，也就是对象地址，这里会把对象堆内存地址传递给被调方法的参数变量
-        //被调方法的参数变量也会指向user所指向的对象
+        User user = new User();//user引用类型变量保存着对象在堆内存地址
+        user.setAge(30);//通过手柄操作(修改)对象
+        System.out.println("main-beforeAddAge: "+user.getAge());//通过手柄操作(访问)对象
+        //这里会把user变量值，也就是对象堆内存地址传递给被调方法的参数变量，然后被调方法的参数变量也会保存着上面User对象在堆内存地址, 和user变量所指向相同的对象
         addAge(user);
+        System.out.println("main-afterAddAge: "+user.getAge());
 
-        System.out.println("main2: "+user.getAge());
-
-        String[] hobby={"code","basketball","health"};
-        user.setHobby(hobby);
+        String[] myHobby={"code","basketball","health"};
+        user.setHobby(myHobby);//这里User的hobby属性和上面的myHobby指向同一数组对象，所以myHobby手柄修改数组对象时候，User的hobby属性引用的数组对象也随之发生改变
         System.out.println(Arrays.toString(user.getHobby()));
-        hobby[1]="sing";
+        myHobby[1]="sing";
         System.out.println(Arrays.toString(user.getHobby()));
 
     }

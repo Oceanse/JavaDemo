@@ -13,21 +13,20 @@ import java.util.Date;
 public class InitialValue {
 
     //全局变量(成员变量和静态变量)具有默认初始值
-    byte b;//false
+    byte b;//0
     short s ;//0
     int i;//0
     long l;//0L
     float f;//0.0F
     double d;//0.0
     boolean flag;//false
-    char c;// /u0000  这种格式是一个char字符unicode码的写法;它只是看起来时空格，但是它与空格、空字符串、NULL和"null"都不同，所以无法找到能够描述它的符号
+    char c;// '\u0000'  这种格式是一个char字符unicode码的写法;它只是看起来时空格，但是它与空格、空字符串、NULL和"null"都不同，所以无法找到能够描述它的符号
 
-    Object o;
-    Runnable r;
-    String[] names;
+    Object o;//null
+    Runnable r;//null
+    String[] names;//null
 
-    static int age;
-    static Date date;
+    static Date date;//null
 
 
     @Test
@@ -44,14 +43,12 @@ public class InitialValue {
 
         System.out.println(o);
         System.out.println(r);
-        System.out.println("arr="+Arrays.toString(names));
-
-        System.out.println("age="+age);
-        System.out.println("date="+date);
+        System.out.println(Arrays.toString(names));
+        System.out.println(date);
     }
 
     public void test2(){
-        //int i; 局部变量必须要显式的初始化
+        //int i; 局部变量使用前必须要显式的初始化
         int i=1;
         if(i!=2){
             System.out.println("right");
