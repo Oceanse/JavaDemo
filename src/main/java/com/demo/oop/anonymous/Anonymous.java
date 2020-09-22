@@ -25,19 +25,15 @@ public class Anonymous {
     }
 
 
-
-
-    public void showSinger(Singer singer){
+    public static void showSinger(Singer singer){
         singer.sing();
     }
+
     @Test
-    public void test2() {
-        new Anonymous().showSinger(new PopularSinger());//匿名对象作为实参传递给一个方法
+    public static void test2() {
+        showSinger(new PopularSinger());//匿名对象作为实参传递给一个方法
     }
 
-    public static void main(String args[]) {
-
-    }
 
 }
 

@@ -100,8 +100,6 @@ public class list_map {
         //如果平行处理时，希望最后顺序是按照原来Stream的数据顺序，那可以调用forEachOrdered()
         System.out.println();
         ls7.parallelStream().forEachOrdered(ele -> System.out.print(ele + " "));
-
-
     }
 
 

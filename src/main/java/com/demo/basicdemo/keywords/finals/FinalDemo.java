@@ -2,43 +2,50 @@ package com.demo.basicdemo.keywords.finals;
 
 
 /**
- * 类:  final修饰的类不能被继承
- * 方法：final修饰的方法不能被重写
- * 属性：final修饰的的属性不能修改
+ * 不能被继承
  */
 public class FinalDemo {
-
-    public static void main(String[] args) {
-        //Shoes.brand="Lining";
-    }
 }
 
-class Shoes{
+
+class Shoes {
 
     /**
      * 不能被修改
      */
-    public static final String brand="Anta";
+    public static final String brand = "Anta";
 
     /**
-     * 不能被重写
+     * 所属类被继承时候不能被重写
      */
-    public final void function(){
+    public final void function() {
         System.out.println("walk.....");
     }
 
 }
 
+
 /**
- * 不能被继承
+ * 类:  final修饰的类不能被继承
+ * 方法：final修饰的方法不能被重写
+ * 属性：final修饰的的属性一旦初始化后就不能修改
  */
-final class SportShoes extends Shoes{
+class SportShoes extends Shoes {
 
     /*
-    编译报错
+    重写父类final方法编译报错
     @Override
     public void function(){
         System.out.println("run.....");
+    }
+    */
+
+
+
+
+    /*只是添加@Override也会被认为是重写
+    @Override
+    public void function(){
     }
     */
 
@@ -52,7 +59,6 @@ final class SportShoes extends Shoes{
 
 
 }
-
 
 
 // class RunShoes extends SportShoes{ }  final class不允许被继承

@@ -22,13 +22,6 @@ public class ReferenceValuePass {
         //这里会把user变量值，也就是对象堆内存地址传递给被调方法的参数变量，然后被调方法的参数变量也会保存着上面User对象在堆内存地址, 和user变量所指向相同的对象
         addAge(user);
         System.out.println("main-afterAddAge: "+user.getAge());
-
-        String[] myHobby={"code","basketball","health"};
-        user.setHobby(myHobby);//这里User的hobby属性和上面的myHobby指向同一数组对象，所以myHobby手柄修改数组对象时候，User的hobby属性引用的数组对象也随之发生改变
-        System.out.println(Arrays.toString(user.getHobby()));
-        myHobby[1]="sing";
-        System.out.println(Arrays.toString(user.getHobby()));
-
     }
 
     public static void addAge(User user){

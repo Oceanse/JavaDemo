@@ -15,10 +15,10 @@ class Kid extends StaticExtend{
 
 
     public static void main(String[] args) {
-        StaticExtend.info();
-        Kid.info();//调用本类static方法info()
-        info();//调用本类static方法info()可以省略类名
+        StaticExtend.info();//通过父类名调用父类静态方法info()
+        Kid.info();//通过子类名调用调用父类静态方法info()
+        info();//继承父类的static info()方法，相当于该类拥有static方法info()，所以省略类名时候默认会从当前类加载这个方法
 
-        new Kid().info();
+        new Kid().info();//通过子类对象调用父类静态方法
     }
 }

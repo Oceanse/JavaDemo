@@ -2,10 +2,14 @@ package com.demo.oop.OOPDemo;
 /**
  * OOP：Object Oriented Programming
  * 类：对具有相同属性(成员变量)行为(方法)的一组对象的集合
- * 对象：也称为实例，根据类生成的具体实体，具有明确定义的属性(成员变量)和行为(方法),不同的对象具有各自的一套属性和行为
+ *
+ * 对象：也称为实例，根据类生成的具体实体，具有明确定义的属性(成员变量)和行为(方法)；
+ *     不同的对象具有各自独有的一套属性和行为，但是共享相同的类变量和类方法
+ *
+ *
  * 类可以理解为汽车设计图，对象就是根据图纸设计出的每辆汽车
  * 定义class就是定义了一种数据类型，对应的instance是这种数据类型的实例；
- * <p>
+ *
  * 类成员组成设计：成员变量(类成员变量和实例成员变量) 方法 构造器 代码块 内部类
  *
  * 面向对象开发过程：观察现实世界中对象，抽取出这些对象的共同特征(状态和行为)，脑海中形成一个模板，然后用代码进行类的设计，
@@ -132,12 +136,16 @@ class OOPDemoTest {
         //栈内存中的demo变量保存着堆内存当中OOPDemo对象的地址, 只有通过引用才能找到对象
         OOPDemo demo = new OOPDemo("ocean", false, hobby, location);
 
-        //这里的引用指向特定对象，就可以把引用“当成”特定对象，通过引用取调用对象的方法
+        //这里的引用指向特定对象，就可以把引用“当成”特定对象，通过引用取调用对象的toString方法
         System.out.println(demo.toString());
 
         location.setCity("Weifang");
         location.setCounty("Anqiu");
         System.out.println(demo.toString());
+
+       //站引用变量不指向任何堆对象，也就是demo对应的对象或者实例不存在，那么相应的属性和方法也不存在，所以会导致NPE
+        demo=null;
+        demo.toString();
 
     }
 }

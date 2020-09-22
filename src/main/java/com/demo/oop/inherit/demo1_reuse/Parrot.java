@@ -8,7 +8,7 @@ public class Parrot extends Bird {
         System.out.println(" public Parrot() is invoked");
     }
 
-    //Parrot类拥有本类和Birdl类、Animal类全部的属性
+    //Parrot类拥有本类和Bird类、Animal类全部的属性
     public Parrot(String species,String food,String swingsShape, String language) {
         this.species=species;
         this.food=food;
@@ -32,7 +32,7 @@ public class Parrot extends Bird {
         //一定是先调用父类构造器，再调用本类构造器
         Parrot parrot=new Parrot("parrot","grain","triangle","chinese");
 
-        //Parrot类拥有本类和Birdl类、Animal类全部的方法
+        //Parrot类拥有本类和Bird类、Animal类全部的方法
         //注意这里parrot调用的是自己的方法
         System.out.println(parrot.getSpecies());
         System.out.println(parrot.getFood());

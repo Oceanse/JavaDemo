@@ -46,7 +46,7 @@ public class Human {
     }
 
     public void info() {
-        System.out.println(name + " is " + age + " years old and is he married: "+married);
+        System.out.println("Human info: "+name + " is " + age + " years old and is he married: "+married);
     }
 
     public static void showNation(){

@@ -10,7 +10,7 @@ public class PrimitiveValuePass {
     @Test
     public void test(){
         int i = 10;//这里把i换成m就特别好理解了
-        addOne(i);//基本数据类型是字面值传递，相当于把i的字面值赋值一份传递给addOne方法
+        addOne(i);//基本数据类型是字面值传递，相当于把i的字面值复制一份传递给addOne方法
         System.out.println("test: " + i);
     }
 

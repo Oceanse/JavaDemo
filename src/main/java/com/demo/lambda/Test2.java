@@ -2,6 +2,7 @@ package com.demo.lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Test2 {
     /*使用() -> {} 替代匿名类
@@ -38,5 +39,22 @@ class AcceptMethod {
        al.forEach(x->{
            AcceptMethod.printValur(x);
        });
+
+
+       /*al.forEach(new Consumer<String>() {
+                      @Override
+                      public void accept(String s) {
+                          System.out.println(s);
+                      }
+                  }
+
+       );*/
+
+
+
+
+
+
+
    }
 }

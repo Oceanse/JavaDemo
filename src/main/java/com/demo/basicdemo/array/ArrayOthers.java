@@ -49,50 +49,13 @@ public class ArrayOthers {
     }
 
 
-    //可变参数实参可以传递给数组形参或者说参数为数组类型的方法可接受可变参数作为入参
-    public static void printNames(String... names) {
-        printArray(names);
-    }
-
-    public static void printArray(String[] names) {
-        System.out.println(names[0]);
-    }
-
+    /**
+     * Arrays.toString
+     */
     @Test
-    public static void test3() {
-        printNames("cc", "dd");
-    }
-
-
-    //数组实参可以传递给可变参数形参或者说可变参数的方法可接受数组作为入参
-    public static void countArr(int[] arr) {
-        count(arr);
-    }
-
-
-    public static void count(int... args) {
-        for (int arg : args) {
-            System.out.println(arg);
-        }
-    }
-
-    @Test
-    public static void test4() {
-        countArr(new int[]{1,2,3});
+    public void test3() {
+        boolean[] b = new boolean[]{true, false, true};
+        System.out.println(Arrays.toString(b));
     }
 
 }
-
-class A {
-    boolean[] b = new boolean[]{true, false, true};
-}
-
-class B {
-    public static void main(String[] args) {
-        A a = new A();
-        System.out.println(Arrays.toString(a.b));
-
-
-    }
-}
-
