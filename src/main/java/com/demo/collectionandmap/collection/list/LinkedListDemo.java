@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import java.util.LinkedList;
 
 
-/*
+/**
 LinkedList存储元素的数据结构是双向链表结构，由存储元素的结点连接而成，
 每一个节点都包含前一个节点的引用，后一个节点的引用和节点存储的值。当一个新节点插入时，
 只需要修改其中保持先后关系的节点的引用即可*/

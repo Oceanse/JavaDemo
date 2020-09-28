@@ -4,6 +4,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * lambda表达式最终被编译为一个实现类，不过语法上做了简化
+ *
+ * 语法：
+ * (parameters) -> expression
+ * 或
+ * (parameters) ->{ statements; }
+ * 其中的表达式或者语句可返回一个值或者什么都不返回
+
+ */
 public class Test2 {
     /*使用() -> {} 替代匿名类
      new Thread(new Runnable() {

@@ -5,6 +5,37 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
+
+
+/**
+原始类型	包装类型
+boolean	Boolean
+byte	Byte
+char	Character
+float	Float
+int	Integer
+long	Long
+short	Short
+double	Double
+
+当表格中左边列出的基础类型与它们的包装类有如下几种情况时，编译器会自动帮我们进行装箱或拆箱.
+
+进行 = 赋值操作（装箱或拆箱）
+进行+，-，*，/混合运算 （拆箱）
+进行>,<,==比较运算（拆箱）
+调用equals进行比较（装箱）
+ArrayList,HashMap等集合类 添加基础类型数据时（装箱）
+
+我们看一段平常很常见的代码
+public void testAutoBox() {
+    List<Float> list = new ArrayList<>();
+    list.add(1.0f);
+    float firstElement = list.get(0);
+}
+
+list集合存储的是Float包装类型，我传入的是float基础类型，所以需要进行装箱，
+而最后的get方法返回的是Float包装类型，我们赋值给float基础类型，所以需要进行拆箱，很简单，安排的明明白白
+*/
 public class Autoboxing_unboxing {
 
     /**

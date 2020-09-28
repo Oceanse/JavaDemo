@@ -1,4 +1,4 @@
-package com.demo.lambda;
+package com.demo.collectionandmap.collection.list;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,94 +13,8 @@ import java.util.stream.Collectors;
 
 public class list_map {
 
-    @Test
-    public void test() {
-        //List<Integer> ls= Arrays.asList(1,2,3);
-        List<Integer> ls = new ArrayList<>();
-        ls.add(1);
-        ls.add(5);
-        ls.add(2);
-        ls.add(2);
-        ls.add(2);
-        ls.add(7);
-        ls.add(4);
-
-        ls.forEach(x -> System.out.print(x + " "));
-
-        System.out.println();
-        ls.forEach(System.out::print);
-
-        System.out.print('\n');
-        ls.forEach(n ->
-        {
-            if (n % 2 == 0) {
-                System.out.print(n + " ");
-            }
-        });
-
-    }
 
 
-    //Stream是java8中新增加的一个特性,被java猿统称为流
-    @Test
-    public void test2() {
-        //List<Integer> ls= Arrays.asList(1,2,3);
-        List<Integer> ls = new ArrayList<>();
-        ls.add(1);
-        ls.add(5);
-        ls.add(2);
-        ls.add(2);
-        ls.add(2);
-        ls.add(7);
-        ls.add(4);
-
-        List ls2 = ls.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
-        System.out.println(ls2);
-
-        List ls3 = ls.stream().limit(2).collect(Collectors.toList());
-        System.out.println(ls3);
-
-        List ls4 = ls.stream().sorted().collect(Collectors.toList());
-        System.out.println(ls4);
-
-        System.out.println("1===========================");
-        List<Integer> ls5 = ls.stream().map(i -> i * i).collect(Collectors.toList());//表达式不用{}
-        List<Integer> ls55 = ls.stream().map(i -> {
-            return i * i;          //语句用{}，必须有返回值
-        }).collect(Collectors.toList());
-        List<Integer> ls555 = ls.stream().map(i -> {
-            int m = i * i;
-            return m;     //语句用{}，必须有返回值
-        }).collect(Collectors.toList());//语句用{}
-
-        List ls5555 = ls.stream().map(i -> i * i).distinct().collect(Collectors.toList());
-        System.out.println(ls5);
-        System.out.println(ls55);
-        System.out.println(ls555);
-        System.out.println(ls5555);
-
-
-        /*Stream 可以并行化操作，迭代器只能命令式地、串行化操作。顾名思义，
-        当使用串行方式去遍历时，每个 item 读完后再读下一个 item。而使用并行去遍历时，
-        数据会被分成多个段，其中每一个都在不同的线程中处理，然后将结果一起输出,
-        Stream 的并行操作依赖于 Java7 中引入的 Fork/Join 框架（JSR166y）来拆分任务和加速处理过程
-        parallelStream其实就是一个并行执行的流.它通过默认的ForkJoinPool,可能提高你的多线程任务的速度*/
-        List ls6 = ls.parallelStream().map(i -> 2 * i).collect(Collectors.toList());
-
-        System.out.println("2===========================");
-        List<Integer> ls7 = new ArrayList<>();
-        ls7.add(1);
-        ls7.add(2);
-        ls7.add(3);
-        ls7.add(4);
-        ls7.stream().forEach(ele -> System.out.print(ele + " "));//输出顺序是固定的
-        System.out.println();
-        ls7.parallelStream().forEach(ele -> System.out.print(ele + " "));//并行流遍历造成输出结果顺序是随机的
-
-        //如果平行处理时，希望最后顺序是按照原来Stream的数据顺序，那可以调用forEachOrdered()
-        System.out.println();
-        ls7.parallelStream().forEachOrdered(ele -> System.out.print(ele + " "));
-    }
 
 
     @Test

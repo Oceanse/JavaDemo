@@ -4,14 +4,16 @@ package com.demo.lambda;
  */
 //无参有返回
 public interface ICar3 {
-    int count();
+    int count();//被重写的接口方法需要返回值
 }
 
 
 class TestCar{
-    //被重写的接口方法需要返回值，所以这里等价于ICar3 car=()->{return 10;};
-    // 当代码块中只有一条语句时候，即使该表达式需要返回值，也可以省略return关键字(然也可以省略花括号)，这行语句的返回值将作为代码块的返回值当
+    //如果大括号内有且仅有一个语句且需要返回值，那么可以同时省略大括号、return关键字及语句分号
     ICar3 car=()-> 10;
+
+    //或者完整写法
+    ICar3 car2=()-> {return 10;};
 
 }
 

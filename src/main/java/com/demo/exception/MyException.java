@@ -37,7 +37,8 @@ import org.apache.logging.log4j.Logger;
  *上述构造方法实际上都是原样照抄RuntimeException。这样，抛出异常的时候，就可以选择合适的构造方法
  *
  *
- * 一个常见的做法是自定义一个BaseException作为“根异常”，然后，派生出各种业务类型的异常。BaseException需要从一个适合的Exception派生，通常建议从RuntimeException派生
+ * 一个常见的做法是自定义一个BaseException作为“根异常”，然后，派生出各种业务类型的异常。BaseException需要从一个适合的Exception派生，
+ * 通常建议从RuntimeException派生
  */
 
 
