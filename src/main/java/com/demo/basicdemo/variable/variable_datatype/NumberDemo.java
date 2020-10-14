@@ -11,12 +11,11 @@ public class NumberDemo {
 
     /**
      * 对于不带任何后缀的整数:
-     * 1 如果将一个 整数常量 或者 整数常量表达式结果 在byte/short/char范围内的赋值给byte/short/char变量，那么系统会自动把这个整数常量或者整数常量表达式当成byte/short/char类型
-     * 2 其他情况下这个整数常量或者整数常量表达式都是int类型(把任意一个整数赋值给int/long/float/double变量,系统会把这个变量当成int)
-     * 3 如果直接使用不带后缀的整型常量，这个整型常量会被当作int
+     *    1 如果将一个 整数常量 或者 整数常量表达式结果 在byte/short/char范围内的赋值给byte/short/char变量，那么系统会自动把这个整数常量或者整数常量表达式当成byte/short/char类型
+     *    2 其他情况下这个整数常量或者整数常量表达式都是int类型(把任意一个整数赋值给int/long/float/double变量,系统会把这个变量当成int)
      *
-     *对于不带任何后缀的浮点数：
-     *都是double类型数据
+     * 对于不带任何后缀的浮点数：
+     *    都是double类型数据
      *
      */
     @Test
@@ -34,12 +33,8 @@ public class NumberDemo {
         short s2=1+1;//1+1的结果是short类型
         char c2=1+1;//1+1的结果是char类型
 
-
         System.out.println(1); //不带任何后缀的整数默认是int
         System.out.println(1.0); //不带任何后缀的小数默认是double
-
-
-
     }
 
 
@@ -85,10 +80,10 @@ public class NumberDemo {
         System.out.println(hex);
         System.out.println(hex2);
 
-        /*某些时候程序需要直接使用二进制，二进制"更真实"，更能体现出整数在内存中的存在形式
-        一个不带任何后缀的二进制默认表示一个int类型
-        */
+        //某些时候程序需要直接使用二进制，二进制"更真实"，更能体现出整数在内存中的存在形式
+        //一个不带任何后缀的二进制默认表示一个int类型
         System.out.println(0B01100001);
+        System.out.println(0B01100001L);
 
     }
     /**
@@ -129,13 +124,11 @@ public class NumberDemo {
     @Test
     public void test3_2(){
 
-        //(1+1.1)结果的类型都是double
-        //cntrl + 点击println验证
-        System.out.println(1+1.1);//int 1会自动转成double 1.0,然后再运算
-
         //float f=2.1;  double类型数据不能直接赋值给float变量
-        float f = (float) 2.1;
-        float f2 = 2.1f;// 数值后面紧跟F或者f
+        double d=2.1;
+        float f = (float) d;//double变量存储的变量值2.1复制一份，然后强转成float类型，再赋值
+        System.out.println(d);
+        System.out.println(f);
 
     }
 
@@ -152,7 +145,22 @@ public class NumberDemo {
         Double d = Double.valueOf(st);
         Long l = Long.valueOf(st);
         Float f = Float.valueOf(st);
+    }
 
+
+    /**
+     * 数值型String--->数值型基本类型
+     */
+    @Test
+    public void test5(){
+
+        //当String类型数据 要转换成int、double、float、long等数据类型时，其数据必须由数字构成，
+        String stringNumber = System.getProperty("number");
+
+        int number = Integer.parseInt(stringNumber);
+        if(number==20201231){
+            System.out.println("Good luck");
+        }
     }
 
 

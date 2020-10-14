@@ -61,7 +61,13 @@ public class Autoboxing_unboxing {
         Integer i2 = Integer.valueOf(100);
         Character character2 = Character.valueOf('p');
 
-        //手动拆箱
+        //手动拆箱1,  String----->基本数据类型
+        int i3 = Integer.parseInt("123");
+        long l = Long.parseLong("456L");
+        boolean b = Boolean.parseBoolean("true");
+
+
+        //手动拆箱2，很少用到
         int j = i.intValue();
         char ch = character.charValue();
     }

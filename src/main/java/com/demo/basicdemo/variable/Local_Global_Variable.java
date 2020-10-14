@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 
 /**
- * 局部变量(Local Variable)
+ * 局部变量(Local )
  * 定义：方法中的变量(包括方法体 形参)和代码块中的变量，局部变量不属于任何类或者对象
  *
  * 存储位置：栈内存中
- *         局部变量只是存放字面值或者对象的地址，因此占用的空间比较小
+ *         局部变量只是存放字面值或者对象的地址，因此占用的空间比较Variable小
  *
  * 初始化：使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作；如果局部变量在使用前没有进行初始化则会在编译器报错；
  *       如果局部变量进行了声明没有进行初始化， 但是也一直没有被使用的话编译也是不会报错的；(局部变量使用前必须初始化话)；
@@ -73,32 +73,31 @@ public class Local_Global_Variable {
      * 局部变量没有初始化，但是没有被使用的话编译也是不会报错的
      */
     @Test
-    public void test2() {
-        int age;
+    public void test() {
+        int count;
     }
 
 
     /**
-     * 局部变量没有初始化，使用的话编译器会报错
+     * 变量使用前必须初始化；
+     * 系统默认不会对局部变量进行初始化数据操作；如果局部变量在使用前没有进行初始化则会在编译器报错；
+     * 局部变量使用前必须手动初始化
      */
     @Test
-    public void test3() {
-        int age;
-        // System.out.println(age); //根据就近原则这里使用的是局部变量age,但是因为没有错初始化，所以编译器会报错
-
-        //String str;局部变量必须要显式的初始化
-        String str = null; //String str=null会对引用变量str(存在栈内存)赋值为null,但是不会开辟堆空间，str完成了初始化(null理解成特殊的变量值，只能赋给引用类型变量)
-        System.out.println(str);
+    public void test2() {
+        String state;
+        //System.out.println(state); //变量没有初始化就使用会报错
     }
+
 
     /**
      * 局部变量可以和全局变量重名
      * 就近原则
      */
     @Test
-    public void test4() {
+    public void test3() {
         String name = "tom";//局部变量可以和全局变量重名，这里的name分配在栈内存，成员变量name分配在堆内存
-        if (name.equals("tom")) {//就近原则,这里的name是局部变量name
+        if (name.equals("tom")) {//当name前面没有this或者super等修饰符时候会遵循就近原则,所以这里的name是局部变量name
             System.out.println("My name is Tom");
         }
 
@@ -108,25 +107,39 @@ public class Local_Global_Variable {
     }
 
 
-
     /**
-     * 局部变量可以和全局变量重名
-     * 就近原则
-     * 尽管局部变量和全局变量可以崇明，但是还是尽量避免这种情形
+     * 局部变量只在当前{}有效， 或者说只在当前{}可见
      */
     @Test
-    public static void test4_2() {
-        String name;//局部变量可以和全局变量重名，这里的name分配在栈内存，成员变量name分配在堆内存
-       /* if (name != null) {  就近原则,这里的name是局部变量name,由于没有初始化就使用，所以会报错
-            System.out.println(name);
-        }*/
+    public static void test4() {
+        if(1==1){
+            String result="right";//result作用域是当前{}
+        }
+        //System.out.println(result);
     }
+
+
+    @Test
+    public static void test4_2() {
+        boolean flag=true;//flag作用域是整个方法体
+        if(flag){
+            System.out.println("flag is "+true);
+        }else{
+            System.out.println("flag is "+false);
+        }
+    }
+
+
 
     /**
      * 代码块中声明的变量是局部变量，仅在当前代码块内生效
      */ {
         int age = 100;
+        System.out.println(age);//局部变量age
+        System.out.println(this.age);//成员变量age
     }
+
+
 
     /**
      * 该方法只有被调用时才会为变量 m, n, sum分配内存空间
@@ -137,26 +150,4 @@ public class Local_Global_Variable {
         int n = 2;
         int sum = m + n;
     }
-
-
-    @Test
-    public static void test6() {
-        if(1==1){
-            String result="right";//result作用域是当前{}
-        }
-        //System.out.println(result);
-    }
-
-
-    @Test
-    public static void test7() {
-        boolean flag=true;//flag作用域是整个方法体
-        if(flag){
-            System.out.println("flag is "+true);
-        }else{
-            System.out.println("flag is "+false);
-        }
-        //System.out.println(result);
-    }
-
 }

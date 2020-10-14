@@ -38,23 +38,24 @@ public class InitialValue {
         System.out.println(f);
         System.out.println(d);
         System.out.println(flag);
-        System.out.println("b"+c+"d");
+        System.out.println(c);
 
 
+        //引用变量对应的栈存储空间默认值为null, null可以理解为一种特殊的值； 不会开辟堆空间；
         System.out.println(o);
         System.out.println(r);
-        System.out.println(Arrays.toString(names));
+        System.out.println(names);
         System.out.println(date);
     }
 
     public void test2(){
-        //int i; 局部变量使用前必须要显式的初始化
+        //int i; 局部变量使用前必须要显式/手动初始化
         int i=1;
-        if(i!=2){
+        if(i!=2){//使用变量i之前必须要手动初始化
             System.out.println("right");
         }
 
-        //String str;局部变量必须要显式的初始化
+        //局部变量必须要显式的初始化
         String str=null; //String str=null会对引用变量str(存在栈内存)赋值为null,但是不会开辟堆空间，str完成了初始化
         System.out.println(str);
     }
