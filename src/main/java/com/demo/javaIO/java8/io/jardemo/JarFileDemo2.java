@@ -22,7 +22,7 @@ public class JarFileDemo2 {
     public void test() throws IOException {
 
         //通过jar文件路径构造JarFile
-        File file = new File("C:\\Users\\epanhai\\.m2\\repository\\se\\ericsson\\jcat\\jcat-demo\\R6A0178-SNAPSHOT\\jcat-demo-R6A0178-SNAPSHOT.jar");
+        File file = new File("C:\\Users\\epanhai\\.m2\\repository\\se\\ericsson\\jcat\\jcat-demo\\R6D0005-SNAPSHOT\\jcat-demo-R6D0005-SNAPSHOT-jar-with-dependencies.jar");
         JarFile jarFile;
         if (file.exists()) {
             jarFile = new JarFile(file);

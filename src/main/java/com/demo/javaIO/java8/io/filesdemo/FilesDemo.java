@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FilesDemo {
 
@@ -114,6 +117,32 @@ public class FilesDemo {
     public void test8() throws IOException {
         Path path = Paths.get("newdir/newfile");
         Files.delete(path);
+    }
+
+
+    /**
+     * Files.walk在 Java 中遍历文件。
+     * @throws IOException
+     */
+    @Test
+    public void test9() throws IOException {
+        Path path = Paths.get("C:\\Users\\epanhai\\git\\myproject\\JavaDemo");
+        Stream<Path> walk = Files.walk(path);//不指明深度，会遍历所有层次(目录级别数)的文件目录,包括path对应的根目录
+        List<Path> collect = walk.collect(Collectors.toList());
+        collect.forEach(System.out::println);
+    }
+
+
+    /**
+     * Files.walk在 Java 中遍历文件。
+     * @throws IOException
+     */
+    @Test
+    public void test9_2() throws IOException {
+        Path path = Paths.get("C:\\Users\\epanhai\\git\\myproject\\JavaDemo");
+        Stream<Path> walk = Files.walk(path,1);//指明深度1，只会遍历当前根目录下(目录级别数)的文件目录,包括path对应的根目录
+        List<Path> collect = walk.collect(Collectors.toList());
+        collect.forEach(System.out::println);
     }
 
 

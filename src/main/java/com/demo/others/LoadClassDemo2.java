@@ -84,7 +84,7 @@ public class LoadClassDemo2<Color> {
     @Test
     public void test2() throws ClassNotFoundException {
        // String path = "C:\\Users\\epanhai\\Documents\\git\\JavaDemo\\target\\classes";
-        String path= "C:\\Users\\epanhai\\Documents\\git\\JavaDemo";//classes父路径也也可以
+        String path= "C:\\Users\\epanhai\\git\\myproject\\JavaDemo";//classes父路径也也可以
         SyntheticRepository repo = SyntheticRepository.getInstance(new ClassPath(path));
         Repository.setRepository(repo);
         JavaClass javaClass = Repository.lookupClass("com.demo.others.LoadClassDemo2");
@@ -96,7 +96,7 @@ public class LoadClassDemo2<Color> {
             System.out.println(annotationEntry);
 
            //注解类型相关
-            System.out.println(annotationEntry.getAnnotationType());//Lcom/demo/others/ClassAno;格式
+            System.out.println(annotationEntry.getAnnotationType());// Lcom/demo/others/ClassAno;格式
             String substring = annotationEntry.getAnnotationType().replace("/", ".").replace(";", "").substring(1);
             System.out.println(substring);//com.demo.others.ClassAno格式
 

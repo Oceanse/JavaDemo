@@ -40,8 +40,8 @@ public class FileUtilsDemo {
 
         FileUtils.touch(new File("newfile.txt"));//创建文件，如果文件存在则更新时间；如果不存在，创建一个空文件
 
-        boolean isSame=FileUtils.contentEquals(new File("test.txt"),new File("test2.txt"));
-        System.out.println(isSame);
+        //boolean isSame=FileUtils.contentEquals(new File("test.txt"),new File("test2.txt"));
+        //System.out.println(isSame);
 
         //第一个参数是文件，第二个是参数目录，第三个参数是否更新时间,newdir不存在则会自动创建
         FileUtils.copyFileToDirectory(new File("newfile.txt"),new File("newdir"),true);

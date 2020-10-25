@@ -100,6 +100,23 @@ public class FilesCopy {
     }
 
 
+    /**
+     * 类似于linux mv： Move or rename a file to a target file.
+     * @throws IOException
+     */
+    @Test
+    public void test6() throws IOException {
+
+       Path path=Paths.get("C:\\Users\\epanhai\\git\\myproject\\JavaDemo\\testResource\\suite.json");
+        Path path2=Paths.get("C:\\Users\\epanhai\\git\\myproject\\JavaDemo\\testResource\\suite2.json");
+
+        //如果设置了REPLACE_EXISTING，则会覆盖已有的文件
+        Files.move(path,path2, StandardCopyOption.REPLACE_EXISTING);
+    }
+
+
+
+
 
 
 
