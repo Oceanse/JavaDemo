@@ -1,4 +1,4 @@
-package com.demo.json_parse.jackson.serilize_deserilize.serialize.field_order;
+package com.demo.json_parse.jackson.serilize_deserilize.serialize.field_order.test2;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

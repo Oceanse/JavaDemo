@@ -1,4 +1,4 @@
-package com.demo.json_parse.jackson.serilize_deserilize.serialize.ignore_null_empty_fields;
+package com.demo.json_parse.jackson.serilize_deserilize.serialize.ignore_null_empty_fields.test3;
 
 
 /**

@@ -6,7 +6,7 @@
 
     <groupId>com.demo</groupId>
     <artifactId>java-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -244,77 +244,319 @@
                 </configuration>
             </plugin>
 
-            <!--  <plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>2.10</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+            </plugin>
+
+            <!--   <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-shade-plugin</artifactId>
+                   <executions>
+                       <execution>
+                           <phase>package</phase>
+                           <goals>
+                               <goal>shade</goal>
+                           </goals>
+                           <configuration>
+                               <shadedArtifactAttached>true</shadedArtifactAttached>
+                               <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
+                               <transformers>
+                                   <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                       <resource>META-INF/services/se.ericsson.jcat.fw.event.JcatEventSubscriber</resource>
+                                   </transformer>
+                                   <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                       <resource>fixture.properties</resource>
+                                   </transformer>
+                                   <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                       <resource>META-INF/services/javax.ws.rs.ext.MessageBodyWriter</resource>
+                                   </transformer>
+                                   <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                       <resource>META-INF/services/javax.ws.rs.ext.MessageBodyReader</resource>
+                                   </transformer>
+                                   <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                       <resource>META-INF/services/javax.ws.rs.ext.Providers</resource>
+                                   </transformer>
+                                   <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                       <mainClass>org.testng.TestNG</mainClass>
+                                   </transformer>
+                               </transformers>
+                               <filters>
+
+                                   <filter>
+                                       &lt;!&ndash;只包含指定jar内的指定文件，适用于10个里面只要一个的情景&ndash;&gt;
+                                       <artifact>commons-io:commons-io</artifact>
+                                       <includes>
+                                           &lt;!&ndash;如果只是包含io下面的input及其目录下的内容，最后的/不要忘记&ndash;&gt;
+                                           <include>org/apache/commons/io/input/</include>
+                                           &lt;!&ndash;等价于<include>org/apache/commons/io/input/</include>&ndash;&gt;
+                                       </includes>
+                                   </filter>
+
+
+                                   <filter>
+                                       &lt;!&ndash;排除指定的jar(这里是全部)内部的指定文件，适用于10个里面的9个的情景&ndash;&gt;
+                                       <artifact>*:*</artifact>
+                                       <excludes>
+                                           <exclude>META-INF/*.SF</exclude>
+                                           <exclude>META-INF/*.DSA</exclude>
+                                           <exclude>META-INF/*.RSA</exclude>
+                                       </excludes>
+                                   </filter>
+
+
+                                 &lt;!&ndash;先include再exclude， 只包含特定jar包内特定目录下的特定文件，适用于10个里面选择1个中的一部分&ndash;&gt;
+                                   <filter>
+                                       <artifact>org.apache.bcel:bcel</artifact>
+                                       <includes>
+                                           <include>org/apache/bcel/classfile/*</include>
+                                       </includes>
+                                       <excludes>
+                                           <exclude>org/apache/bcel/classfile/AccessFlags.class</exclude>
+                                           <exclude>org/apache/bcel/classfile/AnnotationDefault.class</exclude>
+                                       </excludes>
+                                   </filter>
+                               </filters>
+
+
+                               &lt;!&ndash;<artifactSet>（不在filter标签内），可以过滤掉指定的整个jar  groupId:artifactId标记某个jar&ndash;&gt;
+                               <artifactSet>
+                                   <excludes>
+                                       <exclude>org.testng:testng</exclude>
+                                   </excludes>
+                               </artifactSet>
+                           </configuration>
+                       </execution>
+                   </executions>
+               </plugin>-->
+
+
+             <!-- <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-shade-plugin</artifactId>
-                  <executions>
+                  <artifactId>maven-dependency-plugin</artifactId>
+                  <version>3.1.1</version>
+                 <executions>
                       <execution>
-                          <phase>package</phase>
+                         <id>copy</id>
+                         <phase>compile</phase>
+                         <goals>
+                             <goal>copy</goal>
+                         </goals>
+                         <configuration>
+                             <artifactItems>
+                                 <artifactItem>
+                                     <groupId>com.alibaba</groupId>
+                                     <artifactId>fastjson</artifactId>
+                                     <version>1.2.54</version>
+                                     <outputDirectory>${project.build.directory}/libs/test/</outputDirectory>
+                                 </artifactItem>
+                             </artifactItems>
+                         </configuration>
+                     </execution>
+                     <execution>
+                         <id>unpack</id>
+                         <phase>compile</phase>
+                         <goals>
+                             <goal>unpack</goal>
+                         </goals>
+                         <configuration>
+                             <artifactItems>
+                                 <artifactItem>
+                                     <groupId>com.alibaba</groupId>
+                                     <artifactId>fastjson</artifactId>
+                                     <version>1.2.54</version>
+                                     <includes>*/*.txt</includes>
+                                     <excludes>META-INF/NOTICE.txt</excludes>
+                                     <outputDirectory>${project.build.directory}/libs/</outputDirectory>
+                                 </artifactItem>
+                             </artifactItems>
+                         </configuration>
+                     </execution>
+                      <execution>
+                          <id>copy-dependencies</id>
+                          <phase>compile</phase>
                           <goals>
-                              <goal>shade</goal>
+                              <goal>copy-dependencies</goal>
                           </goals>
                           <configuration>
-                              <shadedArtifactAttached>true</shadedArtifactAttached>
-                              <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
-                              <transformers>
-                                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                      <resource>META-INF/services/se.ericsson.jcat.fw.event.JcatEventSubscriber</resource>
-                                  </transformer>
-                                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                      <resource>fixture.properties</resource>
-                                  </transformer>
-                                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                      <resource>META-INF/services/javax.ws.rs.ext.MessageBodyWriter</resource>
-                                  </transformer>
-                                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                      <resource>META-INF/services/javax.ws.rs.ext.MessageBodyReader</resource>
-                                  </transformer>
-                                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                      <resource>META-INF/services/javax.ws.rs.ext.Providers</resource>
-                                  </transformer>
-                                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                      <mainClass>org.testng.TestNG</mainClass>
-                                  </transformer>
-                              </transformers>
-                              <filters>
-                                  <filter>
-                                      <artifact>*:*</artifact>
-                                      <excludes>
-                                          <exclude>META-INF/*.SF</exclude>
-                                          <exclude>META-INF/*.DSA</exclude>
-                                          <exclude>META-INF/*.RSA</exclude>
-                                      </excludes>
-                                  </filter>
-                              </filters>
+                              <outputDirectory>${project.build.directory}/libs/</outputDirectory>
                           </configuration>
                       </execution>
+                     <execution>
+                         <id>unpack-dependencies</id>
+                         <phase>compile</phase>
+                         <goals>
+                             <goal>unpack-dependencies</goal>
+                         </goals>
+                         <configuration>
+                             <outputDirectory>${project.build.directory}/libs/</outputDirectory>
+                         </configuration>
+                     </execution>
                   </executions>
               </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.1</version>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath> <!--指定添加项目中使用的外部jar的classpath项-->
+                            <classpathPrefix>libs/</classpathPrefix> <!--指定外部jar所在的路径，添加的classpath为 【路径】/jar文件名-->，
+                            <mainClass>com.demo.basicdemo.variable.VariableDemo</mainClass>  <!--指定本项目jar包的Main-Class-->
+                        </manifest>
+                    </archive>
+                    <includes>
+                        <include>com/</include>
+                        <include>META-INF/</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
                 <executions>
                     <execution>
-                        <id>copy</id>
-                        <phase>compile</phase>
+                        <phase>initialize</phase>
                         <goals>
-                            <goal>unpack</goal>
+                            <goal>install-file</goal>
                         </goals>
                         <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.alibaba</groupId>
-                                    <artifactId>fastjson</artifactId>
-                                    <version>1.2.54</version>
-                                    <includes>META-INF</includes>
-                                    <outputDirectory>${project.build.directory}/libs/</outputDirectory>
-                                </artifactItem>
-                            </artifactItems>
+                            <file>lib/yourJar.jar</file>
+                            <groupId>com.somegroup.id</groupId>
+                            <artifactId>artefact-id</artifactId>
+                            <version>x.y.z</version>
+                            <packaging>jar</packaging>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
+   <!-- &lt;!&ndash;配置依赖远程仓库地址，可以被settings.xml中的profile覆盖&ndash;&gt;
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    &lt;!&ndash;配置插件远程仓库地址，可以被settings.xml中的profile覆盖&ndash;&gt;
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>-->
+
+    <!--项目描述信息-->
+ <!--   <repositories>
+        <repository>
+            <id>maven-public</id>
+            <name>java-demo</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven-public</id>
+            <name>java-demo</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>-->
+    <description>This is a simpile project for java learning</description>
+
+
+    <!--项目成员信息-->
+    <developers>
+        <developer>
+            <id>ocean</id>
+            <name>Haiyang Pan</name>
+            <email>xxx@163.com</email>
+        </developer>
+    </developers>
+
+
+    <!--问题跟踪信息-->
+    <issueManagement>
+        <system>JIRA</system>
+        <url>http://jira.chengxiang.com/phoneproject</url>
+    </issueManagement>
+
+
+    <!--持续化集成服务信息-->
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>http://ci.chengxiang.com/phoneproject</url>
+    </ciManagement>
+
+
+    <!--源码仓库信息-->
+    <scm>
+        <connection>scm:git:http://gitlab.corp.chengxiang.com/mobile_hotel_res/phone_spider_project</connection>
+        <developerConnection>scm:git:git@gitlab.corp.chengxiang.com:mobile_hotel_res/phone_spider_project.git
+        </developerConnection>
+        <url>http://gitlab.corp.chengxiang.com/mobile_hotel_res/phone_spider_project</url>
+    </scm>
+    <distributionManagement>
+    <!--    <site>
+            <id>JavaDemo</id>
+            <name>Java Demo Site</name>
+            <url>http://localhost:8081/#browse/search</url>
+        </site>-->
+        <repository>
+            <id>maven-release</id>
+            <name>java-demo</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshot</id>
+            <name>java-demo</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

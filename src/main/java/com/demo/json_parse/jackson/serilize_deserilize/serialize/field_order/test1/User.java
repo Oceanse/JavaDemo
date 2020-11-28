@@ -1,4 +1,4 @@
-package com.demo.json_parse.jackson.serilize_deserilize.serialize.field_order;
+package com.demo.json_parse.jackson.serilize_deserilize.serialize.field_order.test1;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
@@ -7,8 +7,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * @JsonPropertyOrder指定序列化之后json字段的顺序
  * Jackson library provides a @JsonPropertyOrder annotation to specify the order of properties on serialization.
  */
-@JsonPropertyOrder(alphabetic=true)
-public class User2 {
+@JsonPropertyOrder({
+        "fullName",
+        "id",
+        "firstName",
+        "lastName"
+})
+public class User {
     public int id;
 
     private String firstName;
@@ -17,7 +22,7 @@ public class User2 {
 
     private String fullName;
 
-    public User2(int id, String firstName, String lastName, String fullName) {
+    public User(int id, String firstName, String lastName, String fullName) {
         super();
         this.id = id;
         this.firstName = firstName;

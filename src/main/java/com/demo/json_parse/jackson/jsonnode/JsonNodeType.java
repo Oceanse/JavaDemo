@@ -1,4 +1,4 @@
-package com.demo.json_parse.jackson.node_model;
+package com.demo.json_parse.jackson.jsonnode;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -35,14 +35,7 @@ public class JsonNodeType {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode rootNode = mapper.readTree(json);
         System.out.println(rootNode.isValueNode());
-        System.out.println(rootNode.isObject());
-        System.out.println(rootNode.isArray());
-
-        String json2 = "{\"name\":\"ocean\"}";
-        JsonNode rootNode2 = mapper.readTree(json2);
-        System.out.println();
-        System.out.println(rootNode.isValueNode());
-        System.out.println(rootNode.isObject());
+        System.out.println(rootNode.isObject());//true
         System.out.println(rootNode.isArray());
     }
 
@@ -64,14 +57,14 @@ public class JsonNodeType {
         //获取rootNode
         JsonNode rootNode = mapper.readTree(jsonString);
         System.out.println(rootNode.isValueNode());
-        System.out.println(rootNode.isObject());
+        System.out.println(rootNode.isObject());//true
         System.out.println(rootNode.isArray());
 
 
         //获取nameNode,并且判断nameNode的类型
         System.out.println();
         JsonNode nameNode = rootNode.get("name");
-        System.out.println(nameNode.isValueNode());
+        System.out.println(nameNode.isValueNode());//true
         System.out.println(nameNode.isObject());
         System.out.println(nameNode.isArray());
 
@@ -79,7 +72,7 @@ public class JsonNodeType {
         System.out.println();
         JsonNode scoreNode = rootNode.get("score");
         System.out.println(scoreNode.isValueNode());
-        System.out.println(scoreNode.isObject());
+        System.out.println(scoreNode.isObject());//true
         System.out.println(scoreNode.isArray());
 
         //获取hobbyNode,并且判断hobbyNode的类型
@@ -87,7 +80,7 @@ public class JsonNodeType {
         JsonNode hobbyNode = rootNode.get("hobby");
         System.out.println(hobbyNode.isValueNode());
         System.out.println(hobbyNode.isObject());
-        System.out.println(hobbyNode.isArray());
+        System.out.println(hobbyNode.isArray());//true
     }
 
 

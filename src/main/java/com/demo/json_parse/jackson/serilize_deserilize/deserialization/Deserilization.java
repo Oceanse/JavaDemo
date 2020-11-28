@@ -1,7 +1,10 @@
-package com.demo.json_parse.jackson.serilize_deserilize;
+package com.demo.json_parse.jackson.serilize_deserilize.deserialization;
 
+import com.alibaba.fastjson.JSONObject;
 import com.demo.json_parse.pojo.CaseBody;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.annotations.Test;
 
@@ -12,6 +15,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**

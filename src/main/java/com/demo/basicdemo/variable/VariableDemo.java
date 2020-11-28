@@ -315,6 +315,10 @@ public class VariableDemo {
         System.out.println("bt4:" + bt4);
     }
 
+    public static void main(String[] args) {
+        System.out.println("good luck!");
+    }
+
 }
 
 

@@ -1,4 +1,4 @@
-package com.demo.json_parse.jackson.node_model;
+package com.demo.json_parse.jackson.jsonnode;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

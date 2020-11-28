@@ -148,6 +148,7 @@ public class Demo1 {
         //JSONPath.eval 可解析多级路径
         System.out.println("JSONPath.eval=====================");
         String math = JSONPath.eval(jsonobj, "$.score.math").toString();
+        System.out.println(JSONPath.eval(jsonobj, "/").toString());
         System.out.println("math: " + math);
 
 

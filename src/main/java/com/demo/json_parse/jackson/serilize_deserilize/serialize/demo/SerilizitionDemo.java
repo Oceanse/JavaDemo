@@ -1,4 +1,4 @@
-package com.demo.json_parse.jackson.serilize_deserilize.serialize;
+package com.demo.json_parse.jackson.serilize_deserilize.serialize.demo;
 
 import com.demo.json_parse.pojo.CaseBody;
 import com.fasterxml.jackson.databind.ObjectMapper;

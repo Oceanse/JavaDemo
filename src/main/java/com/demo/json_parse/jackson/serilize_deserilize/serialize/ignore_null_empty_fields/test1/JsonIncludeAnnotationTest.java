@@ -1,10 +1,10 @@
-package com.demo.json_parse.jackson.serilize_deserilize.serialize.ignore_null_empty_fields;
+package com.demo.json_parse.jackson.serilize_deserilize.serialize.ignore_null_empty_fields.test1;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-public class JsonIncludeAnnotationTest2 {
+public class JsonIncludeAnnotationTest {
     public static void main(String[] args) throws JsonProcessingException {
 
         // Create ObjectMapper object.

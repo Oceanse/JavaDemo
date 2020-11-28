@@ -12,26 +12,29 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class JsonNodeDemo1 {
+public class JsonNodeDemo {
     @Test
     public void test() throws IOException {
-        // 实例化 ObjectMapper 对象
+        // 实例化ObjectMapper对象
         ObjectMapper objectMapper = new ObjectMapper();
 
-        // json 消息
+        // json消息
         String json = "{\"firstname\":\"Bo\",\"lastname\":\"Shang\",\"age\":30}";
 
-        // 将 json 转成 JsonNode 对象
+        // 将json转成JsonNode对象
         JsonNode rootNode = objectMapper.readTree(json);
 
+        //JsonNode get(String fieldName)返回值仍然是JsonNode
         JsonNode firstNameNode = rootNode.get("firstname");
         String firstName = firstNameNode.asText();
-        System.out.println("firstname:" + firstNameNode.asText());
+        System.out.println("firstname:" + firstName);
 
+        //JsonNode get(String fieldName)返回值仍然是JsonNode
         JsonNode lastnameNode = rootNode.get("lastname");
-        String lastname = firstNameNode.asText();
-        System.out.println("lastname:" + lastnameNode.asText());
+        String lastname = lastnameNode.asText();
+        System.out.println("lastname:" + lastname);
 
+        //JsonNode get(String fieldName)返回值仍然是JsonNode
         JsonNode ageNode = rootNode.get("age");
         int age = ageNode.asInt();
         System.out.println("age:" + age);
@@ -40,10 +43,10 @@ public class JsonNodeDemo1 {
 
     @Test
     public void test2() throws IOException {
-        // 实例化 ObjectMapper 对象
+        // 实例化ObjectMapper对象
         ObjectMapper objectMapper = new ObjectMapper();
 
-        // json 消息
+        // json消息
         String json = "{\n" +
                 "               \"name\":\"ocean\",\n" +
                 "               \"age\":28,\n" +
@@ -107,7 +110,7 @@ public class JsonNodeDemo1 {
 
 
     /**
-     * JsonNode rootNode = objectMapper.readTree(File file);
+     * JsonNode_Object_convert rootNode = objectMapper.readTree(File file);
      * @throws IOException
      */
     @Test
