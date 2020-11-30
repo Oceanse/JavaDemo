@@ -6,7 +6,7 @@
 
     <groupId>com.demo</groupId>
     <artifactId>java-demo</artifactId>
-    <version>1.0-RELEASE</version>
+    <version>1.2-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -426,7 +426,7 @@
                     </includes>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>2.4</version>
@@ -445,12 +445,12 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
 
         </plugins>
     </build>
-   <!-- &lt;!&ndash;配置依赖远程仓库地址，可以被settings.xml中的profile覆盖&ndash;&gt;
-    <repositories>
+    <!--配置依赖远程仓库地址，可以被settings.xml中的profile覆盖-->
+    <!--<repositories>
         <repository>
             <id>nexus-aliyun</id>
             <name>Nexus aliyun</name>
@@ -478,14 +478,14 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>-->
-
+    </pluginRepositories>
+-->
     <!--项目描述信息-->
- <!--   <repositories>
+   <!-- <repositories>
         <repository>
             <id>maven-public</id>
             <name>java-demo</name>
-            <url>http://localhost:8081/repository/maven-public/</url>
+            <url>http://192.168.56.102:8081/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -499,7 +499,7 @@
         <pluginRepository>
             <id>maven-public</id>
             <name>java-demo</name>
-            <url>http://localhost:8081/repository/maven-public/</url>
+            <url>http://192.168.56.102:8081/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -537,10 +537,10 @@
 
     <!--源码仓库信息-->
     <scm>
-        <connection>scm:git:http://gitlab.corp.chengxiang.com/mobile_hotel_res/phone_spider_project</connection>
-        <developerConnection>scm:git:git@gitlab.corp.chengxiang.com:mobile_hotel_res/phone_spider_project.git
-        </developerConnection>
-        <url>http://gitlab.corp.chengxiang.com/mobile_hotel_res/phone_spider_project</url>
+        <connection>scm:git:https://gitee.com/oceanse/JavaDemo.git</connection>  <!--git 拉取代码, scm:git: git地址-->
+        <developerConnection>scm:git:https://gitee.com/oceanse/JavaDemo.git</developerConnection><!--提交代码到git上, scm:git: git地址-->
+        <!--<url>http://gitlab.corp.chengxiang.com/mobile_hotel_res/phone_spider_project</url>-->
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
     <!--    <site>
@@ -551,12 +551,12 @@
         <repository>
             <id>maven-release</id>
             <name>java-demo</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://192.168.56.102:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshot</id>
             <name>java-demo</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.56.102:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
