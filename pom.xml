@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo</groupId>
     <artifactId>java-demo</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -540,7 +538,7 @@
         <connection>scm:git:https://gitee.com/oceanse/JavaDemo.git</connection>  <!--git 拉取代码, scm:git: git地址-->
         <developerConnection>scm:git:https://gitee.com/oceanse/JavaDemo.git</developerConnection><!--提交代码到git上, scm:git: git地址-->
         <!--<url>http://gitlab.corp.chengxiang.com/mobile_hotel_res/phone_spider_project</url>-->
-        <tag>HEAD</tag>
+        <tag>java-demo-1.2</tag>
     </scm>
     <distributionManagement>
     <!--    <site>
