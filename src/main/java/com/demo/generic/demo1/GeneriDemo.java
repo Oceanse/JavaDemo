@@ -1,24 +1,24 @@
 package com.demo.generic.demo1;
 
+import com.demo.collection_map.collection.list.model.Apple;
+import com.demo.collection_map.collection.list.model.Fruit;
+import com.demo.collection_map.collection.list.model.Grape;
+import com.demo.collection_map.collection.list.model.Orange;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Java 泛型（generics）是 JDK 5 中引入的一个新特性, 泛型提供了编译时类型安全检测机制
- *
+ * <p>
  * 泛型，即“参数化类型（类型参数化，实参就是具体的类型）”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。
  * 参数化类型就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。
- *
- *
+ * <p>
+ * <p>
  * 泛型有三种使用方式，分别为：泛型类、泛型接口、泛型方法()，都带有<>
  * 泛型类、泛型接口、泛型方法声明的类型参数也被称之为类型变量，
  * 泛型类、泛型接口的属性方法可以使用泛型变量，我们可以称这些属性或者方法为“带泛型的属性方法”或者“使用泛型的属性方法”， 因此带泛型的属性方法必须出现在泛型类中;
  * 泛型方法或者泛型属性和泛型类无关，他们可以出现在非泛型类中
- *
  */
 public class GeneriDemo {
 
@@ -61,4 +61,41 @@ public class GeneriDemo {
         List<Integer> integerArrayList = new ArrayList<Integer>();
         System.out.println(stringArrayList.getClass());
         System.out.println(integerArrayList.getClass());
-}}
+    }
+
+
+    /**
+     * 迭代器支持泛型
+     */
+    @Test
+    public void test3() {
+        //泛型(about generic)
+        ArrayList<Fruit> fruit = new ArrayList<>();
+        fruit.add(new Apple());
+        fruit.add(new Grape());
+        fruit.add(new Orange());
+
+        Iterator<Fruit> iterator = fruit.iterator();//iterator支持泛型
+        while (iterator.hasNext()) {
+            Fruit next = iterator.next();//没有使用泛型，会返回Object类型
+            if (next instanceof Apple) {
+                System.out.println("apple is here");
+            }
+        }
+    }
+
+    @Test
+    public void test4() {
+        //泛型(about generic)
+        ArrayList<Fruit> fruit = new ArrayList<>();
+        fruit.add(new Apple());
+        fruit.add(new Grape());
+        fruit.add(new Orange());
+
+        for (Fruit fruit1 : fruit) {//使用泛型后fruit1是Fruit类型
+            if (fruit1 instanceof Apple) {
+                System.out.println("apple is here");
+            }
+        }
+    }
+}

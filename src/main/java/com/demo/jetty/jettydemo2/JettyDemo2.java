@@ -13,10 +13,23 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ *  Jetty-server + jetty-Servlet提供RESTful API
+ *
+ * <dependency>
+ *     <groupId>org.eclipse.jetty</groupId>
+ *     <artifactId>jetty-servlet</artifactId>
+ *     <version>9.4.19.v20190610</version>
+ * </dependency>
+ *
+ * <dependency>
+ *     <groupId>org.eclipse.jetty</groupId>
+ *     <artifactId>jetty-server</artifactId>
+ *     <version>${jetty.version}</version>
+ * </dependency>
+ */
 public class JettyDemo2 {
     private static final int IDLE_TIMEOUT = 30;
-    private static CountDownLatch latch = new CountDownLatch(1);
-    static int i = 30;
 
     public static void main(String[] args) throws Exception {
 
@@ -32,27 +45,42 @@ public class JettyDemo2 {
 
         //context.addServlet(new ServletHolder(new HelloServlet2()), "/*"); 访问localhost:8080/hello/a, localhost:8080/hello/a都行(通配符)
         server.start();//启动服务器
-        waitForIdleTimeout();//开启定时器和计时器锁，不断轮询服务器启动时间，若启动时间大于某个值，就取消定时轮询
+        waitForIdleTimeout2();//开启定时器和计时器锁，不断轮询服务器启动时间，若启动时间大于某个值，就取消定时轮询
         server.stop();//关闭服务器
     }
 
     private static void waitForIdleTimeout() throws InterruptedException {
+        CountDownLatch latch = new CountDownLatch(1);
         Timer timer = new Timer();
         long init = System.currentTimeMillis();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("当前i值是： "+i--);
-                if (System.currentTimeMillis() - init > 10000) {//server启动时间大于30s时候
-                    System.out.println((System.currentTimeMillis() - init)/1000);//打印server启动时间
+                if (System.currentTimeMillis() - init > 5000) {//server启动时间大于5s时候
+                    System.out.println("server当前运行了: "+(System.currentTimeMillis() - init)/1000+" s");//打印server启动时间
                     latch.countDown();//计时器锁初始值为1，减1变成0，
                 }
             }
         }, 0, 1000);
         latch.await();//阻塞后面线程
         timer.cancel();//取消定时执行任务
+    }
 
+
+    private static void waitForIdleTimeout2() throws InterruptedException {
+        CountDownLatch latch = new CountDownLatch(5);//Latch是门闩的意思
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("server will be shutdown after "+latch.getCount()+" s");
+                latch.countDown();//计时器锁初始值为5，countDown()后减1
+            }
+        }, 0, 1000);//每1s执行一次任务
+        latch.await();//latch门闩阻塞后面线程，直到latch变为0, 阻塞就会接触，然后继续执行(门闩一开始是关着的，直到变成0，门闩才会打开)
+        timer.cancel();//取消定时执行任务
     }
 
 

@@ -45,8 +45,8 @@ public class Coder extends Human {
      * @param salary
      */
     public Coder(String name, int age, boolean married, double salary) {
-        //不再调用super()
-        //因为父类的属性都是私有的，所以不能采取"this.name=name"这种方式赋值；但是可以通过public constructor初始化父类属性；
+        //不再调用super()，因为显示的调用了父类的三参构造器
+        //因为父类的属性都是私有的，所以不能采取"this.name=name"这种方式赋值；但是可以通过super调用父类的构造方法去初始化私有属性；
         //因为父类的属性都是私有的，子类虽然不能继承父类私有属性，但是可以通过继承过来的getter setter方法访问和修改私有属性
         super(name, age, married);//这里同时也创建了一个父类对象
         this.salary = salary;
@@ -92,7 +92,6 @@ public class Coder extends Human {
 
     public static void main(String[] args) {
 
-
         //先调用父类构造方法Human()，再调用本类构造方法
         Coder coder = new Coder();
         coder.accessCoderInfo(); //调用当前对象的info()
@@ -109,7 +108,6 @@ public class Coder extends Human {
         Coder coder3 = new Coder("ocean", 30, true, 20000);
         coder3.accessCoderInfo();//调用当前对象的info()
         coder3.accessHumanInfo();//调用当前对象的父类对象的info()方法， 当前coder2对象的父类对象由Person(String name, int age, boolean married)创建
-
     }
 
 

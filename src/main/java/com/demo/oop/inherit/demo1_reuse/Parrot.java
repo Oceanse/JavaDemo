@@ -5,11 +5,13 @@ public class Parrot extends Bird {
     String language;
 
     public Parrot() {
+        //这里会默认调用父类Bird的空参构造函数
         System.out.println(" public Parrot() is invoked");
     }
 
     //Parrot类拥有本类和Bird类、Animal类全部的属性
     public Parrot(String species,String food,String swingsShape, String language) {
+        //这里会默认调用父类Bird的空参构造函数
         this.species=species;
         this.food=food;
         this.swingsShape=swingsShape;
@@ -33,7 +35,7 @@ public class Parrot extends Bird {
         Parrot parrot=new Parrot("parrot","grain","triangle","chinese");
 
         //Parrot类拥有本类和Bird类、Animal类全部的方法
-        //注意这里parrot调用的是自己的方法
+        //注意这里parrot调用的是自己的方法(继承过来的也要想象成是自己的)
         System.out.println(parrot.getSpecies());
         System.out.println(parrot.getFood());
         System.out.println(parrot.getSwingsShape());

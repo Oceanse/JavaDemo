@@ -18,7 +18,6 @@ import java.io.*;
  */
 public class Object_In_Out_Stream {
 
-
     /**
      * 完成对象序列化，使其可以存储到硬盘
      * @throws IOException

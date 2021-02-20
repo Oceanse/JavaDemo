@@ -13,7 +13,7 @@ import java.io.IOException;
 
 /**
  *
- *  Jetty + Servlet提供RESTful API
+ *  Jetty-server + jetty-Servlet提供RESTful API
  *
  * <dependency>
  *     <groupId>org.eclipse.jetty</groupId>

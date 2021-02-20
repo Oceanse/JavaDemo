@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class ThreadSlleep7 {
     public static void main(String[] args) {
 
-        //每隔1s打印一次
+     //每隔1s打印一次
      /*   new Thread(()->{
             for (int i = 0; i <100 ; i++) {
                 try {
@@ -54,7 +54,7 @@ public class ThreadSlleep7 {
      */
     @Test
     public void test() {
-        System.out.println(TimeUnit.SECONDS.toMillis(44));
+        System.out.println(TimeUnit.SECONDS.toMillis(1));
     }
 
 }

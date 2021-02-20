@@ -10,6 +10,7 @@ public class Thread_Safe_Cause4 implements Runnable {
 
         //如果最后还剩一张票ticket=1，三个线程可能执行完while(Ticket.ticket>0)，然后都失去cpu阻塞在这一步，然后依次执行，所以会打印出1,0，-1，两张错票
         while(Ticket.ticket>0){
+            // if(Tick.ticket<=0) return; 需要加上这行代码
             synchronized (this) {
                 System.out.println(Thread.currentThread().getName()+"票号"+Ticket.ticket);
                 Ticket.ticket--;

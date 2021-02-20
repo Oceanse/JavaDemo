@@ -19,7 +19,7 @@ public class ThreadSleep4 extends Thread {
                 System.out.println(Thread.currentThread().getName()+":"+i);
             }
         }
-        return;
+        //return;
     }
 
     public static void main(String[] args) throws InterruptedException {

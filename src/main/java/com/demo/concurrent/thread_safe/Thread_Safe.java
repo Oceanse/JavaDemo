@@ -32,7 +32,7 @@ public class Thread_Safe implements Runnable {
     public void run() {
 
         while(true){
-            //对下面代码块枷锁，线程体执行到这就会握住这把锁，锁定同步代码块，直达执行完毕才会释放锁，下个线程执行到这握住锁。。。。。
+            //对下面代码块加锁，线程体执行到这就会握住这把锁，锁定同步代码块，直达执行完毕才会释放锁，下个线程执行到这握住锁。。。。。
             //this是指Thread_safe对象，这里多个线程共享同一个Thread_safe对象，所以this对象可以保证锁的唯一性，因此这里可以用this
             //若是采用继承继承Thread方式创建多线程，不能用this
             synchronized (object) { //由对象充当同步监视器，也称之为锁，哪个线程获取锁，哪个线程就执行大括号里被同步的代码块

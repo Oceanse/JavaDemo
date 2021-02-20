@@ -80,6 +80,19 @@ public class FileUtilsDemo {
     }
 
     @Test
+    public void test3_2() throws IOException {
+
+        File file=new File("test.txt");
+        String contents="good luck";
+
+        System.out.println(Charset.defaultCharset());
+
+        //String写入File对象中,覆盖源文件内容
+        FileUtils.write(file,contents, Charset.defaultCharset());//file不存在则创建
+
+    }
+
+    @Test
     public void test4() throws IOException {
         //结果只和文件内容有关，和文件名以及文件路径没有关系
         System.out.println(FileUtils.checksumCRC32(new File("out.txt")));

@@ -1,6 +1,5 @@
 package com.demo.basicdemo.variable;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;

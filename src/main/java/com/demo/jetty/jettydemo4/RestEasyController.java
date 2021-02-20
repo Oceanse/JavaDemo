@@ -93,7 +93,6 @@ public class RestEasyController {
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)//返回给client为json类型
     public User getInfo4() {
-        JsonObject jsonObject = new JsonObject();
         User user = new User("ocean", 30);
         return user;
     }

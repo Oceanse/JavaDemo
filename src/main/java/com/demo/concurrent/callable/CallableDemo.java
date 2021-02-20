@@ -33,9 +33,9 @@ public class CallableDemo {
 }
 
 
-class MyThread implements Callable{
+class MyThread implements Callable<String>{
     @Override
-    public String call() throws Exception {
+    public String call() {
         int sum=0;
         for (int i = 0; i <101; i++) {
             sum+=i;
@@ -45,9 +45,9 @@ class MyThread implements Callable{
     }
 }
 
-class MyThread2 implements Callable{
+class MyThread2 implements Callable<String>{
     @Override
-    public String call() throws Exception {
+    public String call() {
         int sum=0;
         for (int i = 0; i <101; i++) {
             sum+=i;
@@ -57,9 +57,9 @@ class MyThread2 implements Callable{
     }
 }
 
-class MyThread3 implements Callable{
+class MyThread3 implements Callable<String>{
     @Override
-    public String call() throws Exception {
+    public String call() {
         int sum=0;
         for (int i = 0; i <101; i++) {
             sum+=i;

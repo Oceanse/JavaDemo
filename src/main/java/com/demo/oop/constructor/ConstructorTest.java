@@ -24,7 +24,6 @@ import org.testng.annotations.Test;
  *
  *
  *
- *
  * Java构造函数重载(overload)： 一个类中可以多个名字相同，参数不同的重载构造方法包括：
  *     默认构造函数(无参数构造函数)，
  *     参数化构造函数
@@ -43,6 +42,24 @@ import org.testng.annotations.Test;
  *   参数化构造函数：
  *     如果手动添加了参数化构造器，那么默认空参构造器就会消失，所以建议手动加上空参构造器；
  *     作用是为不同对象提供不同初始化的值。
+ *
+ *
+ * java对象初始化顺序：
+ *   Java创建对象时候会先为所有的对象创建内存空间(前提是该类已经被加载过)，接着开始对这些实例变量进程初始化；先是默认值，然后执行实例代码块或者声明实例变量时的初始值，两者的
+ *   顺序和他们在源代码中的排列顺序相同，然后再执行构造器内部的代码
+ *
+ *
+ * 注意：
+ * 当系统开始执行构造器的执行体之前，系统已经创建了一个对象，为该对象分配内存空间，并为这个对象执行默认初始化；
+ * 只是这个对象还不能被外部程序访问，只能在该构造器中通过this来引用；
+ * 当构造器的执行体执行结束后，这个对像作为构造器的返回值被返回，通常还会赋给另一个引用类型的变量，从而让外部程序可以访问该对象。
+ * 带参构造器修改对象的默认属性值，并返回创建的对象给外界使用；】
+ * 空参构造器不会修改默认属性，只是返回创建的对象给外界使用
+ *
+ *
+ *
+ *
+ *
  */
 public class ConstructorTest {
 
@@ -57,7 +74,7 @@ public class ConstructorTest {
     }
 
     /**
-     *  参数化构造函数用于为不同对象提供不同初始化的值。
+     *  参数化构造函数用于为不同对象提供不同初始值。
      */
     @Test
     public void test2(){
@@ -88,6 +105,6 @@ public class ConstructorTest {
     @Test
     public void test5(){
         System.out.println(new Master().toString());
-        System.out.println(new Master("master2").toString());
+        System.out.println(new Master("expert").toString());
     }
 }

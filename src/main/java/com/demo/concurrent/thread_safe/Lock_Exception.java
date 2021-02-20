@@ -26,9 +26,5 @@ public class Lock_Exception {
 
         new Thread(r1).start();
         new Thread(r2).start();
-
-
-
-
     }
 }

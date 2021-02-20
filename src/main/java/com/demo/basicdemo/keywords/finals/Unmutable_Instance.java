@@ -24,7 +24,7 @@ public class Unmutable_Instance {
     private final String name;
     private final int age;
 
-    public Unmutable_Instance(String name, int age) {
+    public Unmutable_Instance(String name, int age) {//构造方法中初始化实例属性，这里是第一次赋值，之后该变量的值不能再改变
         this.name = name;
         this.age = age;
     }
@@ -37,11 +37,12 @@ public class Unmutable_Instance {
         return age;
     }
 
+
     public static void main(String[] args) {
-        //实例一经创建，其内容便不可改变，即无法修改其成员变量。
+        //实例对象一经创建，其内容便不可改变，即无法修改该对象的成员变量(堆内存中的属性值不能变)。
         Unmutable_Instance u=new Unmutable_Instance("ocean",30);
 
-        //实例一经创建，其内容便不可改变，即无法修改其成员变量。
+        //实例对象一经创建，其内容便不可改变，即无法修改该对象的成员变量(堆内存中的属性值不能变)。
         Double d=new Double(1.0);
     }
 }

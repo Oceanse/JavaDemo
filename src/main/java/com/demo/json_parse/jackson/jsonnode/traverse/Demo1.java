@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -76,13 +77,14 @@ public class Demo1 {
                 "    }\n" +
                 "}";
 
-
+        Map<String, String> container = new HashMap<>();
         JsonNode rootNode = mapper.readTree(jsonString);
         Iterator<Map.Entry<String, JsonNode>> it = rootNode.fields();//遍历rootNode下的所有键值对
         while (it.hasNext()) {
             Map.Entry<String, JsonNode> entry = it.next();
-            System.out.println(entry.getKey() + ":" + entry.getValue());
+            container.put(entry.getKey(),  entry.getValue().toString());
         }
+        System.out.println(container);
     }
 
 
@@ -173,15 +175,16 @@ public class Demo1 {
 
 
         JsonNode rootNode = mapper.readTree(jsonString);
-        Iterator<String> iterator = rootNode.fieldNames();
+        Iterator<String> keys = rootNode.fieldNames();
 
         //遍历所有key-value
-        while (iterator.hasNext()) {
-            String next = iterator.next();
-            System.out.println(next+":"+rootNode.get(next));
+        while (keys.hasNext()) {
+            String key = keys.next();
+            System.out.println(key+":"+rootNode.get(key));
         }
 
     }
+
 
 
 }

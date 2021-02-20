@@ -6,6 +6,7 @@ import static com.demo.basicdemo.keywords.statics.MathUtils.add;
 /**
  * 定义：
  * 当一个类所有对象执行某个方法时产生的影响是相同的，我们可以把这个方法定义为静态方法；静态方法属于类级别的方法；
+ * 比如name是成员变量，那么不同对象具有不同的name, getName应该是实例方法；nation是静态属性，所有的对象具有相同的nation, getNation应该是静态方法
  *
  * 用途：
  * 静态方法适合工具类中方法的定义，方便编程使用；比如文件操作，日期处理，数值处理
@@ -49,11 +50,11 @@ public class StaticMethod {
     public static void test3() {
 
         StaticMethod.test2();//通过类访问静态方法
-        new StaticMethod().test2();//通过对象访问静态方法
+        new StaticMethod().test2();//通过对象访问静态方法，本质还是通过当前对象的类名进行调用
         test2();//调用本类的static方法时候可省略类名，编译器会从当前类中找这个方法
 
         double pi = StaticMethod.PI;//通过类访问静态变量
-        double pi2 = new StaticMethod().PI;//通过对象访问静态变量
+        double pi2 = new StaticMethod().PI;//通过对象访问静态变量，本质还是通过当前对象的类名进行调用
         double pi3 = PI;//调用本类的static属性时候可省略类名，编译器会从当前类中找这个属性
     }
 
@@ -100,22 +101,22 @@ public class StaticMethod {
         this.test();
 
         test2();//系统监测到调用的方法是静态方法，然后就会从当前类加载这个方法
-        this.test2();//当然也可以通过当前对象调用静态方法
+        this.test2();//当然也可以通过当前对象调用静态方法,本质还是通过当前对象的类名进行调用
         StaticMethod.test2();//通过类名调用静态方法
 
         System.out.println(PI); //系统监测到当前变量是静态变量，然后就会从当前类加载这个变量
-        System.out.println(this.PI);//当然也可以通过当前对象调用静态变量
+        System.out.println(this.PI);//当然也可以通过当前对象调用静态变量，本质还是通过当前对象的类名进行调用
         System.out.println(StaticMethod.PI);//通过类名调用静态变量
     }
 
 
     public void test6() {
         //通过类名调用非本类static方法,也就是调用非本类静态方法前一定需要通过类名或者方法名来调用
-        int sum = add(1, 2);
+        int sum = MathUtils.add(1, 2);
     }
 
     public void test6_2() {
-        //通过import进其他类的方法到本类中可以实现省略类名或者对象名来调用静态方法
+        //静态导入：通过import进其他类的方法到本类中可以实现省略类名或者对象名来调用静态方法
         //import static com.demo.basicdemo.keywords.statics.MathUtils.add;
         int sum = add(1, 2);
     }

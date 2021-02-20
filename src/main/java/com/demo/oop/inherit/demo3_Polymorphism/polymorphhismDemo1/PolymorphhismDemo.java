@@ -34,7 +34,6 @@ public class PolymorphhismDemo {
         System.out.println("ICICI Rate of Interest: " + b1.getRateOfInterest());
         Bank  b2 = new AXIS();
         System.out.println("AXIS Rate of Interest: " + b2.getRateOfInterest());
-
     }
 }
 class Bank {

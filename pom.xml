@@ -541,11 +541,11 @@
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>
-    <!--    <site>
-            <id>JavaDemo</id>
-            <name>Java Demo Site</name>
-            <url>http://localhost:8081/#browse/search</url>
-        </site>-->
+        <!--    <site>
+                <id>JavaDemo</id>
+                <name>Java Demo Site</name>
+                <url>http://localhost:8081/#browse/search</url>
+            </site>-->
         <repository>
             <id>maven-release</id>
             <name>java-demo</name>

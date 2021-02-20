@@ -33,7 +33,7 @@ class B implements  Runnable{
 class A {
 
     /*method1 method2公用同一把类锁
-    所以当一个线程握住锁执行其中一个方法时，另一个方法就不能被执行，同一把锁会同时锁住两个方法*/
+    所以当一个线程握住锁执行其中一个方法时，另一个方法就不能被执行*/
     public synchronized static void method1() {
         try {
             Thread.sleep(5000);

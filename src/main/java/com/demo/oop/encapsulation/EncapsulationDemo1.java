@@ -43,7 +43,7 @@ public class EncapsulationDemo1 {
 
 class Person {
 
-    private int age;
+    private int age;//Person类外面不能访问该属性
 
     private String name;
 

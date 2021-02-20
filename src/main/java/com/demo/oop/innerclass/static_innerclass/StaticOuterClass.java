@@ -18,7 +18,7 @@ public class StaticOuterClass {
 
     static class InnerClass{
         private String name="inname";
-        private static double weight =125.0;
+        public static double weight =125.0;
 
         /**
          * 这是静态内部类的一个实例方法，可以访问内部类中的实例属性和实例方法
@@ -46,5 +46,21 @@ public class StaticOuterClass {
         //外部类内部通过内部类类名访问内部类静态成员
         System.out.println(InnerClass.weight);//外部类内部是等价于：StaticOuterClass.InnerClass.weight
 
+    }
+
+
+    public void test(){
+        //这里实际上是StaticOuterClass.InnerClass.weight,外部类内部声明内部类对象时候可以省略外部类限制符(自动添加)
+        System.out.println(InnerClass.weight);
+    }
+
+}
+
+
+
+class Tests{
+    public static void main(String[] args) {
+        //外部类("内部类所在的类")外部声明内部类对象时候必须添加上外部类限制符
+        System.out.println(StaticOuterClass.InnerClass.weight);
     }
 }

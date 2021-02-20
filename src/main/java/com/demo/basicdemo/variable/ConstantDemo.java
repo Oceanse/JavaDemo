@@ -1,6 +1,5 @@
 package com.demo.basicdemo.variable;
 
-import javafx.scene.control.Cell;
 import org.testng.annotations.Test;
 
 import java.util.Map;

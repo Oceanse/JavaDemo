@@ -11,7 +11,7 @@ public class Employee {
         this.address = address;
     }
 
-    void display() {
+    void display() {//在Employee使用Address类的功能
         System.out.println(id + " " + name);
         System.out.println(address.getCity() + " " + address.getProvince());
     }

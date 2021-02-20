@@ -78,7 +78,7 @@ class Accounts {
             double balance=this.balance-money;
 
             try {
-                Thread.sleep(2000);//某个线程执行到这延迟(阻塞)2s，其它线程就会执行这段代码，
+                Thread.sleep(2000);//若没加锁，某个线程执行到这延迟(失去cpu时间片处于阻塞状态，一旦达到睡眠时间，进入就绪状态)2s，其它线程就会执行这段代码，
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

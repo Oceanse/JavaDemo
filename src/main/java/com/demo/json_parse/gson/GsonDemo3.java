@@ -23,13 +23,13 @@ public class GsonDemo3 {
     @Test
     public void test2(){
         Gson gson = new Gson();
-        String jsonString = "{\"name\":\"ocean\",\"age\":30}";
+        String jsonString = "{\"name\":\"haiyang\",\"age\":30}";
         JsonObject jsonObject = new JsonParser().parse(jsonString).getAsJsonObject();
 
 
         JsonElement name = jsonObject.get("name");
-        String n = name.toString();
-        jsonObject.addProperty("engname",n);
+
+        jsonObject.addProperty("engname","ocean");
         System.out.println(jsonObject);
 
 

@@ -72,7 +72,7 @@ public class GsonDemo {
 
 
     /**
-     * Gson在默认情况下是不导出值null的键的
+     * Gson在序列化时候，默认会忽略字段为null的属性
      */
     @Test
     public void test4(){
@@ -84,7 +84,7 @@ public class GsonDemo {
 
 
     /**
-     * Gson在默认情况下是不动导出值null的键的
+     * Gson在序列化时候，默认会忽略字段为null的属性
      */
     @Test
     public void test5(){
@@ -107,6 +107,10 @@ public class GsonDemo {
         System.out.println(jsonObject);
     }
 
+
+    /**
+     * 序列化
+     */
     @Test
     public void test7(){
         Gson gson = new Gson();
@@ -132,6 +136,9 @@ public class GsonDemo {
     }
 
 
+    /**
+     * 反序列化
+     */
     @Test
     public void test8(){
         String jsonStr="{\n" +
