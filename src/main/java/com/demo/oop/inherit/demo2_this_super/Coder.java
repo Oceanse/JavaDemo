@@ -3,8 +3,8 @@ package com.demo.oop.inherit.demo2_this_super;
 /**
  *
  * super作用：
- * 1 隐式或者显式调用父类构造方法,某些情况下父类属性私有的，所以可以通过super显式的的调用父类空参完成初始化
- * 2 访问父类的成员变量和方法;子类和父类中变量或方法名称相同时，用 super 关键字来访问父类属性和方法
+ * 1 隐式或者显式调用父类构造方法,某些情况下父类属性私有的，所以可以通过super显式的的调用父类空参完成继承来的私有属性初始化
+ * 2 访问父类的成员变量和方法;子类和父类中变量或方法名称相同时，用super关键字来访问父类属性和方法
  *
  * Note:
  * 子类一定会隐式或者显式调用父类构造器，也就是若不显示调用父类构造器，编译器会自动在子类构造方法的第一句加上super()，
@@ -28,7 +28,7 @@ public class Coder extends Human {
 
 
     public Coder(double salary) {
-        //super(); 这里会隐式调用super()
+        //super(); 这里会隐式调用super()，必须保证父类中有空参构造方法
         this.salary = salary;
         System.out.println("Coder(double salary) is called");
     }
@@ -46,7 +46,7 @@ public class Coder extends Human {
      */
     public Coder(String name, int age, boolean married, double salary) {
         //不再调用super()，因为显示的调用了父类的三参构造器
-        //因为父类的属性都是私有的，所以不能采取"this.name=name"这种方式赋值；但是可以通过super调用父类的构造方法去初始化私有属性；
+        //因为父类的属性都是私有的，所以不能采取"this.name=name"这种方式赋值；但是可以通过super调用父类的构造方法去初始化继承过来的私有属性；
         //因为父类的属性都是私有的，子类虽然不能继承父类私有属性，但是可以通过继承过来的getter setter方法访问和修改私有属性
         super(name, age, married);//这里同时也创建了一个父类对象
         this.salary = salary;

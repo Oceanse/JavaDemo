@@ -45,7 +45,7 @@ public class Person {
     private String name;
     boolean isMarried;
     String[] hobby;
-    Site site;//把A类的对象作为B类的成员变量组合起来，从而可以使用A类的属性和方法(组合关系)
+    Site site;//把A类的对象作为B类的成员变量组合起来，从而可以复用A类的属性和方法(组合或者聚合关系，has-a关系)
 
     //类变量
     private static String nation = "China";
@@ -153,7 +153,7 @@ class Tests {
         System.out.println(people.toString());
 
         //demo指向堆内存OOPDemo对象地址，堆内存中Person存放着Site对象的引用变量site, 所以这里存在着一个"引用链", 引用1-->引用2-->具体对象
-        //当引用2发生改变时候，引用1也会发生改变
+        //当引用2发生改变时候，引用1对应的对象也会发生改变
         site.setCity("Weifang");
         site.setCounty("Anqiu");
         System.out.println(people.toString());

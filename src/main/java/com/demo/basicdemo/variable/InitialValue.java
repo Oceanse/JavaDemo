@@ -48,15 +48,19 @@ public class InitialValue {
         System.out.println(date);
     }
 
+
+
     public void test2(){
         //int i; 局部变量使用前必须要显式/手动初始化
-        int i=1;
-        if(i!=2){//使用变量i之前必须要手动初始化
-            System.out.println("right");
+        double weight=135;
+        if(weight==135){//使用变量i之前必须要手动初始化
+            System.out.println("Perfect weight for me");
         }
 
-        //局部变量必须要显式的初始化
-        String str=null; //String str=null会对引用变量str(存在栈内存)赋值为null,但是不会开辟堆空间，str完成了初始化
-        System.out.println(str);
+        //局部变量必须要显式的初始化,null是一种特殊的引用类型变量值
+        String[] hobby=null; //String str=null会对引用变量str(存在栈内存)赋值为null,但是不会开辟堆空间，str完成了初始化
+        if(hobby==null){
+            System.out.println("Life is boring");
+        }
     }
 }

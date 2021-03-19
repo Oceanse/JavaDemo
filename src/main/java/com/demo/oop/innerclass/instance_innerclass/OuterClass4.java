@@ -27,7 +27,7 @@ public class OuterClass4 {
     private String name;
 
     //把实例成员内部类InnerClass想象成外部类一种普通的引用类型的实例成员变量
-    //这里实际上是OuterClass3.InnerClass in,外部类内部声明内部类对象时候会自动添加上外部类限制符
+    //这里实际上是OuterClass4.InnerClass in,外部类内部声明内部类对象时候会自动添加上外部类限制符
     InnerClass in;
 
     public OuterClass4(String name) {
@@ -38,7 +38,7 @@ public class OuterClass4 {
     }
 
     class InnerClass{
-        private String name="inname";
+        private String name="innerInstanceName";
 
         public InnerClass(String name) {
             this.name = name;
@@ -51,7 +51,7 @@ public class OuterClass4 {
          * 显式访问内部类成员变量2语法：this.成员变量
          */
         public void showName(){
-            String name="localname";
+            String name="innerLocalName";
             System.out.println(name);
             System.out.println(this.name);
             System.out.println(OuterClass4.this.name);
@@ -68,6 +68,7 @@ class InnerclassTest{
         //外部类外面声明内部类对象时候必须带上外部类限制符
         //外部类外创建实例内部类对象只能通过： 外部类对象.new Innerclass(xxx)
         OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
+        innerClass.showName();
 
     }
 }

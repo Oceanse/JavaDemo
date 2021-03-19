@@ -38,16 +38,15 @@ public class Thread_Safe implements Runnable {
             synchronized (object) { //由对象充当同步监视器，也称之为锁，哪个线程获取锁，哪个线程就执行大括号里被同步的代码块
                 if (ticket > 0) {
                     try {
-                        //当前线程休眠（释放cpu）20 ms, 其它线程就会执行此段代码，导致线程安全问题
-                        Thread.currentThread().sleep(20);
+                        //当前线程休眠（释放cpu）20 ms, 其它线程就会执行此段代码，若没有采取同步等安全措施，容易导致线程安全问题(大概率出现负数票)
+                        Thread.currentThread().sleep(10);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    System.out.println(Thread.currentThread().getName() + "票号" + ticket);
+                    System.out.println(Thread.currentThread().getName() + "票号" + ticket);//这一句和下面ticket--执行时候存在时间差，若没有采取同步等安全措施，可能会出现重票
                     ticket--;
                 }
             }
-
         }
     }
 

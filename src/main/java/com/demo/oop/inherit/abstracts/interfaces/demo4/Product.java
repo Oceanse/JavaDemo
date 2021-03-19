@@ -18,7 +18,8 @@ package com.demo.oop.inherit.abstracts.interfaces.demo4;
  *  1 匿名内部类必须继承一个且最多一个父类或者实现一个且最多一个接口，
  *  2 匿名内部类不能是抽象类，因为系统在创建匿名内部类时候会立即创建其对象
  *  3 匿名内部类不能定义构造器，因为它没有类名，但是可以定义初始化块
- *  4 匿名内部类创建使用后立即消失，不能重复使用
+ *  4 匿名内部类创建使用后立即消失，
+ *  不能重复使用
  *  5 通过实现接口创建匿名内部类对象只能使用默认隐式的的空参构造器，因此new()不能传入其他参数：    new 接口名(){。。。}
  *    但是通过继承抽象类，匿名内部类可以使用抽象父类所拥有的任何构造器：  new 抽象类名(实参列表){。。。}
  */
@@ -27,7 +28,7 @@ public interface Product {
     String getName();
 }
 
-class AnonymouseTest{
+class AnonymousTest{
     public static void getProductInfo(Product product){
         System.out.println("name: "+product.getName()+" and price: "+product.getPrice());
     }

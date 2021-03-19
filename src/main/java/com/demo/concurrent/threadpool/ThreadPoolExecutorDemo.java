@@ -12,6 +12,8 @@ package com.demo.concurrent.threadpool;
 
  * */
 
+import org.testng.annotations.Test;
+
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -37,40 +39,46 @@ public class ThreadPoolExecutorDemo {
     }
 
 
-    public static void test() {
+    @Test
+    public  void test() {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
         System.out.println(t.getPoolSize());//在创建了线程池后，默认情况下，线程池中并没有任何线程
     }
 
-    public static void test1() {
+    @Test
+    public  void test1() {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
-        t.prestartAllCoreThreads();//在创建了线程池后，默认情况下，线程池中并没有任何线程,prestartAllCoreThreads设置项，可以在线程池创建，但还没有接收到任何任务的情况下，先行创建符合corePoolSize参数值的线程数：
+        t.prestartAllCoreThreads();//在创建了线程池后，默认情况下线程池中并没有任何线程; prestartAllCoreThreads设置项，在还没有接收到任何任务的情况下可以在线程池创建符合corePoolSize参数值的线程数：
         System.out.println(t.getPoolSize());
         //新创建的核心线程一直处于空闲状态等待新的任务提交，没有空闲超时策略，所以如果不手动关闭线程池，程序会一致处于阻塞状态
     }
 
 
-    public static void test2() {
+    @Test
+    public  void test2() throws InterruptedException {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
 
-        //线程池创建了三个线程执行任务，当前线程数<=核心线程数，那么就启动一个新的线程处理新提交的任务，即使有空闲的线程,所以下面每个任务都是对应新的线程
+        //线程池创建了三个线程执行任务，当前线程数<=核心线程数，那么每提交一个新的任务就启动一个新的线程处理新提交的任务，即使有空闲的线程,所以下面每个任务都是对应新的线程
         // 我理解为即使之前的核心线程执行完任务处于空闲状态，但是当有新的任务时，仍然会创建新的线程执行这个任务，最终线程池中的线程数poolSize逐渐达到核心线程数corePoolSize)
         t.execute(new Thread(new Task()));
         t.execute(new Thread(new Task2()));
         t.execute(new Thread(new Task3()));
+        Thread.sleep(1000);//默认情况下，核心线程空闲存活时间无限大，没有超时策略
         System.out.println(t.getPoolSize());
         //线程执行完后核心线程会一直处于空闲状态等待新的任务提交，没有空闲超时策略，所以如果不手动关闭线程池，程序会一致处于阻塞状态
 
     }
 
-    public static void test2_2() {
+    @Test
+    public void test2_2() throws InterruptedException {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
 
-        //闲置的核心线程会有超时策略，这个时间由keepAliveTime来设定，所以当多余任务执行完，所有线程过了keepAliveTime后全部被销毁，程序不会阻塞
+        //给闲置的核心线程设置超时策略，然后核心线程的空闲存活时间也取决于keepAliveTime,当然keepAliveTime也会应用于非核心线程
+        // 所以当所有线程过了keepAliveTime后全部被销毁
         t.allowCoreThreadTimeOut(true);
 
         //线程池创建了三个线程执行任务，当前线程数<=核心线程数，那么就启动一个新的线程处理新提交的任务，即使有空闲的线程,所以下面每个任务都是对应新的线程
@@ -78,43 +86,56 @@ public class ThreadPoolExecutorDemo {
         t.execute(new Thread(new Task()));
         t.execute(new Thread(new Task2()));
         t.execute(new Thread(new Task3()));
+        Thread.sleep(3000);//keepAliveTime设置为1s, 所以3s后线程池中的线程全部被销毁，数量是0
         System.out.println(t.getPoolSize());
 
     }
 
 
-    public static void test3() {
+    @Test
+    public static void test3() throws InterruptedException {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
 
-        //线程池放入了5个任务，那么所有的3个核心线程会全部被创建，当前任务数>核心线程数，此时不会创建新的非核心线程，多余的任务提交到阻塞队列排队
+        //线程池放入了5个任务，那么所有的3个核心线程会全部被创建，当前任务数>核心线程数，此时不会创建新的非核心线程，多余的任务提交到阻塞队列(任务队列)排队
         //当前线程池只有三个线程
         t.execute(new Thread(new Task()));
         t.execute(new Thread(new Task2()));
         t.execute(new Thread(new Task3()));
         t.execute(new Thread(new Task4()));
-        t.execute(new Thread(new Task4()));
+        t.execute(new Thread(new Task5()));
+        Thread.sleep(3000);
         System.out.println(t.getPoolSize());
     }
 
-    public static void test4() {
+    @Test
+    public static void test4() throws InterruptedException {
 
-        ThreadPoolExecutor t = new ThreadPoolExecutor(3, 6, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
+        ThreadPoolExecutor t = new ThreadPoolExecutor(3, 6, 10, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
 
-        //线程池放入了8个任务，那么所有的3个核心线程会全部被创建处理三个任务，任务队列存放3个任务已满，
-        //于是线程池会创建新的线程，但是会保证当前线程数小于最大线程数
+        //线程池放入了8个任务，那么所有的3个核心线程会全部被创建处理三个任务，任务队列(阻塞队列)存放3个任务已满，
+        //线程池会创建新的线程，但是会保证当前线程数小于最大线程数
+
+        //创建3个核心线程
         t.execute(new Thread(new Task()));
         t.execute(new Thread(new Task2()));
         t.execute(new Thread(new Task3()));
+
+        //放入阻塞队列
+        t.execute(new Thread(new Task4()));
+        t.execute(new Thread(new Task5()));
+        t.execute(new Thread(new Task4()));
+
+        //若核心线程已经全部创建，阻塞队列已满，线程总数<最大线程数，继续创建新的非核心线程处理新的任务
         t.execute(new Thread(new Task4()));
         t.execute(new Thread(new Task4()));
-        t.execute(new Thread(new Task4()));
-        t.execute(new Thread(new Task4()));
-        t.execute(new Thread(new Task4()));
-        System.out.println(t.getPoolSize());//在创建了线程池后，默认情况下，线程池中并没有任何线程
+
+        Thread.sleep(2000);
+        System.out.println(t.getPoolSize());
     }
 
 
+    @Test
     public static void test5() {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 6, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
@@ -126,6 +147,7 @@ public class ThreadPoolExecutorDemo {
         }
     }
 
+    @Test
     public static void test6() {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
@@ -145,6 +167,7 @@ public class ThreadPoolExecutorDemo {
 
     }
 
+    @Test
     public static void test7() {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
@@ -162,6 +185,7 @@ public class ThreadPoolExecutorDemo {
 
     }
 
+    @Test
     public static void test8() {
 
         ThreadPoolExecutor t = new ThreadPoolExecutor(3, 4, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3));
@@ -189,7 +213,9 @@ class Task implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + "task");
+        for (int i = 0; i < 1000; i++) {
+            System.out.println(Thread.currentThread().getName() + " task1");
+        }
 
     }
 }
@@ -198,7 +224,9 @@ class Task2 implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + "tesk2");
+        for (int i = 0; i < 1000; i++) {
+            System.out.println(Thread.currentThread().getName() + " task2");
+        }
 
     }
 }
@@ -208,7 +236,9 @@ class Task3 implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + "tesk3");
+        for (int i = 0; i < 1000; i++) {
+            System.out.println(Thread.currentThread().getName() + " task3");
+        }
 
     }
 }
@@ -218,7 +248,9 @@ class Task4 implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + "tesk4");
+        for (int i = 0; i < 1000; i++) {
+            System.out.println(Thread.currentThread().getName() + " task4");
+        }
 
     }
 }

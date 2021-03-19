@@ -22,10 +22,14 @@ interface B {
 
     //在 java8 中的接口中不仅增加了默认方法，还增加了静态方法。使用方式接口名.方法名。
     public static void show(){
-        System.out.println("static method of B....");
+        System.out.println("show time....");
     }
 }
 
+
+//多继承
+interface C extends A,B{
+}
 
 
 //抽象类
@@ -37,14 +41,13 @@ abstract class D{
 }
 
 
+/**
+ * 多实现，implements部分必须放在extends部分之后。
+ *
+ * 一个类实现了一个或多个接口之后，这个类必须完全实现这些接口里所定义的全部抽象方法（也就
+ * 是重写这些抽象方法）；否则，该类将保留从父接口那里继承到的抽象方法，该类也必须定义成抽象类。
+ */
 
-//多继承
-interface C extends A,B{
-}
-
-
-
-//多实现
 public class InterfaceDemo extends D implements C {
 
     @Override
@@ -65,7 +68,7 @@ class Test{
         new InterfaceDemo().printLetters("abc".toCharArray());//继承拥有父类的default方法
 
         //在 java8 中的接口中不仅增加了默认方法，还增加了静态方法。使用方式接口名.方法名。
-        //注意：不能通过子类类名调用
+        //注意：不能通过子类类名调用,个人感觉接口中定义的方法没有被继承过来
         B.show();
 
         //继承拥有父类的静态变量

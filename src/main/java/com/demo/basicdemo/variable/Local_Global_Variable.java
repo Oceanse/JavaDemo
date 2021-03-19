@@ -1,14 +1,15 @@
 package com.demo.basicdemo.variable;
 
+import com.demo.oop.aggregation.Address;
 import org.testng.annotations.Test;
 
 
 /**
- * 局部变量(Local )
+ * 局部变量(Local variable)
  * 定义：方法中的变量(包括方法体 形参)和代码块中的变量，局部变量不属于任何类或者对象
  *
  * 存储位置：栈内存中
- *         局部变量只是存放字面值或者对象的地址，因此占用的空间比较Variable小
+ *         局部变量只是存放字面值或者对象的地址，因此占用的空间比较小
  *
  * 初始化：使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作；如果局部变量在使用前没有进行初始化则会在编译器报错；
  *       如果局部变量进行了声明没有进行初始化， 但是也一直没有被使用的话编译也是不会报错的；(局部变量使用前必须初始化话)；
@@ -40,7 +41,7 @@ import org.testng.annotations.Test;
  */
 public class Local_Global_Variable {
 
-    //实例变量
+    //全局变量之实例变量，对象创建时候被分配空间，对象销毁后被释放
     String name="ocean";
     int age=30;
 
@@ -74,7 +75,7 @@ public class Local_Global_Variable {
      */
     @Test
     public void test() {
-        int count;
+        Address address;
     }
 
 
@@ -85,48 +86,35 @@ public class Local_Global_Variable {
      */
     @Test
     public void test2() {
-        String state;
-        //System.out.println(state); //变量没有初始化就使用会报错
+        String[] hobby;
+        //System.out.println(hobby); //变量没有初始化就使用会报错
     }
 
 
     /**
      * 局部变量可以和全局变量重名
-     * 就近原则
+     * 变量前面没有this或者super等修饰符时候会遵循就近原则
      */
     @Test
     public void test3() {
         String name = "tom";//局部变量可以和全局变量重名，这里的name分配在栈内存，成员变量name分配在堆内存
-        if (name.equals("tom")) {//当name前面没有this或者super等修饰符时候会遵循就近原则,所以这里的name是局部变量name
-            System.out.println("My name is Tom");
-        }
-
-        if (this.name.equals("ocean")) {//使用this访问成员变量name
-            System.out.println("My name is ocean");
-        }
+        System.out.println("name="+name);//当name前面没有this或者super等修饰符时候会遵循就近原则,所以这里的name是局部变量name
+        System.out.println("this.name="+this.name);//this修饰说明name是当前对象的一个属性
     }
 
 
     /**
+     * 局部变量可以和全局变量重名
+     * 变量前面没有this或者super等修饰符时候会遵循就近原则
      * 局部变量只在当前{}有效， 或者说只在当前{}可见
      */
     @Test
-    public static void test4() {
-        if(1==1){
+    public  void test4() {
+        int age=31;
+        if(age!=this.age){
             String result="right";//result作用域是当前{}
         }
-        //System.out.println(result);
-    }
-
-
-    @Test
-    public static void test4_2() {
-        boolean flag=true;//flag作用域是整个方法体
-        if(flag){
-            System.out.println("flag is "+true);
-        }else{
-            System.out.println("flag is "+false);
-        }
+        //System.out.println(result); //result变量空间已经被释放
     }
 
 
@@ -135,19 +123,40 @@ public class Local_Global_Variable {
      * 代码块中声明的变量是局部变量，仅在当前代码块内生效
      */ {
         int age = 100;
-        System.out.println(age);//局部变量age
-        System.out.println(this.age);//成员变量age
+        System.out.println("age="+age);//局部变量可以和全局变量重名，这里的age分配在栈内存，成员变量age分配在堆内存
+        System.out.println("this.age="+this.age);//成员变量age
+    }
+
+
+    /**
+     * sum的作用域是整个方法，也就是只有整个方法调用结束时候变量sum才会被释放
+     * sum在方法被调用时候才会为其创建分配内存空间
+     *
+     * i的作用范围时for循环，一次for循环结束后就会被销毁
+     * i只有在执行到for循环时候才会为其创建分配内存空间
+     */
+    @Test
+    public static void test4_2() {
+       int sum=0;//注意变量要初始化
+        for (int i = 0; i < 101; i++) {//这里变量i会反复被声明(开辟空间)，赋值，超出for循环之后会被销毁
+            sum+=i;
+        }
+        System.out.println("sum="+sum);
     }
 
 
 
     /**
-     * 该方法只有被调用时才会为变量 m, n, sum分配内存空间
+     * sum和i的作用域是整个方法，也就是只有整个方法调用结束时候变量sum才会被释放
      */
     @Test
-    public static void test5() {
-        int m = 1;
-        int n = 2;
-        int sum = m + n;
+    public static void test4_3() {
+        int sum=0;//注意变量要初始化
+        int i;
+        for (i = 0; i < 101; i++) {
+            sum+=i;
+        }
+        System.out.println("sum="+sum);
     }
+
 }

@@ -2,6 +2,8 @@ package com.demo.oop.constructor;
 
 import java.util.Arrays;
 
+
+
 public class Student {
 
     //实例变量只有在对象创建时候才会被声明初始化，也就是先有对象才会有实例变量
@@ -14,7 +16,7 @@ public class Student {
      无参构造方法
      */
     public Student() {
-        System.out.println("无参构造器");
+        System.out.println("Student 无参构造器");
     }
 
     /**
@@ -23,7 +25,7 @@ public class Student {
     public Student(String name, int id) {
         this.name = name;
         this.id = id;
-        System.out.println("双参构造器");
+        System.out.println("Student 双参构造器");
     }
 
     /**
@@ -32,7 +34,7 @@ public class Student {
     public Student(String name, int id, String[] subject) {
         this(name, id);//this调用双参构造器
         this.subject = subject;
-        System.out.println("三参构造器");
+        System.out.println("Student 三参构造器");
     }
 
 
@@ -43,7 +45,7 @@ public class Student {
         this.name=student.name;
         this.id=student.id;
         this.subject=student.subject;
-        System.out.println("拷贝构造函数");
+        System.out.println("Student 拷贝构造函数");
     }
 
     @Override
@@ -62,7 +64,6 @@ public class Student {
     }
 
 }
-
 
 
 

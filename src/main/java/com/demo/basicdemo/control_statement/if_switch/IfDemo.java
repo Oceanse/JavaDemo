@@ -2,6 +2,10 @@ package com.demo.basicdemo.control_statement.if_switch;
 
 import org.apache.logging.log4j.core.util.JsonUtils;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -43,6 +47,9 @@ public class IfDemo {
      * if(boolean condition){
      * 条件执行体；
      * }
+     *
+     * 单行代码块可以省略{}，但是不建议这么做，即使条件执行体只有一行代码；
+     * 因为{}使得代码具有更好的可读性
      */
     @Test
     public void test() {
@@ -53,30 +60,29 @@ public class IfDemo {
             System.out.println("登录失败！");
             System.out.println("请检查输入的用户名、密码和验证码是否正确！");
         }
+        if (username == "admin" && userpass == "123456" && code == "0000") {
+            System.out.println("登录成功！");
+        }
 
-        int age = 20;
-        String sex="mam";
-        if (age > 18 && "man".equals(sex))
-            System.out.print("You are an adult male");//语句块中只包含一条语句，可以省略大括号
-        System.out.println("My age is " + age);
+
+        List<String> all = Arrays.asList("A.java","B.java","A.class","B.class","a.c");
+        List<String> javaSourceFile=new ArrayList<>();
+        List<String> javaClassFile=new ArrayList<>();
+        List<String> cSourceFile=new ArrayList<>();
+        for (String item : all) {
+            if(item.endsWith("java"))
+                javaSourceFile.add(item);//if语句块中只包含一条语句，可以省略大括号
+            if(item.endsWith("class"))
+                javaClassFile.add(item);//if语句块中只包含一条语句，可以省略大括号
+            if(item.endsWith("c"))
+                cSourceFile.add(item);//if语句块中只包含一条语句，可以省略大括号
+        }
+        System.out.println("javaSourceFile="+javaSourceFile);
+        System.out.println("javaClassFile="+javaClassFile);
+        System.out.println("cSourceFile="+cSourceFile);
     }
 
-    /**
-     * if(boolean condition){\
-     *  单行条件执行体；
-     *
-     * 单行代码块可以省略{}，但是不建议这么做，即使条件执行体只有一行代码；
-     * 因为{}使得代码具有更好的可读性
-     */
-    @Test
-    public void test1_2() {
 
-        int age = 20;
-        String sex="man";
-        if (age > 18 && "man".equals(sex))
-            System.out.println("You are an adult male");//语句块中只包含一条语句，可以省略大括号
-        System.out.println(String.format("My sex is %s and age is %d",sex,age));//一定会被执行
-    }
 
 
     /**
@@ -86,19 +92,21 @@ public class IfDemo {
      * else{
      * 条件执行体2；
      * }
+     *
+     *非你即我
      */
     @Test
     public void test2() {
         double totalPrice = 100;
         int amount = 0;
-        double unitPrice = 0;
+        double unitPrice;
         if (amount != 0) {
             unitPrice = totalPrice / amount;
         } else {
             System.out.println("The amount cannot be zero");
-            return;//若amount==0, 执行到这里会直接退出整个方法
+            return;//若amount==0, 执行到这里会直接退出整个方法(if语句中出现return直接退出所在if所在方法)
         }
-        System.out.println("unitPrice is " + unitPrice);
+        System.out.println("unitPrice is " + unitPrice);//只有if被执行时候这句才会被执行，所以不违背变量初始化之后才能使用的原则
     }
 
     /**
@@ -117,6 +125,19 @@ public class IfDemo {
         } else {
             System.out.println("COMMON YEAR");
         }
+    }
+
+
+    @Test
+    public void test2_3() {
+        int b = 5;
+        if (b > 4)
+            System.out.println("b大于4");
+        else
+            b-=2;
+        //对于下面代码而言它已经不再是条件执行体的一部分， 因此总会执行
+            System.out.println("b小于4");
+
     }
 
 
@@ -143,11 +164,11 @@ public class IfDemo {
         int i = s.nextInt();
         if (i == 100) {
             System.out.println("满分");
-        } else if (i >= 90) {//这里等价于 i>=90 & i!=100
+        } else if (i >= 90) {//这里等价于 i>=90 & i!=100(符合当前情形且exclude上面的情形)
             System.out.println("优秀");
-        } else if (i >= 60) {//这里等价于 i>=60 & !(i>=90) & !(i==100)
+        } else if (i >= 60) {//这里等价于 i>=60 & !(i>=90) & !(i==100)(符合当前情形且exclude上面的情形)
             System.out.println("及格");
-        } else {//这里等价于 !(i>=60) & !(i>=90) & !(i==100)
+        } else {//这里等价于 !(i>=60) & !(i>=90) & !(i==100)(符合当前情形且exclude上面的情形)
             System.out.println("不及格");
         }
     }
@@ -155,6 +176,7 @@ public class IfDemo {
 
     /**
      * Nested If Statement.
+     * 条件细分或者大前提于小前提
      */
     @Test
     public void test4() {
@@ -174,6 +196,10 @@ public class IfDemo {
     }
 
 
+    /**
+     * Nested If Statement.
+     * 条件细分或者大前提于小前提
+     */
     @Test
     public void test4_2() {
        String weather="sunny";
@@ -189,26 +215,4 @@ public class IfDemo {
        }
     }
 
-
-    /**
-     * if语句中出现return直接退出所在if所在方法
-     */
-    @Test
-    public void test5() {
-        //Creating two variables for age and weight
-        int age = 25;
-        int weight = 48;
-        //applying condition on age and weight
-        if (age >= 18) {
-            if (weight > 50) {
-                System.out.println("You are eligible to donate blood");
-            } else {
-                System.out.println("You are not eligible to donate blood");
-                return; //直接退出整个方法
-            }
-        } else {
-            System.out.println("Age must be greater than 18");
-        }
-        System.out.println("I cannot be executed");
-    }
 }

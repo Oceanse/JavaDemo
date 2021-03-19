@@ -2,14 +2,18 @@ package com.demo.oop.innerclass.static_innerclass;
 
 /**
  * 静态内部类也是定义在一个类里面的类，只不过在类的前面多了一个关键字static
+ *
  * 静态内部类可以想象成静态属性或者静态方法，是不需要依赖于外部类对象而存在，所以在没有外部类的对象的情况下，也可以创建静态内部类的对象
- * 静态内部类不能直接访问或者通过OutterClass.this访问外部类的非static成员变量或者方法，只能通过外部类对象访问外部类实例成员变量
+ * 也就是说静态内部类对象是寄生在外部类的类本身，而不是寄生在外部类的对象中
+ *
+ * 静态内部类不能直接访问或者通过OutterClass.this访问外部类实例非static成员变量或者方法(因为此时可能并不存在外部类对象)，
+ * 只能通过外部类对象访问外部类实例成员变量
  * 外部类内部通过 内部类类名.静态成员 或者 外部类类名.内部类类名.静态成员 来访问内部类静态成员
  *
  */
 public class StaticOuterClass {
 
-    private String name="outname";
+    private String name="outInstanceName";
     private static int age=30;
 
 
@@ -17,7 +21,7 @@ public class StaticOuterClass {
 
 
     static class InnerClass{
-        private String name="inname";
+        private String name="innerInstanceName";
         public static double weight =125.0;
 
         /**
@@ -27,10 +31,15 @@ public class StaticOuterClass {
          *
          */
         public void showName(){
+            String localName="localName";
+            System.out.println(localName);
             System.out.println(this.name);//this代指内部类对象引用
-            System.out.println(StaticOuterClass.age);//可以访问外部类静态属性
-            //System.out.println(StaticOuterClass.this.name);//静态内部类不可以访问外部类实例成员变量
+
+            //静态内部类不可以访问外部类实例成员变量StaticOuterClass.this相当于外部类对象的引用
+            //System.out.println(StaticOuterClass.this.name);
             System.out.println(new StaticOuterClass().name);//只能通过外部类对象访问外部类实例成员变量
+
+            System.out.println(StaticOuterClass.age);//可以访问外部类静态属性
         }
     }
 
@@ -60,7 +69,9 @@ public class StaticOuterClass {
 
 class Tests{
     public static void main(String[] args) {
-        //外部类("内部类所在的类")外部声明内部类对象时候必须添加上外部类限制符
+        //外部类外部声明内部类对象时候必须添加上外部类限制符
         System.out.println(StaticOuterClass.InnerClass.weight);
+        System.out.println(StaticOuterClass.InnerClass.weight);
+
     }
 }

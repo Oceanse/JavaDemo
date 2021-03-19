@@ -23,14 +23,12 @@ import static java.lang.Math.*;
 public class ImportDemo {
     public static void main(String[] args) {
         String str="java.lang.String会自动被import";
-        Arrays.asList(1,2,3);//Arrays属于java.util包，不属于当前package,如果不想使用全类名，那么需要import java.util.*或者import java.util.Arrays;
+        //Arrays属于java.util包，不属于当前package,如果不想使用全类名，那么需要import java.util.*或者import java.util.Arrays;
+        Arrays.asList(1,2,3);
 
 
         //通过import static java.lang.System.* 和 import static java.lang.Math.*;
         // 省略类名直接调用类变量
         out.println(PI);
-
-
-
     }
 }

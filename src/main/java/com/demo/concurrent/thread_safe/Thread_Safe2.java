@@ -73,12 +73,11 @@ class Accounts {
         此时第二线程进来就 balance-money，导致余额不正常
          synchronized()
          */
-
         synchronized (this) {//this是指Accounts对象，这里多个线程共享同一个Accounts对象，所以this对象可以保证锁的唯一性，因此这里可以用this
             double balance=this.balance-money;
 
             try {
-                Thread.sleep(2000);//若没加锁，某个线程执行到这延迟(失去cpu时间片处于阻塞状态，一旦达到睡眠时间，进入就绪状态)2s，其它线程就会执行这段代码，
+                Thread.sleep(1000);//若没加锁，某个线程执行到这延迟(失去cpu时间片处于阻塞状态，一旦达到睡眠时间，进入就绪状态)2s，其它线程就会执行这段代码，
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

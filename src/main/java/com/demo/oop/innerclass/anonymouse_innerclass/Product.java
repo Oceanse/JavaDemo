@@ -27,7 +27,7 @@ public interface Product {
     String getName();
 }
 
-class AnonymouseTest{
+class AnonymousTest {
     public static void getProductInfo(Product product){
         System.out.println("name: "+product.getName()+" and price: "+product.getPrice());
     }

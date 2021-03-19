@@ -46,18 +46,18 @@ public class CharDemo {
 
 
     /**
-     * 字符表示形式
+     * 字符表示形式：普通字符  转移字符   unicode码字符   数值
      */
     @Test
     public void test() {
 
-        //单个符号作为字符值
+        //普通字符：单个符号作为字符值
         char c = 'a';
 
-        //转义字符作为字符值; 转义符号\+被转义符号=转移字符，转移字符对java编译器来说单个符号;
+        //转移字符：转义字符作为字符值; 转义符号\+被转义符号=转移字符，转移字符对java编译器来说单个符号;
         char c2 = '\t';
 
-        //unicode码作为字符值('\uaaaa'作为字符值，其中a代表十六进制整数)
+        //unicode码字符：'\uaaaa'作为字符值，其中a代表十六进制整数
         char c3 = '\u12ab';
 
         //0~65535范围内的十进制或者十六进制整数作为字符值；char变量本质是无符号整数，表示范围从0~65535，只不过每个整数都对应一个字符，比如'a'<--->97
@@ -94,13 +94,13 @@ public class CharDemo {
     public void test1() {
         char c = 'a';
         char c2 = 'b';
-        System.out.println(c);//打印字符形式
         System.out.println((int) c);//相当于显示字符的十进制编号
         System.out.println(c + 1);//把变量c保存的变量值复制一份，转成int再参与计算
-        System.out.println(c + 1.1);//把变量c保存的变量值复制一份，转成int再转成float再参与计算
+        System.out.println(c + 1.1);//把变量c保存的变量值复制一份，转成int再转成double,再参与计算
         System.out.println(c > c2);//比较的是底层编号
         System.out.println((int)'中');//相当于显示字符的十进制编号
-    }
+        System.out.println((int)Character.MIN_VALUE);
+        System.out.println((int)Character.MAX_VALUE);    }
 
 
     @Test
@@ -129,10 +129,10 @@ public class CharDemo {
  */
     @Test
     public void test3() {
-        System.out.println('\'');
-        System.out.println('\"');
-        System.out.println("'");
-        System.out.println('"');
+        System.out.println('\'');//字符类型单引号
+        System.out.println("'");//字符串类型单引号
+        System.out.println('"');//字符类型双引号
+        System.out.println("\"");//字符串类型双引号
         System.out.println("\'hello world\'");
         System.out.println("\"hello world\"");
 
@@ -159,7 +159,7 @@ public class CharDemo {
         System.out.println("aa" + '\t' + "aa");//println后面会输出一个换行
 
         System.out.println("2==========================");
-        System.out.println('d' + '\t' + 'd');//三个字符用+连接，这里的+是运算符
+        System.out.println('d' + '\t' + 'd');//三个字符用+连接，这里的+是运算符,三个字符会自动转化成int类型数据进行运算
         System.out.println('e' + "\t" + 'e');//"\t"是字符串，所以这里的+是连接符
         System.out.println(12 + '\n');//int+char,首先转char换成int,再相加，这里+是运算符
         System.out.println(12 + "\n");//int+字符串，这里+是连接符
@@ -180,7 +180,9 @@ public class CharDemo {
 
     @Test
     public void test6() {
-        char c = '\u0000';//char变量默认值；等价于 char c;
+        char c = '\u0000';//char变量默认值；等价于成员变量 char c;
+        int number=(int)c;//unicode码形式的char类型变量c转换车int类型
+        System.out.println(number);
 
         System.out.println("b" + c + "d");//等价于默认值
     }

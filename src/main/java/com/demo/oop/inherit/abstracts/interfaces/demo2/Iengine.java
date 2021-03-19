@@ -38,20 +38,26 @@ class EngineB implements Iengine{
 //简单工厂模式：把生成实现类(具体引擎)的逻辑集中在工厂类当中
 class EngineFactory{
 
-    public static Iengine getEngineA(){
-        return new EngineA();
+    public static Iengine getEngine(String engineBrand){
+        if(engineBrand==null){
+            return null;
+        }
+        if(engineBrand=="A"){
+            return new EngineA();
+        }else if(engineBrand=="B"){
+            return new EngineB();
+        }else{
+            return null;
+        }
     }
 
-    public static Iengine getEngineB(){
-        return new EngineB();
-    }
 }
 
 
 
 class Car{
 
-    Iengine e;
+    Iengine e;//Car和engine是has-a关系，所以可以组合
     public Car(Iengine e) {
         this.e = e;
     }
@@ -62,8 +68,8 @@ class Car{
     }
 
     public static void main(String[] args) {
-        Iengine engineA = EngineFactory.getEngineA();
-        Iengine engineB = EngineFactory.getEngineB();
+        Iengine engineA = EngineFactory.getEngine("A");
+        Iengine engineB = EngineFactory.getEngine("B");
 
         new Car(engineA).testEngine();
         new Car(engineB).testEngine();

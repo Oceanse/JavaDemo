@@ -3,7 +3,7 @@ package com.demo.oop.aggregation;
 public class Employee {
     int id;
     String name;
-    Address address;//Employee有一个实体引用地址(Address)，因此关系是：Employee HAS-A Address
+    private Address address;//Employee有一个实体引用地址(Address)，因此关系是：Employee HAS-A Address
 
     public Employee(int id, String name, Address address) {
         this.id = id;

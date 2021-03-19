@@ -33,7 +33,7 @@ public class EqualsDemo {
 
 
     /**
-     * Object中的equals的equals比较的是两个对象的内存地址是否相同
+     * Object中的equals默认比较的是两个变量保存的变量值，如果是两个变量是引用类型变量则比较的是两个变量保存的地址
      */
     @Test
     public void test() {
@@ -55,7 +55,7 @@ public class EqualsDemo {
 
     /**
      * String以及Integer等基本类型的包装类型已经对原生equals方法进行了重写，比较的是两个对象的内容
-     * 这里进行了自动装箱
+     * equals(Object obj)，所以碰到基本类型要自动装箱
      */
     @Test
     public void test2_2() {
@@ -63,6 +63,11 @@ public class EqualsDemo {
         System.out.println(new Character('c').equals('c'));
         System.out.println(new Boolean(true).equals(true));
         System.out.println("qaz".equals(new String("qaz")));
+
+        //==是运算符，  碰到包装类自动拆箱
+        System.out.println(new Integer(1)==1);
+        System.out.println(new Character('c')=='c');
+        System.out.println(new Boolean(true)==true);
     }
 
     /**

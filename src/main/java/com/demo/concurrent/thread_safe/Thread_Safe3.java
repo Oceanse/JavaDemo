@@ -15,7 +15,7 @@ public class Thread_Safe3 {
 
         thread.start();
 
-        Thread.sleep(1000);//1s之后下面这个线程才会启动，这样可以保证线程t1先启动执行
+        //Thread.sleep(1000);//1s之后下面这个线程才会启动，这样可以保证线程t1先启动执行
 
         thread2.start();
 
@@ -52,7 +52,7 @@ class MyClass{
 
     public synchronized void method1(){
         try {
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

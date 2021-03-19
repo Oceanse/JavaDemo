@@ -41,5 +41,5 @@ public class Thread_Safe5 implements Runnable {
 
 
 class Tick{
-    static int ticket=100;//三个线程对象拥有着同一个Thread_Safe_cause对象，执行同一个线程体，共同修改同一份数据ticket
+    static int ticket=100;//三个Thread类线程对象共享同一个Thread_Safe_cause对象，执行同一个线程体，共同修改同一份数据ticket
 }

@@ -2,6 +2,8 @@ package com.demo.oop.inherit.demo3_Polymorphism.polymorphhismDemo1;
 /**
  * 编译时多态：详见overload
  *
+ * 多态概念: 一个引用类型变量可以指向多个实际上不同类型的子类对象，在运行时候可以根据实际类型对象的不同而调用对应的方法
+ *
  * 运行时多态(动态方法分派): SupperClass obj=new SubClass();  obj.method();
  * obj在编译时期是SupperClass类型， 但是此类型并不是obj的实际类型；obj的实际实现类是在运行时决定的(运行时才会创建对象)；
  * 因此JVM编译期间无法决定将调用哪个类方法，此决定在运行时完成，因此这也叫作运行时多态或动态方法分派。
@@ -18,6 +20,8 @@ package com.demo.oop.inherit.demo3_Polymorphism.polymorphhismDemo1;
  * 重写(多个子类重写父类的同一个方法)，
  * 向上转型(父类引用指向子类对象)
  * 父类引用.重写方法
+ *
+ *
  *
  */
 public class PolymorphhismDemo {

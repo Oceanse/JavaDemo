@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 /**
  *
- 逻辑运算符(Logical Operatpr)用于连接两个结果布尔类型的变量/常量/表达式，用于执行多个判断，
+ 逻辑运算符(Logical operator)用于连接两个结果布尔类型的变量/常量/表达式，用于执行多个判断，
  判断的结果是 true 或 false。
  */
 public class LogicalOperatprDemo {
@@ -49,8 +49,11 @@ public class LogicalOperatprDemo {
      */
     @Test
     public void test2(){
+        boolean flag=true;
+        System.out.println(!flag);
         System.out.println("!true: "+!true);
         System.out.println("!(2>1): "+!(2<1));
+
     }
 
 

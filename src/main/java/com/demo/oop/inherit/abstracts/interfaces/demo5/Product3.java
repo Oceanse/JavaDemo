@@ -10,7 +10,7 @@ public interface Product3 {
 }
 
 
-class AnonymouseTest2{
+class AnonymousTest2 {
 
     public static void getProductInfo(Product3 product){
         System.out.println("price: "+product.getPrice());

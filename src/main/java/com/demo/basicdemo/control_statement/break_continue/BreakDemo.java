@@ -2,6 +2,9 @@ package com.demo.basicdemo.control_statement.break_continue;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -14,15 +17,43 @@ import org.testng.annotations.Test;
 public class BreakDemo {
 
     @Test
-    public void test() {
-        for (int i = 0; i < 10; i++) {
-            if (i == 5) {
-                break;//i==5时跳出当前循坏
+    public void test1() {
+        int[] scores= new int[]{60,80,100,70,90};
+
+        boolean isFullMarks=false;
+        for (int i = 0; i < scores.length; i++) {
+            if(scores[i]==100){
+                isFullMarks=true;
+                break;//break只是退出循环，并不是退出方法(找到获得满分的人就停止遍历，退出循环)
             }
-            System.out.println(i);
         }
-        System.out.println("======");//bbreak只是退出循环，并不是退出方法，所以这里依然可以打印
+
+        if(isFullMarks){
+            System.out.println("There are someone who get full marks");
+        }
     }
+
+
+    @Test
+    public void test1_2() {
+        int[] scores= new int[]{60,80,100,70,90};
+
+        boolean isFullMarks=false;
+        for (int score: scores) {
+            if(score==100){
+                isFullMarks=true;
+                break;//break只是退出循环，并不是退出方法(找到获得满分的人就停止遍历，退出循环)
+            }
+        }
+
+        if(isFullMarks){
+            System.out.println("There are someone who get full marks");
+        }
+    }
+
+
+
+
 
 
     @Test
@@ -33,8 +64,9 @@ public class BreakDemo {
                 if (j == 5) {
                     break;//i==5时跳出当前循坏,当前循环是内层循环
                 }
-                System.out.println(i + " + " + j + " = " + (i + j));
+                System.out.print(i + " + " + j + " = " + (i + j)+"\t");
             }
+            System.out.println();
         }
 
     }
@@ -48,14 +80,15 @@ public class BreakDemo {
     @Test
     public void test17() {
 
-        outter: for (int i = 0; i < 3; i++) {
+        outer: for (int i = 0; i < 3; i++) {
             inner:for (int j = 0; j < 10; j++) {
                 if (j == 5) {
                     //break inner;  i==5时跳出内层循环inner,同test16
-                    break outter;//i==5时跳出外层循环outter
+                    break outer;//i==5时跳出外层循环outer
                 }
-                System.out.println(i + " + " + j + " = " + (i + j));
+                System.out.print(i + " + " + j + " = " + (i + j)+"\t");
             }
+            System.out.println();
         }
 
     }

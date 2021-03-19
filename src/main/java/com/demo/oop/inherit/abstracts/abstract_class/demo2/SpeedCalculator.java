@@ -47,6 +47,10 @@ class  CarSpeedCalculator extends SpeedCalculator{
 
     private double radius;
 
+    public CarSpeedCalculator(double radius, int turnRate) {
+        super(turnRate);//通过父类构造器初始化本类的turnRate属性，抽象类中的构造器在创建其子类的实例时被调用
+        this.radius = radius;
+    }
 
     /**
      * 继承实现父类的perimeter方法
@@ -57,13 +61,10 @@ class  CarSpeedCalculator extends SpeedCalculator{
         return 2*PI*radius;
     }
 
-    public CarSpeedCalculator(double radius, int turnRate) {
-        super(turnRate);//通过父类构造器初始化本类的turnRate属性
-        this.radius = radius;
-    }
+
 
     public static void main(String[] args) {
-        CarSpeedCalculator c=new CarSpeedCalculator(2,10);
+        SpeedCalculator c=new CarSpeedCalculator(2,10);
         System.out.println(c.speedCal());
     }
 }

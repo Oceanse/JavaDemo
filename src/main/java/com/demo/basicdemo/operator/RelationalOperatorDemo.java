@@ -15,7 +15,7 @@ public class RelationalOperatorDemo {
 
 
     @Test
-    public void test3_1(){
+    public void test(){
 
         //基本类型变量值大小的比较
         int a = 10;
@@ -26,18 +26,35 @@ public class RelationalOperatorDemo {
         System.out.println("a < b = " + (a < b) );
         System.out.println("b >= a = " + (b >= a) );//大于或者等于
         System.out.println("b <= a = " + (b <= a) );//小于或者等于
+    }
 
+
+
+    @Test
+    public void test2(){
         //引用变量比较
         Integer i1=new Integer(10);
         Integer i2=new Integer(10);
         System.out.println("i1=i2: "+(i1==i2));//i1和i2存储的是对象的堆内存地址，这里是不相等的
+    }
 
 
-        //数值常量比较大小
-        System.out.println("10>=10: "+(10>=10));
-        System.out.println("10==10: "+(10.0==10));//基本数据类型比较，比较的是他们的值
+
+    @Test
+    public void test3(){
+        //引用变量比较
+        Integer i1=new Integer(10);//自动拆箱
+        double i2=10.0;
+        System.out.println("i1=i2: "+(i1==i2));//基本数据类型比较，比较的是他们的值
+        System.out.println("i1>i2: "+(i1>i2));
+        System.out.println("i1+i2=: "+(i1+i2));
+    }
 
 
+
+    @Test
+    public void test4(){
+        //引用变量比较
         //布尔常量比较是否相同
         System.out.println("true==false: "+(true==false));
 

@@ -8,6 +8,9 @@ import org.testng.annotations.Test;
  *
  * 语法：boolean变量/表达式？表达式 1：表达式 2,     表达式1和表达式2可以是常量,变量或表达式
  *
+ * 运算符的结合性是指相同优先级的运算符在同一个表达式中，且没有括号的时候，运算符和操作数的结合方式，通常有从左到右结合和从右到左结合两种方式
+ * 表达式a>0 ? "positive" : a<0 ? "negative" : "zero" ====> 该表达式被解析为a>0 ? "positive" : (a<0 ? "negative" : "zero")
+ *
  * boolean表达式为true则执行表达式 1 ;boolean表达式为 false 则执行表达式 2
  * 有时候可用来替换if-else
  *

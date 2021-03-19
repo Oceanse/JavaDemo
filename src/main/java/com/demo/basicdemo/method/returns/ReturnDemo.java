@@ -4,14 +4,14 @@ package com.demo.basicdemo.method.returns;
 /**
  * return 用在方法中有两个作用：
  *   1 return 返回值;  表示返回方法结果；
- *   2 return;  表示方法执行结束，跳出方法；如果方法无需返回值但又因为方法内部业务逻辑需要结束运行， 则可以只用retrun来跳出方法, 不需要返回任何数据
+ *   2 return;  表示方法执行结束，跳出方法；如果方法无需返回值但又因为方法内部业务逻辑需要结束运行， 则可以只用return来跳出方法, 不需要返回任何数据
  *     return;语句只能出现在void方法中，因为它表示结束或者退出方法，不会返回数据
  *
  *  注意：
  *  return;或者 return 返回值; 我们可以称之为return语句，return语句只要被执行，所在方法就会执行结束，所以return语句后面不能跟其他语句
  * */
 
-import com.demo.others.scanner.ScannerNext;
+import com.demo.basicdemo.code_block.construct_block.demo1.Person;
 import org.testng.annotations.Test;
 
 import java.util.Scanner;
@@ -63,7 +63,13 @@ public class ReturnDemo {
      * null也是一种引用类型数据，或者说null属于任何引用类型数据
      * @return
      */
-    public static String returnNull(){
+    public static Object returnNull(){
+        return null;
+    }
+    public static String returnNull2(){
+        return null;
+    }
+    public static Person returnNull3(){
         return null;
     }
 
@@ -86,6 +92,7 @@ public class ReturnDemo {
 
 
     /**
+     * return; 语句只能出现在void方法中，因为它表示结束或者退出方法，不会返回数据
      * return; 表示已经退出方法， 所以后面不能跟语句
      */
     public static void test(){

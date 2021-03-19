@@ -9,10 +9,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class FixedThreadPool {
 
     /*
-      定长线程池，可控制线程最大并发数，
+      定长线程池，可控制线程最大并发数
       核心线程数等于最大线程数，所以线程全部创建完成后就会一直存在于线程池，所以使用完毕必须手动关闭线程池(否则会一直在内存中)
       如果线程池的数量达到了指定数量，并且有线程是空闲的，则取出空闲线程执行任务
-      如果没有线程是空闲的，则将任务缓存到队列（队列长度为Integer.MAX_VALUE）。
+      如果没有线程是空闲的，则将任务缓存到队列（队列长度为Integer.MAX_VALUE）
       当线程空闲的时候，按照FIFO的方式进行处理
     * */
 

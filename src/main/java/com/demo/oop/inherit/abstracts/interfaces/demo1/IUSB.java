@@ -10,7 +10,7 @@ package com.demo.oop.inherit.abstracts.interfaces.demo1;
 
  面向接口设计实现
    接口的作用是制定一组标准协议规范，指明了它的实现类必须要做什么(避免了子类设计的随意性),具体做什么由子类决定
-   剩下的就是实现类面向接口去实现
+   剩下的就是实现类面向接口去实现.接口体现的是标准规范和实现分离的设计哲学
 
  面向接口调用
    统一标准之后的下一件事情，就是多态；调用者面向接口去调用，也就是调用方法中的参数要从接口的角度出发
@@ -36,14 +36,18 @@ public abstract 返回值类型 方法名(参数)     =====>     返回值类型
 
 java类可以implements多个接口，接口可以extends多个接口
 
-
- 案例：
+案例1：
 我们知道，如果某个设备需要向电脑中读取或者写入某些东西，
 这些设备一般都是采用USB方式与电脑连接的，我们发现，只要带
 有USB功能的设备就可以插入电脑中使用了，那么我们可以认为USB
 就是一种功能，这种功能能够做出很多的事情（实现很多的方法），
 其实USB就可以看做是一种标准，一种接口，只要实现了USB标准的
 设备我就认为你已经拥有了USB这种功能。（因为你实现了我USB标准中规定的方法
+
+
+ 案例2：
+ 例如主机板上提供了PCI插槽， 只要一块显卡遵守PCI接口规范， 就可以插入PCI插槽内， 与该主机
+ 板正常通信。至于这块显卡是哪个厂家制造的， 内部是如何实现的， 主机板无须关心
 */
 
 
@@ -97,7 +101,7 @@ class Tests{
      * 面向接口调用
      * @param usb
      */
-    public void test( IUSB usb){
+    public static void test( IUSB usb){
         usb.read();
         usb.write();
     }
@@ -105,8 +109,7 @@ class Tests{
 
 
     public static void main(String[] args) {
-        Tests t=new Tests();
-        t.test(new Cellphone());
-        t.test(new Udisk());
+        test(new Cellphone());
+        test(new Udisk());
     }
 }
